@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f3efe6">
-<title>7,251 รายการบ่อบาดาลในบัญชี “รอทบทวน” — เปิด 4 ธงที่ควรตรวจต่อ</title>
-<meta name="description" content="อ่านหลักฐานเรื่องความจำเป็น คุณภาพ ราคา และผลลัพธ์ของทรัพย์สินบ่อบาดาล 7,251 รายการที่อยู่ในบัญชีรอทบทวนการใช้ประโยชน์">
+<title>บ่อบาดาล 7,251 แถวในบัญชี “รอทบทวน” — 4 ธงที่ควรตรวจ</title>
+<meta name="description" content="ทะเบียนสินทรัพย์บ่อบาดาล 7,251 แถว มูลค่าตามบัญชี 5.08 พันล้านบาท: ตรวจความจำเป็น คุณภาพ ราคา และผลลัพธ์ โดยแยกสิ่งที่หลักฐานยืนยันกับสิ่งที่ยังไม่รู้">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Serif+Thai:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -55,6 +55,9 @@ a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .hero-fact + .hero-fact { padding-left: 18px; border-left: 1px solid var(--rule); }
 .number { display: block; font-size: clamp(27px, 4vw, 39px); line-height: 1.3; font-weight: 800; font-variant-numeric: tabular-nums; }
 .hero-fact span:last-child { display: block; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.thesis { display: grid; grid-template-columns: 152px 1fr; gap: 14px; align-items: start; margin: 20px 0 18px; padding: 15px 17px; border-left: 4px solid var(--red); background: #e9e2d6; }
+.thesis-label { color: var(--red); font-size: 11px; font-weight: 800; letter-spacing: .04em; }
+.thesis p { margin: 0; font: 700 16px/1.7 var(--serif); }
 .flags { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
 .flag { min-height: 158px; padding: 16px 19px; background: var(--white); color: var(--ink); text-decoration: none; transition: background .16s ease, transform .16s ease; }
 .flag:hover { background: #fff; color: var(--ink); transform: translateY(-2px); }
@@ -84,6 +87,16 @@ td p:last-child { margin-bottom: 0; }
 .level.report { border-color: #d7b49d; color: #794a30; }
 .figure { margin: 20px 0; padding: 15px 17px; border: 1px solid var(--rule); background: var(--white); }
 .figure-title { margin: 0 0 12px; font-size: 13px; font-weight: 700; }
+.year-chart { display: block; width: 100%; height: auto; }
+.year-chart .gridline { stroke: #d9d3c8; stroke-width: 1; }
+.year-chart .axis-label, .year-chart .year-label { fill: #535d56; font: 12px var(--sans); }
+.year-chart .value-label { fill: #18211e; font: 700 12px var(--sans); }
+.year-chart .year-bar { fill: #52715e; }
+.year-chart .year-bar.peak { fill: #a2382d; }
+.evidence-split { display: grid; gap: 6px; margin-top: 6px; }
+.evidence-split span { display: block; padding: 7px 9px; border-left: 2px solid var(--green); background: #f1eee7; font-size: 12px; line-height: 1.7; }
+.evidence-split span:first-child { border-left-color: var(--red); }
+.evidence-split b { color: var(--ink); }
 .bars { display: grid; gap: 7px; }
 .barrow { display: grid; grid-template-columns: 115px minmax(70px, 1fr) 66px; align-items: center; gap: 10px; font-size: 12px; }
 .barlabel { color: var(--muted); text-align: right; white-space: nowrap; }
@@ -146,6 +159,8 @@ td p:last-child { margin-bottom: 0; }
   .section-no { font-size: 33px; }
   .standfirst { margin-left: 51px; font-size: 14px; }
   .evidence-grid, .cohorts { grid-template-columns: 1fr; }
+  .thesis { grid-template-columns: 1fr; gap: 2px; }
+  .thesis p { font-size: 15px; }
   .barrow { grid-template-columns: 76px minmax(24px, 1fr) 55px; gap: 7px; font-size: 10px; }
   .status-band { align-items: flex-start; flex-direction: column; gap: 3px; }
   .map-head { align-items: flex-start; flex-direction: column; }
@@ -156,6 +171,8 @@ td p:last-child { margin-bottom: 0; }
   .flags { grid-template-columns: 1fr; }
   .topbar-in { align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 9px; }
   .barrow { grid-template-columns: 68px minmax(18px, 1fr) 52px; }
+  .flag .metrics { display: grid; grid-template-columns: 1fr; gap: 2px; }
+  .flag .metrics span::before { content: "• "; color: var(--red); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .flag { transition: none; } }
 </style>
@@ -167,41 +184,45 @@ td p:last-child { margin-bottom: 0; }
 </div></div>
 
 <header class="hero shell">
-  <p class="kicker">บัญชีสินทรัพย์ที่อยู่ระหว่างทบทวนการใช้ประโยชน์ · สำรวจ 30 ก.ย. 2567</p>
-  <h1>รัฐลงบัญชีบ่อบาดาล <em>7,251 รายการ</em><br>มูลค่า 5.08 พันล้านบาท<br>ทุกแถวมีสถานะ “รอทบทวน”</h1>
-  <p class="lead">สถานะนี้ยังไม่บอกว่ารายการไหนเป็นหลุมเดี่ยวหรือระบบพร้อมอุปกรณ์ บ่อไหนมีน้ำ งานได้มาตรฐาน หรือส่งน้ำถึงผู้ใช้จริงหรือไม่. เราจึงตั้ง 4 ธงจากทะเบียน เอกสารราชการ และรายงานภาคสนาม เพื่อชี้ว่าควรขอหลักฐานอะไรต่อ</p>
+  <p class="kicker">บัญชีสินทรัพย์ที่รายงานจัดไว้ “รอทบทวนการใช้ประโยชน์” · สำรวจ 30 ก.ย. 2567</p>
+  <h1>บัญชีรัฐมีสินทรัพย์บ่อบาดาล <em>7,251 แถว</em><br>มูลค่าตามบัญชี 5.08 พันล้านบาท<br>รายงานจัดทุกแถว “รอทบทวน”</h1>
+  <p class="lead">หน้านี้ถามตรง ๆ ว่าโครงการเจาะบ่อจำเป็นแค่ไหน งานและน้ำได้คุณภาพหรือไม่ มูลค่าที่ลงบัญชีสอดคล้องกับงานหรือเปล่า และสร้างแล้วมีคนได้น้ำจริงเพียงใด. คำตอบมาจากการเทียบทะเบียนกับรายงานตรวจและกรณีหน้างาน ไม่ได้อนุมานจากป้ายสถานะเพียงอย่างเดียว</p>
   <div class="hero-facts" aria-label="ขอบเขตข้อมูล">
-    <div class="hero-fact"><span class="number">7,251</span><span>แถวทะเบียน DGR ที่ชื่อรายการมีคำว่า “บ่อน้ำบาดาล”</span></div>
-    <div class="hero-fact"><span class="number">฿5,081.9 ล้าน</span><span>มูลค่าการได้มาที่บันทึกในบัญชี ไม่ใช่ยอดจ่ายตามสัญญา</span></div>
-    <div class="hero-fact"><span class="number">30 ก.ย. 2567</span><span>วันที่สำรวจในบัญชี สถานะนี้ไม่ใช่การตรวจสภาพปัจจุบัน</span></div>
+    <div class="hero-fact"><span class="number">7,251</span><span>แถวทะเบียน DGR ที่ชื่อรายการมีคำว่า “บ่อน้ำบาดาล” · หนึ่งแถวไม่จำเป็นต้องเท่ากับหนึ่งหลุม</span></div>
+    <div class="hero-fact"><span class="number">฿5,081.9 ล้าน</span><span>มูลค่าการได้มาที่ลงบัญชี ไม่ใช่ยอดเบิกจ่ายหรือราคาสัญญา</span></div>
+    <div class="hero-fact"><span class="number">30 ก.ย. 2567</span><span>วันที่สำรวจตามบัญชี ไม่ใช่ผลตรวจสภาพรายบ่อหรือสถานะล่าสุด</span></div>
+  </div>
+  <div class="thesis">
+    <span class="thesis-label">ธงที่ใช้เปิดเรื่อง</span>
+    <p>ข้อมูลพอให้ขอดูหลักฐานรายโครงการและรายบ่อ แต่ยังไม่พอจะสรุปว่าบ่อทั้ง 7,251 แถวเสียหรือมีทุจริต</p>
   </div>
   <nav class="flags" aria-label="สี่ธงที่ควรตรวจต่อ">
     <a class="flag" href="#need">
-      <span class="flag-no">ธง ๑ · ความจำเป็น</span>
-      <h2>กระจุกเวลาและพื้นที่—เจาะเพราะจำเป็นหรือ?</h2>
-      <div class="metrics"><span>97.5% ใน 6 ปี</span><span>415 ชื่อพื้นที่ซ้ำปี</span><span>68 แถวใน ต.นาชำ</span></div>
-      <p>เป็นเหตุให้ขอดูผลสำรวจและประวัติจุดเจาะ ไม่ใช่หลักฐานว่าซ้ำซ้อน</p>
+      <span class="flag-no">ธง ๑ · จำเป็นจริงหรือ?</span>
+      <h2>รายการพุ่งใน 6 ปี และชื่อพื้นที่กลับมาซ้ำ</h2>
+      <div class="metrics"><span>97.5% ใน 6 ปี</span><span>415 หมู่บ้านซ้ำปี</span><span>68 แถว · ต.นาชำ</span></div>
+      <p>ควรขอผลสำรวจน้ำและเหตุผลเลือกจุดก่อนอนุมัติ</p>
     </a>
     <a class="flag" href="#quality">
       <span class="flag-no">ธง ๒ · คุณภาพ</span>
-      <h2>เอกสารรัฐเคยบันทึกทั้งบ่อชำรุดและน้ำดื่มไม่ผ่าน</h2>
-      <div class="metrics"><span>3,240 บ่ออุดกลบ</span><span>41% ท่อกรุ/บ่อชำรุด</span><span>298/323 น้ำไม่ผ่านเกณฑ์</span></div>
-      <p>ต่างปี ต่างพื้นที่ และต่างประเภทการตรวจ—ห้ามเหมารวมเป็นอัตราเสียของบัญชีนี้</p>
+      <h2>เอกสารรัฐพบทั้งบ่อชำรุดและน้ำดื่มไม่ผ่าน</h2>
+      <div class="metrics"><span>1,329/3,240 ชำรุด</span><span>298/323 น้ำไม่ผ่าน</span><span>342 ม. · น้ำดิบไม่เหมาะดื่ม</span></div>
+      <p>เป็นผลตรวจคนละชุด ไม่ใช่อัตราความเสียหายของ 7,251 แถว</p>
     </a>
     <a class="flag" href="#cost">
       <span class="flag-no">ธง ๓ · ราคา</span>
-      <h2>มูลค่าซ้ำเป๊ะ และเงินรวมใกล้กันแต่จำนวนแถวต่าง</h2>
+      <h2>ยอดในบัญชีซ้ำตรง และยอดรวมใกล้กันแต่แถวต่าง</h2>
       <div class="metrics"><span>255 แถว × ฿221,280</span><span>มูลค่า 2,538 / 2,544 ล้านบาท</span><span>จำนวนแถวต่าง 3.8 เท่า</span></div>
-      <p>เป็นมูลค่าทะเบียน ไม่ใช่ราคาที่จ่ายหรือสเปกของบ่อที่เทียบกันได้</p>
+      <p>เป็นมูลค่าทะเบียน ไม่ใช่ราคาจ่ายจริงหรือหลักฐานฮั้ว</p>
     </a>
     <a class="flag" href="#result">
       <span class="flag-no">ธง ๔ · ผลลัพธ์</span>
-      <h2>หลักฐานหน้างานมีตั้งแต่ใช้ไม่ได้จนถึงใช้ได้บางส่วน</h2>
-      <div class="metrics"><span>1 ใน 2 บ่อสูบไม่ขึ้น</span><span>2 ใน 4 บ่อใช้ไม่ได้</span><span>11 ลบ.ม./ชม.</span></div>
-      <p>ทะเบียนยังใส่ทุกแถวไว้ใต้ป้าย “รอทบทวน” เดียวกัน</p>
+      <h2>สร้างเสร็จแล้ว แต่น้ำไปถึงคนแค่ไหน?</h2>
+      <div class="metrics"><span>1/4 บ่อปกติ</span><span>รายงานว่า 1/2 สูบไม่ขึ้น</span><span>สูบทดสอบ 11 ลบ.ม./ชม.</span></div>
+      <p>ตัวอย่างจากคนละโครงการ; ทะเบียนยังรวมไว้ใต้สถานะเดียว: “รอทบทวน”</p>
     </a>
   </nav>
-  <p class="scope-line">แหล่งหลัก: <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียนสินทรัพย์ 12 กระทรวงใน Drive</a> · ตัวกรอง: หน่วยงาน “กรมทรัพยากรน้ำบาดาล” และชื่อรายการมีคำว่า “บ่อน้ำบาดาล”. หนึ่งแถวไม่จำเป็นต้องเท่ากับหนึ่งหลุม.</p>
+  <p class="scope-line">แหล่งหลัก: <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">บัญชีสินทรัพย์ 12 กระทรวงใน Drive</a> · ตัวกรอง: หน่วยงาน “กรมทรัพยากรน้ำบาดาล” และชื่อรายการมีคำว่า “บ่อน้ำบาดาล”. 7,251 คือจำนวนแถวในตัวกรอง ไม่ใช่จำนวนหลุมที่ตรวจยืนยันแล้ว; ฿5,081.9 ล้านคือมูลค่าตามบัญชี ไม่ใช่ยอดจ่ายจริง.</p>
 </header>
 
 <main class="shell">
@@ -215,7 +236,7 @@ td p:last-child { margin-bottom: 0; }
       <tbody>
         <tr>
           <td>๑ · จำเป็นไหม</td>
-          <td><span class="level">รายงาน สตง. ตรวจ 26 จุด</span><br>ในโครงการที่ตรวจในสุพรรณบุรี 12 จุดมีระบบเดิมซึ่งรายงานระบุว่าให้บริการครอบคลุมและเพียงพอ; อีกทั้งบัญชีมีการกระจุกตัวตามปีและชื่อพื้นที่ซ้ำข้ามปี. <a href="https://en.audit.go.th/sites/default/files/files/inspection-results/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99.pdf" target="_blank" rel="noopener">อ่านรายงาน สตง.</a></td>
+          <td><span class="level">รายงาน สตง. ตรวจ 26 จุด</span><br>ในโครงการที่ตรวจในสุพรรณบุรี 12 จุดมีระบบเดิมซึ่งรายงานระบุว่าให้บริการครอบคลุมและเพียงพอ; อีกทั้งบัญชีมีการกระจุกตัวตามปีและชื่อพื้นที่ซ้ำข้ามปี. <a href="https://www.audit.go.th/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%9C%E0%B8%A5%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%A4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99" target="_blank" rel="noopener">อ่านรายงาน สตง.</a></td>
           <td>ไม่รู้ว่ารายการใดอยู่จุดเดียวกัน มีผู้ขาดน้ำเท่าใด หรือพิจารณาทางเลือกอื่นแล้วหรือไม่. ชื่อซ้ำไม่ยืนยันว่าขุดซ้ำบ่อเดิม.</td>
         </tr>
         <tr>
@@ -240,24 +261,32 @@ td p:last-child { margin-bottom: 0; }
 </section>
 
 <section class="section" id="need" aria-labelledby="need-title">
-  <div class="section-head"><span class="section-no">๑</span><h2 class="title" id="need-title">ความจำเป็น · ทำไมการเจาะจึงกระจุกตัว?</h2></div>
-  <p class="standfirst">จำนวนรายการพุ่งขึ้นในช่วงสั้น และชื่อโครงการเดิมกลับมาในหลายปี. คำถามที่ควรตรวจคือมีข้อมูลความต้องการน้ำและเหตุผลเลือกจุดก่อนอนุมัติครบหรือไม่</p>
+  <div class="section-head"><span class="section-no">๑</span><h2 class="title" id="need-title">ไม่จำเป็น? · ทำไมรายการจึงพุ่งและพื้นที่เดิมกลับมา?</h2></div>
+  <p class="standfirst">หลักฐานบอกว่ารายการกระจุกในช่วงเวลาและชื่อหมู่บ้านบางแห่งปรากฏข้ามปี. นี่ไม่ใช่หลักฐานว่าเจาะซ้ำบ่อเดิม แต่เป็นเหตุให้ตรวจว่าก่อนอนุมัติมีข้อมูลคนขาดน้ำและประวัติบ่อในพื้นที่ครบหรือไม่</p>
 
   <div class="figure">
-    <p class="figure-title">จำนวนแถวทะเบียนตามปีที่ได้มา · 7,067 จาก 7,251 แถวอยู่ในปี 2560–2565</p>
-    <div class="bars" role="list" aria-label="จำนวนแถวทะเบียนในแต่ละปีงบประมาณ">
-      <div class="barrow" role="listitem"><span class="barlabel">2565</span><span class="track"><span class="fill red" style="--bar:.8%"></span></span><span class="barvalue">16</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2564</span><span class="track"><span class="fill" style="--bar:25%"></span></span><span class="barvalue">518</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2563</span><span class="track"><span class="fill" style="--bar:47.3%"></span></span><span class="barvalue">982</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2562</span><span class="track"><span class="fill" style="--bar:100%"></span></span><span class="barvalue">2,078</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2561</span><span class="track"><span class="fill" style="--bar:99.9%"></span></span><span class="barvalue">2,076</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2560</span><span class="track"><span class="fill" style="--bar:67.2%"></span></span><span class="barvalue">1,397</span></div>
-      <div class="barrow" role="listitem"><span class="barlabel">2559</span><span class="track"><span class="fill" style="--bar:8.9%"></span></span><span class="barvalue">184</span></div>
-    </div>
-    <p class="caption">กราฟนับรายการตามปีที่ลงทะเบียน ไม่ได้ระบุวันเจาะจริงทุกหลุม. ตัวเลขจาก <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียนใน Drive</a>.</p>
+    <p class="figure-title">คลื่นตามปีที่ได้มา · 7,067 จาก 7,251 แถว (97.5%) อยู่ใน 6 ปีงบ 2560–2565</p>
+    <svg class="year-chart" viewBox="0 0 760 250" role="img" aria-labelledby="year-chart-title year-chart-desc">
+      <title id="year-chart-title">จำนวนแถวทะเบียนบ่อบาดาลตามปีที่ได้มา</title>
+      <desc id="year-chart-desc">จำนวนรายการเพิ่มจาก 184 ในปี 2559 เป็นจุดสูงสุด 2,078 ในปี 2562 แล้วลดลงเหลือ 16 ในปี 2565</desc>
+      <line class="gridline" x1="58" y1="185" x2="735" y2="185"></line>
+      <line class="gridline" x1="58" y1="105" x2="735" y2="105"></line>
+      <line class="gridline" x1="58" y1="25" x2="735" y2="25"></line>
+      <text class="axis-label" x="48" y="189" text-anchor="end">0</text>
+      <text class="axis-label" x="48" y="109" text-anchor="end">1,000</text>
+      <text class="axis-label" x="48" y="29" text-anchor="end">2,000</text>
+      <rect class="year-bar" x="91" y="170" width="54" height="15" rx="2"></rect><text class="value-label" x="118" y="162" text-anchor="middle">184</text><text class="year-label" x="118" y="211" text-anchor="middle">2559</text>
+      <rect class="year-bar" x="181" y="73" width="54" height="112" rx="2"></rect><text class="value-label" x="208" y="65" text-anchor="middle">1,397</text><text class="year-label" x="208" y="211" text-anchor="middle">2560</text>
+      <rect class="year-bar peak" x="271" y="19" width="54" height="166" rx="2"></rect><text class="value-label" x="298" y="14" text-anchor="middle">2,076</text><text class="year-label" x="298" y="211" text-anchor="middle">2561</text>
+      <rect class="year-bar peak" x="361" y="19" width="54" height="166" rx="2"></rect><text class="value-label" x="388" y="14" text-anchor="middle">2,078</text><text class="year-label" x="388" y="211" text-anchor="middle">2562</text>
+      <rect class="year-bar" x="451" y="106" width="54" height="79" rx="2"></rect><text class="value-label" x="478" y="98" text-anchor="middle">982</text><text class="year-label" x="478" y="211" text-anchor="middle">2563</text>
+      <rect class="year-bar" x="541" y="144" width="54" height="41" rx="2"></rect><text class="value-label" x="568" y="136" text-anchor="middle">518</text><text class="year-label" x="568" y="211" text-anchor="middle">2564</text>
+      <rect class="year-bar" x="631" y="184" width="54" height="1" rx="1"></rect><text class="value-label" x="658" y="175" text-anchor="middle">16</text><text class="year-label" x="658" y="211" text-anchor="middle">2565</text>
+    </svg>
+    <p class="caption">นับตามปีที่ลงบัญชี ไม่ใช่วันเจาะจริงทุกหลุม; สองปีที่สูงสุดคือ 2561–2562. ตัวเลขคำนวณจาก <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียนใน Drive</a>.</p>
   </div>
 
-  <h3>ชื่อโครงการแก้ขาดแคลนน้ำ ปรากฏในทะเบียนสามปี</h3>
+  <h3>โครงการชื่อ “แก้ปัญหาขาดแคลนน้ำ” ลงบัญชีต่อเนื่อง 3 ปี</h3>
   <div class="table-scroll">
     <table class="program-table">
       <thead><tr><th>ปีงบประมาณ</th><th>เป้าหมายที่พิมพ์ในชื่อโครงการ</th><th class="n">แถวที่พบในชุด 7,251</th></tr></thead>
@@ -268,7 +297,7 @@ td p:last-child { margin-bottom: 0; }
       </tbody>
     </table>
   </div>
-  <p class="caption">นับแถวที่ชื่อโครงการมีคำว่า “แก้ไขปัญหาการขาดแคลนน้ำอุปโภคบริโภค”; จำนวน “แห่ง” เป็นเป้าหมายตามชื่อโครงการ ส่วนจำนวนแถวเป็นการกรองทะเบียน จึงไม่เท่ากันและไม่ยืนยันว่าจุดเดิมได้รับงานซ้ำ.</p>
+  <p class="caption">นับแถวที่ชื่อโครงการมีคำว่า “แก้ไขปัญหาการขาดแคลนน้ำอุปโภคบริโภค”; จำนวน “แห่ง” คือเป้าหมายที่พิมพ์ในชื่อโครงการ ส่วนจำนวนแถวเป็นผลกรองทะเบียน. ทั้งสองยอดไม่เท่ากัน และยังไม่ยืนยันว่าเป็นจุดเดิมหรือสัญญาเดิม.</p>
 
   <h3>ชื่อพื้นที่เดิมปรากฏข้ามปี</h3>
   <div class="table-scroll">
@@ -277,14 +306,14 @@ td p:last-child { margin-bottom: 0; }
       <tbody>
         <tr><td>ต.นาชำ · เพชรบูรณ์</td><td>68 รายการในปีงบ 2562–2563; กระจายในอย่างน้อย 4 หมู่บ้าน</td><td>เป็นยอดระดับตำบล ไม่ใช่หมู่บ้านเดียว.</td></tr>
         <tr><td>อ.หล่มเก่า · เพชรบูรณ์</td><td>96 รายการในชุดทะเบียน</td><td>ยอดรวมระดับอำเภอ; ไม่ได้แปลว่ามี 96 บ่อในจุดเดียว.</td></tr>
-        <tr><td>บ้านเชียงเพ็ง ม.3 · อ.กุดจับ · อุดรธานี</td><td>ชื่อบ้านและหมู่เดียวกันปรากฏต่อเนื่อง 6 ปีงบ 2559–2564</td><td>อาจเป็นจุดใหม่หรือคนละระบบในหมู่บ้านเดียวกัน; ไม่มีเลขบ่อเชื่อมทุกแถว.</td></tr>
+        <tr><td>บ้านเชียงเพ็ง ม.3 · อ.กุดจับ · อุดรธานี</td><td>ชื่อบ้านและหมู่เดียวกันปรากฏทุกปีงบ 2559–2564 (6 ปีติดกัน)</td><td>แต่ละปีอาจเป็นบ่อใหม่หรือคนละระบบในหมู่บ้านเดียวกัน; ไม่มีเลขบ่อเชื่อมทุกแถว.</td></tr>
       </tbody>
     </table>
   </div>
   <p class="caption">ยังพบชื่อหมู่บ้าน 415 แห่งที่ปรากฏในอย่างน้อย 2 ปีงบ. แหล่งข้อมูล: <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียน DGR ใน Drive</a>.</p>
 
   <div class="evidence-grid">
-    <article class="evidence-card"><h3>การตรวจ สตง.ในสุพรรณบุรี</h3><p>จาก 26 จุดที่ตรวจ 12 จุดมีแหล่งน้ำหรือระบบประปาเดิมที่รายงานระบุว่าให้บริการครอบคลุมและเพียงพอ. รายงานยังวิจารณ์การสำรวจความขาดแคลนก่อนเลือกพื้นที่. เป็นผลตรวจของโครงการที่สุ่มตรวจ ไม่ใช่ผลแทนทั้งบัญชี.</p><p class="source"><a href="https://en.audit.go.th/sites/default/files/files/inspection-results/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99.pdf" target="_blank" rel="noopener">รายงาน สตง. เขต 3</a></p></article>
+    <article class="evidence-card"><h3>การตรวจ สตง.ในสุพรรณบุรี</h3><p>จาก 26 จุดที่ตรวจ 12 จุดมีแหล่งน้ำหรือระบบประปาเดิมที่รายงานระบุว่าให้บริการครอบคลุมและเพียงพอ. รายงานยังวิจารณ์การสำรวจความขาดแคลนก่อนเลือกพื้นที่. เป็นผลตรวจของโครงการที่สุ่มตรวจ ไม่ใช่ผลแทนทั้งบัญชี.</p><p class="source"><a href="https://www.audit.go.th/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%9C%E0%B8%A5%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%A4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99" target="_blank" rel="noopener">รายงาน สตง. เขต 3</a></p></article>
     <article class="evidence-card"><h3>เหตุผลที่กรมฯ ระบุ</h3><p>กรมทรัพยากรน้ำบาดาลอธิบายเป้าหมายไว้ทั้งบรรเทาภัยแล้ง เพิ่มความมั่นคงน้ำชุมชน และส่งน้ำจากแหล่งไกลในพื้นที่แล้งซ้ำซากหรือน้ำเค็ม. เป้าหมายกว้างยังไม่ตอบความจำเป็นของแต่ละจุด.</p><p class="source"><a href="https://www.dgr.go.th/th/vdo/9/104" target="_blank" rel="noopener">บรรเทาภัยแล้ง</a> · <a href="https://www.dgr.go.th/th/vdo/9/455" target="_blank" rel="noopener">น้ำมั่นคงชุมชน</a> · <a href="https://www.dgr.go.th/bgd/th/newsAll/292/9144" target="_blank" rel="noopener">ระบบส่งน้ำระยะไกล</a></p></article>
     <article class="evidence-card alert"><h3>ยังต้องดูเอกสารก่อนอนุมัติ</h3><p>ผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน พิกัดจริง เหตุผลเลือกจุด ทางเลือกที่เปรียบเทียบ และประวัติการเจาะหรือซ่อมในพื้นที่เดิม.</p></article>
   </div>
@@ -297,21 +326,21 @@ td p:last-child { margin-bottom: 0; }
   <div class="evidence-grid">
     <article class="evidence-card alert">
       <h3>1,329 จาก 3,240 บ่อที่อุดกลบ ชำรุดที่ท่อหรือบ่อ</h3>
-      <p>รายงาน DGR ปีงบประมาณ 2552 ระบุอุดกลบ 3,240 บ่อทั่วประเทศ; 1,329 บ่อ หรือ 41% ถูกจัดสาเหตุว่าท่อกรุ/ตัวบ่อชำรุด. นี่เป็นข้อมูลประวัติศาสตร์ของบ่อที่ถูกอุดกลบแล้ว.</p>
+      <p>รายงาน DGR ปีงบประมาณ 2552 ระบุการอุดกลบ 3,240 บ่อทั่วประเทศ; 1,329 บ่อ (41%) จัดสาเหตุว่า “ท่อกรุ/บ่อชำรุด”. นี่คือบ่อเก่าที่ถูกอุดกลบแล้ว ไม่ใช่ 41% ของบัญชีปัจจุบัน.</p>
       <p class="source"><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2552/20180715235554I7ZOO.pdf" target="_blank" rel="noopener">รายงาน DGR โครงการอุดกลบบ่อ 2552</a></p>
     </article>
     <article class="evidence-card alert">
       <h3>298 จาก 323 ระบบน้ำบาดาล ไม่ผ่านเกณฑ์น้ำดื่ม</h3>
-      <p>ผลตรวจกรมทรัพยากรน้ำ ปี 2567 พบ 92.26% ของระบบประปาหมู่บ้านที่ใช้น้ำบาดาลในกลุ่มตรวจไม่ผ่านเกณฑ์ดื่ม. เป็นการตรวจน้ำในระบบหลังผลิต ไม่ใช่ตัวบ่อหรือการสุ่มแทนทุกระบบทั่วประเทศ.</p>
+      <p>ผลตรวจกรมทรัพยากรน้ำ ปี 2567 พบ 92.26% ของระบบประปาหมู่บ้านที่ใช้น้ำบาดาลในกลุ่มตรวจไม่ผ่านเกณฑ์ดื่ม. ตัวอย่างนี้ตรวจน้ำในระบบประปา ไม่ใช่สภาพตัวบ่อ และโครงการไม่ได้สุ่มแทนทุกระบบทั่วประเทศ.</p>
       <p class="source"><a href="https://division.dwr.go.th/wad/images/Announce_PDF/30_Report_project__to_strengthen_water_assessment.pdf" target="_blank" rel="noopener">รายงานผลตรวจกรมทรัพยากรน้ำ ปี 2567</a></p>
     </article>
     <article class="evidence-card alert">
       <h3>บ่อ 6309H003 ลึก 342 เมตร: “ไม่เหมาะสมที่จะใช้บริโภค”</h3>
-      <p>รายงาน DGR เรียกบ่อนี้ว่า “บ่อสำรวจ” ใน ต.โพรงอากาศ อ.บางน้ำเปรี้ยว. ผลน้ำดิบระบุ TDS 2,260 มก./ล. และเกินเกณฑ์ด้านเหล็ก คลอไรด์ และความกระด้างด้วย.</p>
+      <p>รายงาน DGR เรียกบ่อนี้ว่า “บ่อสำรวจ” ใน ต.โพรงอากาศ อ.บางน้ำเปรี้ยว. น้ำดิบมี TDS 2,260 มก./ล. และเหล็ก คลอไรด์ กับความกระด้างเกินเกณฑ์; รายงานระบุว่าต้องผ่านระบบ RO ก่อนดื่ม.</p>
       <p class="source"><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2565/280/2024110413593453R51.pdf" target="_blank" rel="noopener">รายงานติดตามโครงการของ DGR (ผลวิเคราะห์น้ำ)</a></p>
     </article>
   </div>
-  <p class="note">น้ำดื่มไม่ผ่านเกณฑ์ไม่เท่ากับ “เจาะเสีย”: น้ำดิบอาจต้องปรับปรุงคุณภาพ ส่วนท่อกรุชำรุดเป็นปัญหาสภาพบ่อ. การตรวจแต่ละโครงการต้องดูผลสูบทดสอบ ผลแล็บ ระบบกรอง แบบก่อสร้าง และใบตรวจรับประกอบกัน.</p>
+  <p class="note">น้ำดิบไม่เหมาะดื่มไม่ได้แปลว่าบ่อสูบน้ำไม่ได้; น้ำประปาที่ไม่ผ่านเกณฑ์ก็เป็นผลตรวจหลังผลิต. ส่วนท่อกรุชำรุดเป็นปัญหาสภาพบ่อ. การตัดสินแต่ละจุดต้องดูผลสูบทดสอบ ผลแล็บ ระบบกรอง แบบก่อสร้าง และใบตรวจรับประกอบกัน.</p>
   <p class="mut"><strong>ข้อจำกัดของธง ๒:</strong> รายงานทั้งสามชุดต่างปี ต่างพื้นที่ และต่างวิธีตรวจ. ไม่มีชุดใดใช้คำนวณอัตราบ่อเสียหรือน้ำดื่มไม่ได้ของรายการทั้ง 7,251 ได้.</p>
 </section>
 
@@ -366,24 +395,30 @@ td p:last-child { margin-bottom: 0; }
 
 <section class="section" id="result" aria-labelledby="result-title">
   <div class="section-head"><span class="section-no">๔</span><h2 class="title" id="result-title">ผลลัพธ์ · สร้างแล้วน้ำถึงคนหรือไม่?</h2></div>
-  <p class="standfirst">ป้าย “รอทบทวน” เหมือนกันไม่ได้แปลว่าทุกจุดมีสภาพเหมือนกัน. เอกสารและรายงานพื้นที่ให้ภาพตั้งแต่ร้องเรียนว่าใช้ไม่ได้ ไปจนถึงระบบที่ใช้ได้บางส่วนหรือมีหลักฐานส่งมอบ</p>
+  <p class="standfirst">สถานะเดียวในบัญชีซ่อนผลที่ต่างกัน: บางโครงการใช้งานไม่ได้ บางแห่งได้ใช้เพียงบางระบบ และบางแห่งมีเพียงรายงานส่งมอบ. ตารางนี้แยกหลักฐานแต่ละกรณีและระดับการจับคู่กับทะเบียน</p>
   <div class="status-band">
-    <strong>7,251 แถว · สถานะทะเบียนเดียวกัน: “อยู่ระหว่างทบทวนการใช้ประโยชน์”</strong>
-    <span>สำรวจ 30 ก.ย. 2567 · ไม่ใช่ผลตรวจรายบ่อหรือสถานะวันนี้</span>
+    <strong>7,251 แถว · รายงานจัดไว้สถานะเดียวกัน: “อยู่ระหว่างทบทวนการใช้ประโยชน์”</strong>
+    <span>สำรวจ 30 ก.ย. 2567 · ไม่ใช่ผลตรวจรายบ่อหรือสถานะล่าสุด</span>
   </div>
   <div class="table-scroll">
     <table class="outcome-table">
       <thead><tr><th>พื้นที่ / หลักฐาน</th><th>พบอะไร</th><th>จับคู่กับทะเบียนได้แค่ไหน</th><th>ยังไม่รู้</th></tr></thead>
       <tbody>
         <tr>
-          <td>บ้านนาหนองกอก ม.3 · ต.นาซำ · หล่มเก่า เพชรบูรณ์<br><span class="level report">ป.ป.ท.ลงพื้นที่ตรวจ</span></td>
-          <td>โครงการเกษตร 500 ไร่มี 4 บ่อ. รายงานภาคสนามของ Thai PBS ระบุผลตรวจของ ป.ป.ท.: ใช้ได้ 1 บ่อ, รั่ว 1 บ่อ และใช้น้ำไม่ได้ 2 บ่อ; ชาวบ้านบอกว่าน้ำไม่ถึงพื้นที่เกษตรมาหลายปี.</td>
-          <td>ชื่อบ้าน หมู่ ตำบล และโครงการ 500 ไร่ตรงกับแถวในชุด 7,251; มูลค่าลงบัญชี ฿10.13 ล้าน. เป็นการจับคู่ระดับโครงการ ไม่ใช่เลขบ่อรายหลุม.</td>
-          <td>เจ้าหน้าที่ระบุว่าต้องตรวจเอกสารและสาเหตุต่อ. รายงานนี้ไม่ใช่คำวินิจฉัยว่ามีทุจริตหรือใครต้องรับผิด.</td>
+          <td>บ้านนาหนองกอก ม.3 · ต.นาซำ · หล่มเก่า เพชรบูรณ์<br><span class="level report">ป.ป.ท. 4 เม.ย. / DGR 6 เม.ย. 2567</span></td>
+          <td>
+            โครงการเกษตร 500 ไร่ มี 4 บ่อ; สร้างเสร็จและส่งมอบในปี 2564.
+            <div class="evidence-split">
+              <span><b>ป.ป.ท.และชาวบ้าน:</b> ตรวจพบ 1 บ่อใช้ได้ 1 บ่อมีน้ำรั่ว และ 2 บ่อใช้น้ำไม่ได้; ชาวบ้านบอกว่าน้ำไม่ถึงพื้นที่เพาะปลูก.</span>
+              <span><b>คำชี้แจง DGR:</b> รายงานใช้น้ำสะสม 60,256 ลบ.ม. ถึง มิ.ย. 2566; เมื่อตรวจ 6 เม.ย. 2567 พบ 1 บ่อปกติ อีก 3 บ่อมีปัญหาสายไฟ ระบบควบคุมแรงดัน หรือแผงโซลาร์ถูกเงาบัง.</span>
+            </div>
+          </td>
+          <td>ชื่อบ้าน หมู่ ตำบล และโครงการตรงกับแถวในชุด 7,251; มูลค่าการได้มาตามบัญชี ฿10.13 ล้าน. จับคู่ได้ระดับโครงการ แต่ไม่มีเลขบ่อเชื่อมรายหลุม.</td>
+          <td>หลักฐานทั้งสองฝ่ายยืนยันปัญหาอุปกรณ์/การส่งน้ำ แต่ต่างกันเรื่องการใช้งานและรายละเอียดจุดขัดข้อง. ยังไม่พบหลักฐานสาธารณะว่าซ่อมเสร็จหรือเกษตรกรได้รับน้ำต่อเนื่องหลัง เม.ย. 2567.</td>
         </tr>
         <tr>
-          <td>บ้านห้วยข่อย ม.16 · หล่มเก่า เพชรบูรณ์<br><span class="level report">รายงานภาคสนาม</span></td>
-          <td>Thai PBS รายงานว่ามี 2 บ่อ แต่เกษตรกรระบุว่าใช้ได้เพียงบ่อเดียว; บางรายไม่ต่อท่อไปยังบ่อที่มีปัญหาเพราะกลัวไม่คุ้ม.</td>
+          <td>บ้านห้วยข่อย ม.16 · หล่มเก่า เพชรบูรณ์<br><span class="level report">ชาวบ้านให้ข้อมูลข่าวภาคสนาม</span></td>
+          <td>โครงการเกษตร 300 ไร่มี 2 บ่อ; เกษตรกรระบุว่า 1 บ่อสูบน้ำไม่ขึ้น และบางรายไม่ต่อท่อไปยังบ่อนั้นเพราะกลัวไม่คุ้ม. ข่าวไม่ได้รายงานผลตรวจทางเทคนิคของบ่อ.</td>
           <td>ตรงกับรายการ DGR ฉบับเต็ม 10,901 รายการ (มูลค่าลงบัญชี ฿5.84 ล้าน) แต่ไม่อยู่ในชุด 7,251 แถวที่กรองจากคำในชื่อรายการ. ไม่มีเลขบ่อหรือพิกัดรายบ่อยืนยัน.</td>
           <td>ไม่ระบุสาเหตุทางเทคนิค และยังไม่ทราบสถานะหลังรายงาน 10 เม.ย. 2567.</td>
         </tr>
@@ -402,7 +437,7 @@ td p:last-child { margin-bottom: 0; }
       </tbody>
     </table>
   </div>
-  <p class="caption">แหล่งข้อมูล: <a href="https://www.thaipbs.or.th/news/content/338929" target="_blank" rel="noopener">Thai PBS ลงพื้นที่เพชรบูรณ์ (บ้านนาหนองกอกและบ้านห้วยข่อย)</a> · <a href="https://en.audit.go.th/sites/default/files/files/inspection-results/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99.pdf" target="_blank" rel="noopener">รายงาน สตง. สุพรรณบุรี</a> · <a href="https://www.dgr.go.th/th/newsAll/17/7339" target="_blank" rel="noopener">DGR รายงานส่งมอบบ้านคลอง 21/20</a> · <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียนสินทรัพย์</a></p>
+  <p class="caption">แหล่งข้อมูล: <a href="https://www.thaipbs.or.th/news/content/338929" target="_blank" rel="noopener">Thai PBS ลงพื้นที่เพชรบูรณ์ (บ้านนาหนองกอกและบ้านห้วยข่อย)</a> · <a href="https://www.thaipbs.or.th/news/content/338954" target="_blank" rel="noopener">คำชี้แจง DGR ต่อกรณีบ้านนาหนองกอก</a> · <a href="https://www.audit.go.th/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%9C%E0%B8%A5%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%A4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B4%E0%B8%97%E0%B8%98%E0%B8%B4%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%A5%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B1%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%87%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%8A%E0%B8%B8%E0%B8%A1%E0%B8%8A%E0%B8%99" target="_blank" rel="noopener">รายงาน สตง. สุพรรณบุรี</a> · <a href="https://www.dgr.go.th/th/newsAll/17/7339" target="_blank" rel="noopener">DGR รายงานส่งมอบบ้านคลอง 21/20</a> · <a href="https://drive.google.com/file/d/11Y7srnex2l4aJAqady_2D3afBrQutNOo/view?usp=drivesdk" target="_blank" rel="noopener">ทะเบียนสินทรัพย์</a></p>
   <div class="map-panel">
     <div class="map-head"><h3>จังหวัดไหนมีรายการมาก และมีรายงานปัญหาที่ใด?</h3><a href="map.html">เปิดแผนที่เต็ม ↗</a></div>
     <iframe src="map.html" title="แผนที่จำนวนรายการบ่อบาดาลในทะเบียนและจังหวัดที่มีรายงานปัญหา" loading="lazy"></iframe>
