@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>บ่อบาดาลรอทบทวน 7,251 รายการ — เจอปั๊มไหม้ บ่อชำรุด น้ำไปไม่ถึงชาวบ้าน</title>
+<meta name="description" content="ทะเบียน ก.พ.ร. มีรายการกรมทรัพยากรน้ำบาดาล 7,251 แถวที่ชื่อมีคำว่าบ่อน้ำบาดาล พร้อมหลักฐานปั๊มไหม้ บ่อชำรุด และโครงการส่งน้ำไม่ถึงประชาชน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f7f4ee;
+  --paper-2: #efebe2;
+  --ink: #17150f;
+  --ink-2: #55524a;
+  --ink-3: #8a867b;
+  --rule: #d8d3c6;
+  --well: #2a78d6;
+  --sys: #eb6834;
+  --water: #1baf7a;
+  --seal: #b3382c;
+  --serif: "Noto Serif Thai", "Sukhumvit Set", serif;
+  --sans: system-ui, -apple-system, "Noto Sans Thai", "Sukhumvit Set", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--sans); font-size: 16.5px; line-height: 1.75;
+  background-image: repeating-linear-gradient(0deg, transparent 0 2px, rgba(23,21,15,0.008) 2px 4px);
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+.wide { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+.kicker {
+  font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--seal); font-weight: 700;
+}
+h1, h2, h3 { font-family: var(--serif); line-height: 1.25; }
+h2 { font-size: 30px; font-weight: 900; margin: 0 0 6px; }
+h3 { font-size: 19px; font-weight: 700; margin: 30px 0 8px; }
+p { margin: 0 0 16px; }
+a { color: var(--well); }
+.sec { padding: 72px 0 26px; border-top: 1px solid var(--rule); }
+.sec .no {
+  font-family: var(--serif); font-weight: 900; color: var(--ink-3);
+  font-size: 14px; letter-spacing: 0.1em; margin-bottom: 10px;
+}
+.sec .standfirst { font-size: 18px; color: var(--ink-2); margin-bottom: 26px; }
+/* hero */
+.hero { padding: 84px 0 60px; }
+.hero h1 { font-size: clamp(30px, 4.6vw, 52px); font-weight: 900; margin: 14px 0 18px; }
+.hero h1 em { font-style: normal; color: var(--seal); }
+.hero .sub { font-size: 19px; color: var(--ink-2); max-width: 620px; }
+.byline { font-size: 13px; color: var(--ink-3); margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 14px; }
+/* stat band */
+.stats { display: flex; flex-wrap: wrap; gap: 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); margin: 34px 0 8px; }
+.stat { flex: 1 1 140px; padding: 16px 18px 14px; border-left: 1px solid var(--rule); }
+.stat:first-child { border-left: none; }
+.stat .v { font-family: var(--serif); font-weight: 900; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; }
+.stat .v.red { color: var(--seal); }
+.stat .l { font-size: 12.5px; color: var(--ink-2); margin-top: 4px; }
+/* cycle diagram */
+.cycle { display: flex; gap: 0; margin: 30px 0 8px; flex-wrap: wrap; }
+.cyc { flex: 1 1 200px; border: 1px solid var(--ink); padding: 16px 18px; margin: 0 -1px -1px 0; background: var(--paper); }
+.cyc .yr { font-size: 12px; letter-spacing: 0.12em; color: var(--seal); font-weight: 700; }
+.cyc .big { font-family: var(--serif); font-weight: 900; font-size: 30px; margin: 4px 0 2px; }
+.cyc .tx { font-size: 13.5px; color: var(--ink-2); }
+.cyc.arrow { flex: 0 0 auto; display: flex; align-items: center; padding: 0 10px; border: none; background: none; font-size: 26px; color: var(--ink-3); }
+/* tables */
+table.d { width: 100%; border-collapse: collapse; font-size: 14.5px; margin: 18px 0 10px; }
+.d th { text-align: left; font-size: 12px; letter-spacing: 0.06em; color: var(--ink-3); font-weight: 700; border-bottom: 2px solid var(--ink); padding: 7px 8px; }
+.d td { padding: 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.d td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.d tr:hover td { background: var(--paper-2); }
+.d .hl td { background: #f3e9e2; }
+/* quote / callout */
+.callout {
+  border-left: 4px solid var(--seal); background: var(--paper-2);
+  padding: 16px 20px; margin: 24px 0; font-size: 15.5px;
+}
+.callout .src { font-size: 12.5px; color: var(--ink-3); margin-top: 8px; }
+/* reported failures */
+.casegrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
+.case { border: 1px solid var(--rule); background: var(--paper); padding: 18px 20px; }
+.case h3 { font-size: 18px; margin: 0 0 8px; }
+.case p { font-size: 14.5px; color: var(--ink-2); margin: 0 0 8px; }
+.case .status { font-size: 12px; color: var(--seal); font-weight: 700; }
+.case a { font-size: 12.5px; }
+.case-note { font-size: 13px; color: var(--ink-2); }
+/* chart */
+.chart { margin: 26px 0 8px; }
+.chart .cap { font-size: 12.5px; color: var(--ink-3); margin-top: 8px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .bar { fill: var(--well); }
+.chart .bar2 { fill: var(--sys); }
+.chart text { font-family: var(--sans); font-size: 12.5px; fill: var(--ink-2); }
+.chart .vlab { fill: var(--ink); font-weight: 600; }
+.chart .axis { stroke: var(--rule); stroke-width: 1; }
+/* map embed */
+.mapframe { margin: 8px 0 10px; border: 1px solid var(--ink); }
+.mapframe iframe { display: block; width: 100%; height: 78vh; border: 0; background: #fff; }
+/* questions */
+.q { counter-reset: qq; }
+.q .qi { display: flex; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.q .qn { font-family: var(--serif); font-weight: 900; font-size: 26px; color: var(--seal); flex: 0 0 44px; }
+.q .qt b { display: block; margin-bottom: 3px; }
+.q .qt span { color: var(--ink-2); font-size: 15px; }
+/* footer */
+footer { border-top: 2px solid var(--ink); margin-top: 70px; padding: 34px 0 60px; font-size: 13.5px; color: var(--ink-2); }
+footer .cols { display: flex; gap: 40px; flex-wrap: wrap; }
+footer .cols > div { flex: 1 1 260px; }
+footer h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px; }
+footer ul { margin: 0; padding-left: 18px; }
+footer li { margin-bottom: 6px; }
+/* reveal motion (single pattern, respects reduced motion) */
+.rv { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+@media (max-width: 640px) {
+  body { font-size: 15.5px; }
+  h2 { font-size: 25px; }
+  .hero { padding: 56px 0 40px; }
+  .stat { flex: 1 1 40%; }
+  .casegrid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">รายงานวิเคราะห์ · ทะเบียนสินทรัพย์ ก.พ.ร. ส่ง กมธ. (มิ.ย. 2569)</div>
+    <h1>“รอทบทวน” แทนคำตอบ<br><em>ปั๊มไหม้ บ่อชำรุด น้ำไปไม่ถึงชาวบ้าน</em></h1>
+    <p class="sub">ทะเบียน ก.พ.ร. มีรายการของกรมทรัพยากรน้ำบาดาล 7,251 แถวที่ชื่อมีคำว่า “บ่อน้ำบาดาล” มูลค่าการได้มา ฿5.08 พันล้าน. หลักฐานภาคสนามเจอปั๊มไหม้ บ่อชำรุด ระบบส่งน้ำไม่ถึงคน และน้ำประปาบางระบบไม่ผ่านมาตรฐาน. แต่ทะเบียนไม่มีรหัสบ่อหรือผลตรวจสภาพ จึงยังบอกไม่ได้ว่าแถวไหนเสียหรือเป็นคนละหลุมกัน</p>
+    <div class="stats">
+      <div class="stat"><div class="v">7,251</div><div class="l">แถว DGR ที่ชื่อมีคำว่า “บ่อน้ำบาดาล” ในบัญชีรอทบทวน</div></div>
+      <div class="stat"><div class="v">฿5.08bn</div><div class="l">มูลค่าการได้มา</div></div>
+      <div class="stat"><div class="v red">38,758</div><div class="l">บ่อร้างหรือไม่ใช้ที่สำรวจพบในปี 2548</div></div>
+      <div class="stat"><div class="v">2,568</div><div class="l">ชื่อ ตำบลที่แยกได้จากรายการ DGR</div></div>
+    </div>
+    <div class="byline">ทะเบียน ก.พ.ร. สำรวจ 30 ก.ย. 2567 · วิเคราะห์รายการสินทรัพย์และรายงานตรวจสอบ · พิกัดในแผนที่แสดงระดับจังหวัด</div>
+  </div>
+</header>
+<main>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 0 — ปัญหาบ่อเสียมีมานาน</div>
+  <h2 class="rv">กรมฯ เคยสำรวจบ่อร้าง 38,758 บ่อ และอุดกลบ 3,240 บ่อ</h2>
+  <p class="standfirst rv">รายงานเก่าปี 2548–2552 บันทึกบ่อที่ถูกทิ้งและบ่อที่รัฐอุดกลบ. ตัวเลขชุดนั้นเป็นประวัติศาสตร์และไม่ใช่บ่อ 7,251 แถวในทะเบียน ก.พ.ร.; ยอดปัจจุบันยังไม่มีผลตรวจยืนยันว่าบ่อใดเสีย</p>
+  <div class="cycle rv">
+    <div class="cyc"><div class="yr">พ.ศ. 2548</div><div class="big">38,758</div><div class="tx">บ่อที่สำรวจพบว่าถูกทิ้งร้างหรือไม่ใช้ — รายงานของกรมทรัพยากรน้ำบาดาล</div></div>
+    <div class="cyc arrow">→</div>
+    <div class="cyc"><div class="yr">พ.ศ. 2552</div><div class="big">3,240</div><div class="tx">บ่อที่รัฐอุดกลบ ฿81M — 41% ท่อชำรุด, 20% แห้ง, 19% น้ำเค็ม, 12% น้ำสนิม/เหม็น</div></div>
+    <div class="cyc arrow">→</div>
+    <div class="cyc"><div class="yr">พ.ศ. 2559–2565</div><div class="big">7,251</div><div class="tx">แถวทะเบียน DGR ที่ชื่อมีคำว่า “บ่อน้ำบาดาล” มูลค่าได้มา ฿5.08bn — ไม่ใช่ยอดหลุมที่ยืนยันแล้ว</div></div>
+  </div>
+  <p class="case-note rv">ที่มา: <a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2552/20180715235554I7ZOO.pdf">รายงานกรมทรัพยากรน้ำบาดาล โครงการอุดกลบบ่อ ปีงบ 2552 (PDF)</a> · ยอด 38,758 เป็นผลสำรวจเดิมที่อ้างในรายงานนี้</p>
+  <div class="callout rv">ผลตรวจน้ำประปาหลังผลิต ปีงบ 2567: ใน 323 ระบบประปาหมู่บ้านที่ใช้น้ำบาดาล
+  ตรวจพบ <b>298 จาก 323 ระบบ (92.26%) ดื่มไม่ผ่านมาตรฐาน</b> — โคลิฟอร์ม, E. coli, เหล็ก, TDS, ความกระด้าง. ตัวเลขนี้เป็นผลตรวจน้ำหลังผลิต ไม่ใช่ผลตรวจตัวบ่อหรืออัตราทั่วประเทศ
+  <div class="src">ที่มา: <a href="https://division.dwr.go.th/wad/images/Announce_PDF/30_Report_project__to_strengthen_water_assessment.pdf">รายงานกรมทรัพยากรน้ำ ปีงบ 2567</a> · ตรวจน้ำหลังผลิต ไม่ใช่น้ำดิบหรือตัวบ่อ</div></div>
+</div></section>
+<section class="sec"><div class="wide">
+  <div class="no rv">ตัวอย่างเคสที่มีหลักฐาน</div>
+  <h2 class="rv">อาการจริง: ปั๊มไหม้ บ่ออุดตัน สูบน้ำไม่ขึ้น</h2>
+  <p class="standfirst rv">เคสเหล่านี้ยืนยันว่าบ่อและระบบน้ำมีปัญหาจริง แต่ไม่ได้แปลว่าทุกรายการในบัญชี 7,251 แถวเสีย</p>
+  <div class="casegrid">
+    <article class="case rv">
+      <h3>สกลนคร · ตรวจบ่อเอกชน 84 บ่อ</h3>
+      <p>กรมฯ พบ <b>3 บ่อพัง</b>, <b>ปั๊ม 4 บ่อเสียและยังซ่อมอยู่</b>, อีก 1 บ่อใช้ไม่ได้จนถูกสั่งอุดกลบ.</p>
+      <div class="status">ตรวจ 22 มิ.ย. 2569 · ไม่เปิดชื่อบ่อ จับคู่กับทะเบียน 7,251 รายการไม่ได้</div><br>
+      <a href="https://www.dgr.go.th/gcl/th/newsAll/160/16056">รายงานกรมทรัพยากรน้ำบาดาล</a>
+    </article>
+    <article class="case rv">
+      <h3>ผาน้ำย้อย ร้อยเอ็ด · ปั๊มไหม้ น้ำไม่พอ 2 หมู่บ้าน</h3>
+      <p>ปั๊มซัมเมอร์สที่หมู่ 3 ไหม้ น้ำประปาไม่พอทั้งหมู่ 3 และหมู่ 11. เทศบาลแจ้งว่ายังเร่งซ่อมและเปลี่ยนอุปกรณ์.</p>
+      <div class="status">ประกาศ 2 ต.ค. 2569 · ไม่พบรายการตำบลนี้ในทะเบียน DGR ที่ตรวจ</div><br>
+      <a href="https://www.phanamyoi.go.th/news-482.html">ประกาศเทศบาลตำบลผาน้ำย้อย</a>
+    </article>
+    <article class="case rv">
+      <h3>ป่าสัก หมู่ 1 นาโสม ลพบุรี · บ่อเดิมอุดตัน</h3>
+      <p>ดินกับหินอุดบ่อเก่า น้ำไม่ไหลและผลิตน้ำประปาไม่พอ. อบต.ใส่โครงการเจาะบ่อใหม่ไว้ใน <b>ร่าง</b>แผนพัฒนาท้องถิ่น—เอกสารนี้ยังไม่ยืนยันว่าได้งบหรือเจาะแล้ว.</p>
+      <div class="status">เอกสาร อบต. 14 ม.ค. 2568 · พบแถวในตำบลเดียวกันแต่คนละหมู่บ้าน จึงยังจับคู่ไม่ได้</div><br>
+      <a href="https://nasom.go.th/fileupload/2025-01-224019289799.pdf">บันทึกและร่างแผนของ อบต.นาโสม (PDF)</a>
+    </article>
+    <article class="case rv">
+      <h3>บ้านแม่แขม แพร่ · ปั๊มพัง สูบน้ำไม่ขึ้น 2 เดือน</h3>
+      <p>กรมฯ ซ่อมเครื่องสูบและเพิ่มท่อเมื่อ 9 พ.ค. 2562; <b>69 ครัวเรือนกลับมามีน้ำใช้</b>. เคสนี้ซ่อมแล้ว แต่ไม่พบรหัสเชื่อมกับบัญชีปัจจุบัน.</p>
+      <div class="status">ยืนยันการซ่อมโดยกรมทรัพยากรน้ำบาดาล เขต 1</div><br>
+      <a href="https://www.dgr.go.th/bgr1/th/newsAll/152/1829">รายงานผลซ่อมบ้านแม่แขม</a>
+    </article>
+  </div>
+  <p class="case-note rv">ข้อจำกัด: CSV ไม่มีรหัสบ่อหรือผลตรวจสภาพรายรายการให้จับคู่เคสส่วนใหญ่กับสินทรัพย์ 7,251 รายการ. แผนที่ด้านล่างแสดงพิกัดระดับจังหวัด ไม่ใช่ตำแหน่งบ่อจริง.</p>
+</div></section>
+<section class="sec"><div class="wide">
+  <div class="no rv">§ 1 — แผนที่</div>
+  <h2 class="rv">รายการในบัญชีกระจายอยู่ที่ไหน</h2>
+  <p class="standfirst rv">แผนที่มี 17,504 จาก 17,536 รายการใน CSV — 32 รายการไม่มีจังหวัดให้วางพิกัด. ขนาดวงกลม ∝ จำนวนรายการต่อจังหวัด; พิกัดเป็นระดับจังหวัด ไม่ใช่ตำแหน่งบ่อ. แผนที่รวมสินทรัพย์หมวดอื่นเพื่อให้เห็นทั้งบัญชี</p>
+  <p class="case-note rv">ยอดใน PDF ก.พ.ร. คือ 17,573 รายการ / ฿53,533M; CSV ที่ใช้มี 17,536 / ฿53,408M — ต่างกัน 37 รายการและ ฿125M และยังเคลียร์ความต่างรายกระทรวงไม่ครบ. อีก 24 แถวไม่มีปีงบ และ 32 แถวไม่มีจังหวัด.</p>
+  <div class="mapframe rv"><iframe src="map.html" title="แผนที่สินทรัพย์รอทบทวน แยกตามจังหวัด" loading="lazy"></iframe></div>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 2 — บันไดฮาร์ดแวร์</div>
+  <h2 class="rv">รายการระบบราคาแพงเพิ่มขึ้นตามชนิดโครงการ</h2>
+  <p class="standfirst rv">ตัวอย่างบางหมวด: มูลค่ามัธยฐานในทะเบียนของแถวบ่อเปล่าอยู่ราว ฿0.17–0.30M; กลุ่มระบบโซลาร์และระบบส่งน้ำเฉพาะทางมีมูลค่าต่อแถวสูงกว่ามาก. ตารางนี้ไม่ครอบคลุมครบ 7,251 แถว และไม่ได้เทียบกับราคากลางหรือสัญญาจัดซื้อ</p>
+  <table class="d rv">
+    <thead><tr><th>ขั้น</th><th>หมวดรายการ</th><th class="n">ค่ามัธยฐานมูลค่า/รายการ</th><th class="n">รายการ</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>บ่อเปล่าสำหรับหมู่บ้าน</td><td class="n">฿0.17–0.30M</td><td class="n">3,722</td></tr>
+      <tr><td>2</td><td>บ่อพร้อมเครื่องสูบไฟฟ้า</td><td class="n">฿0.17–0.22M</td><td class="n">~1,155</td></tr>
+      <tr><td>3</td><td>บ่อพร้อมระบบประปาบาดาล</td><td class="n">฿2.13M</td><td class="n">531</td></tr>
+      <tr><td>4</td><td>ระบบสูบพลังงานแสงอาทิตย์</td><td class="n">฿1.84M</td><td class="n">~470</td></tr>
+      <tr><td>5</td><td>เกษตร "เทคโนโลยีชั้นสูง"</td><td class="n">฿13.7M</td><td class="n">30</td></tr>
+      <tr class="hl"><td>6</td><td>ระบบส่งน้ำจากแหล่งระยะไกล</td><td class="n">฿10–12M</td><td class="n">38</td></tr>
+    </tbody>
+  </table>
+  <p class="rv">สองหมวดบนสุด (68 รายการ) มีมูลค่าในทะเบียนรวม <b>฿843M</b> — มากกว่ารายการบ่อเปล่า 3,722 แถวรวมกัน (฿716M) ทั้งที่มีจำนวนแถวน้อยกว่า 55 เท่า</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 3 — ทำไมมีรายการมาก</div>
+  <h2 class="rv">มีหลายโครงการ: แก้ขาดน้ำ เกษตร โรงเรียน และประปาหมู่บ้าน</h2>
+  <p class="standfirst rv">จากชื่อโครงการใน 7,251 แถว นับได้ 1,923 แถวในกลุ่มแก้ขาดน้ำอุปโภคบริโภค, 1,330 แถวเพื่อเกษตรในพื้นที่ภัยแล้ง และ 1,012 แถวในโครงการน้ำดื่มสะอาดโรงเรียน. ตัวเลขนับจากหมวดโครงการในทะเบียน ไม่ยืนยันว่าทุกแถวคือหลุมคนละแห่งหรือว่าจุดนั้นจำเป็น</p>
+  <div class="chart rv" id="ch-years"></div>
+  <p class="rv" style="font-size:14.5px;color:var(--ink-2)">ปีที่ได้มา 2560–2562 มี 5,551 แถว (76.6%); ปี 2560–2565 รวม 7,067 แถว (97.5%). จำนวนพุ่งในช่วงสั้นนี้อธิบายได้จากหลายโครงการที่เดินพร้อมกัน แต่ทะเบียนไม่บอกว่าก่อสร้างเสร็จเมื่อไรหรือเป็นหลุมคนละแห่งทั้งหมด</p>
+  <p class="case-note rv">เหตุผลตามโครงการของกรมฯ: <a href="https://www.dgr.go.th/th/vdo/9/104">เจาะบ่อช่วยภัยแล้ง</a>, <a href="https://www.dgr.go.th/th/vdo/9/455">โครงการน้ำบาดาลเพื่อความมั่นคงชุมชน</a> และ <a href="https://www.dgr.go.th/bgd/th/newsAll/292/9144">ระบบส่งน้ำระยะไกลสำหรับพื้นที่แล้งซ้ำซากหรือน้ำเค็ม</a>. เหตุผลตามนโยบายอธิบายว่าทำไมมีโครงการหลายชุด; ยังไม่ตอบว่าจุดไหนควรได้งบหรือซ้ำกับหน่วยงานอื่นหรือไม่.</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 4 — คนละช่วงปีงบ</div>
+  <h2 class="rv">จำนวนแถวต่างกันมาก แต่มูลค่ารวมใกล้กัน</h2>
+  <p class="standfirst rv">ช่วงปี 2559–2562 มี 5,735 แถว มูลค่าการได้มาราว ฿2.538bn; ปี 2563–2565 มี 1,516 แถว มูลค่าราว ฿2.544bn. ช่วงหลังมีสัดส่วนระบบโซลาร์และระบบมูลค่าสูงเพิ่มขึ้น. นี่เป็นการเทียบตามปีที่ได้มา ไม่ใช่หลักฐานว่าบุคคลใดสั่งเจาะหรือรับผิดชอบสัญญา</p>
+  <div class="chart rv" id="ch-min"></div>
+  <p class="rv" style="font-size:14.5px;color:var(--ink-2)">สินทรัพย์ระดับเทคโนโลยีสูงและระบบส่งน้ำระยะไกล 68 รายการ (฿843M) อยู่ในปีงบ 2563–2565 ทั้งหมด; ตัวเลขเป็นมูลค่าการได้มาในทะเบียน ไม่ใช่ยอดจ่ายตามสัญญาที่ตรวจสอบแล้ว</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 5 — ชื่อพื้นที่ซ้ำในหลายปี</div>
+  <h2 class="rv">พื้นที่เดิมมีรายการบ่อในหลายปี</h2>
+  <p class="standfirst rv">415 ชื่อหมู่บ้านในทะเบียนปรากฏอย่างน้อย 2 ปีงบ; บ้านเชียงเพ็งมีชื่อใน 6 ปีติด. การนับจากชื่อพื้นที่ไม่ยืนยันว่าเป็นจุดเดียวกันหรือเจาะหลุมเดิมซ้ำ—ทะเบียนไม่มีเลขบ่อหรือพิกัดรายจุด</p>
+  <table class="d rv">
+    <thead><tr><th>หมู่บ้าน / พื้นที่</th><th class="n">รายการบ่อ</th><th class="n">มูลค่าทะเบียน</th><th>หมายเหตุ</th></tr></thead>
+    <tbody>
+      <tr class="hl"><td>ต.นาชำ จ.เพชรบูรณ์</td><td class="n">68</td><td class="n">฿47.8M</td><td>4 หมู่บ้าน ปีงบ 2562–63 เท่านั้น</td></tr>
+      <tr><td>ต.ช่องสาริกา จ.ลพบุรี</td><td class="n">24</td><td class="n">฿50.2M</td><td>ปีงบเดียว (2563)</td></tr>
+      <tr><td>บ้านเชียงเพ็ง จ.อุดรธานี</td><td class="n">10</td><td class="n">—</td><td>มีแถวทะเบียน 6 ปีติด (2559–2564)</td></tr>
+      <tr><td>บ้านม่วง จ.นครพนม</td><td class="n">9</td><td class="n">—</td><td>มีแถวทะเบียน 5 ปี (2559–2563)</td></tr>
+      <tr><td>อ.หล่มเก่า จ.เพชรบูรณ์</td><td class="n">96</td><td class="n">฿80.8M</td><td>อำเภอเดียว มากที่สุดในประเทศ</td></tr>
+    </tbody>
+  </table>
+  <p class="rv" style="font-size:14.5px;color:var(--ink-2)">คำถามที่ข้อมูลนี้ยังตอบไม่ได้: 68 รายการใน ต.นาชำ เป็นคนละหลุมหรือไม่ อยู่ตรงไหน และส่งน้ำให้ใคร. ขอรหัสบ่อ พิกัดจริง บันทึกเจาะ และผลส่งมอบมาเทียบกันก่อนสรุปว่าเป็นความจำเป็นหรือรายการซ้ำ</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 6 — มูลค่าที่บันทึกซ้ำ</div>
+  <h2 class="rv">332 แถวมีมูลค่า ฿221,300 เมื่อปัดเป็นหลักร้อย</h2>
+  <p class="standfirst rv">จำนวนนี้ได้จากการปัดมูลค่าการได้มาในทะเบียนเป็นหลักร้อยบาท ไม่ใช่ยอดราคาที่ตรงกันถึงบาท. ทะเบียนไม่บอกสเปก วิธีจัดซื้อ ผู้ชนะราคา หรือยอดจ่ายจริง; ค่าที่ปัดแล้วซ้ำกันเป็นจุดให้ตรวจสัญญา ไม่ใช่หลักฐานฮั้วหรือโกงราคา</p>
+  <div class="chart rv" id="ch-price"></div>
+  <p class="rv" style="font-size:14.5px;color:var(--ink-2)">ในรายการเกษตรภัยแล้งปี 2560–2561 มูลค่าต่อแถวอยู่ตั้งแต่ ฿10,000 ถึง ฿2.3M. อาจรวมอุปกรณ์หรือเงื่อนไขพื้นที่ต่างกัน; ชื่อสินทรัพย์ไม่มีสเปกให้เทียบ จึงต้องดูสัญญา แบบ และใบตรวจรับก่อนสรุปว่าราคาผิดปกติ</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 7 — ทุจริตกับงานล้มเหลวต้องแยกกัน</div>
+  <h2 class="rv">มีคดีเรียกรับเงินจริง แต่ยังไม่มีคำตัดสินว่าทะเบียน 7,251 แถวถูกโกง</h2>
+  <p class="standfirst rv">สัญญาณที่ควรตรวจคือรายการจำนวนมากกระจุกในสามปี, ชื่อพื้นที่และมูลค่าที่ปัดแล้วซ้ำ, และตัวเลข PDF กับ CSV ยังต่างกัน. แต่หลักฐานเหล่านี้ลำพังยังไม่พิสูจน์การทุจริต</p>
+  <div class="casegrid">
+    <article class="case rv">
+      <h3>ศาลยืนโทษอดีตกรรมาธิการเรียก 5 ล้านบาท</h3>
+      <p>ศาลฎีกาชั้นวินิจฉัยอุทธรณ์ยืนโทษจำคุก 6 ปีกรณีเรียกรับเงินจากอธิบดีกรมทรัพยากรน้ำบาดาลระหว่างการพิจารณางบประมาณปี 2564. นี่เป็นคดีทุจริตในกระบวนการพิจารณางบ ไม่ใช่คำพิพากษาว่าการจัดซื้อบ่อทั้ง 7,251 แถวทุจริต</p>
+      <a href="https://isranews.org/article/isranews-scoop/129957-isra-15.html">รายงานคำวินิจฉัยชั้นอุทธรณ์</a>
+    </article>
+    <article class="case rv">
+      <h3>สตง. พบโครงการ 27.5 ล้านบาทใช้ประโยชน์ต่ำ</h3>
+      <p>มีเกษตรกรใช้ระบบ 91 จาก 490 คน และมีพื้นที่ใช้น้ำ 275.765 จาก 7,508 ไร่ (3.67%). สตง. ชี้ปัญหาคัดกลุ่มเป้าหมายไม่ตรง สำรวจพื้นที่ไม่พอ แรงดันส่งน้ำไม่ถึง และขาดการติดตาม. เป็นผลตรวจเรื่องผลสัมฤทธิ์และการควบคุมโครงการ ไม่ใช่ข้อสรุปว่ามีการยักยอกเงิน</p>
+      <a href="https://www.audit.go.th/th/%E0%B8%AA%E0%B8%95%E0%B8%87%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%B2%E0%B8%B0%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%B9%E0%B8%9A%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AA%E0%B8%87%E0%B8%AD%E0%B8%B2%E0%B8%97%E0%B8%B4%E0%B8%95%E0%B8%A2%E0%B9%8C%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%81%E0%B8%B2%E0%B8%A3">รายงาน สตง. โครงการสูบน้ำโซลาร์</a>
+    </article>
+    <article class="case rv">
+      <h3>ป.ป.ช. ลงตรวจสถานีจ่ายน้ำที่ถูกทิ้ง</h3>
+      <p>ป.ป.ช. อุดรธานีลงตรวจโครงการ 14 แห่ง มูลค่า 25.9 ล้านบาท หลังพบสถานีที่อำเภอนายูงสร้างเสร็จแต่ถูกทิ้งและไม่มีไฟฟ้าใช้งาน. ข่าวระบุว่ากำลังตรวจสอบสาเหตุและการดูแลรักษา ไม่ใช่ผลชี้มูลทุจริต</p>
+      <a href="https://www.nacc.go.th/categorydetail/20180831184638361/20230905232219">ข่าวตรวจสอบของ ป.ป.ช.</a>
+    </article>
+    <article class="case rv">
+      <h3>ข้อกล่าวหาจ่ายซ้ำและซื้อปั๊มแพง: กรมฯ ปฏิเสธ</h3>
+      <p>กรมฯ ชี้แจงกรณีข้อกล่าวหางบเจาะซ้ำ 171,000 บาทและปั๊ม/เครื่องกำเนิดไฟฟ้าแพงว่าเงินดังกล่าวเป็นค่าเดินหน่วยเจาะและวัสดุ พร้อมยืนยันว่าจัดซื้อตามเกณฑ์. นี่คือคำชี้แจงของหน่วยงาน; การตัดสินต้องดูสัญญา ใบเบิก และเอกสารตรวจรับ</p>
+      <a href="https://www.dgr.go.th/th/newsAll/17/10990">คำชี้แจงกรมทรัพยากรน้ำบาดาล</a>
+    </article>
+  </div>
+  <p class="case-note rv">สิ่งที่ยังขาดคือรหัสและพิกัดรายบ่อ, บันทึกเจาะ, TOR/สัญญา, ผู้ชนะประมูล, ราคาต่อสเปก, ใบตรวจรับ และบันทึกซ่อม. ตัวเลขกระจุกหรือซ้ำชี้จุดที่ควรเปิดเอกสาร; ยังฟันธงไม่ได้ว่ามีการฮั้วหรือยักยอกในรายการ 7,251 แถว</p>
+</div></section>
+<section class="sec"><div class="wrap">
+  <div class="no rv">§ 8 — ห้าคำถามสำหรับ กมธ.</div>
+  <h2 class="rv">สิ่งที่ถามได้ทันทีเมื่อมีทะเบียนนี้ในมือ</h2>
+  <div class="q">
+    <div class="qi rv"><div class="qn">๑</div><div class="qt"><b>189 รายการ ฿1.3bn ไม่มีชื่อ</b>
+    <span>155 รายการเป็นของกรมทรัพยากรน้ำ (฿986M) ขึ้นทะเบียนด้วยรหัส GFMIS ล้วน เช่น "100000035985" — ทบทวนอะไร ถ้าอ่านชื่อไม่ได้</span></div></div>
+    <div class="qi rv"><div class="qn">๒</div><div class="qt"><b>ต.นาชำ 68 แถว</b>
+    <span>เป็นกี่หลุม อยู่พิกัดไหน ส่งน้ำให้ใคร และอยู่ในสัญญา/ใบตรวจรับฉบับใด?</span></div></div>
+    <div class="qi rv"><div class="qn">๓</div><div class="qt"><b>บ่อไหนยังใช้ได้จริงกี่บ่อ</b>
+    <span>เปิดผลตรวจรายบ่อ: ปั๊มทำงานไหม น้ำไหลถึงคนหรือไม่ ตรวจครั้งล่าสุดเมื่อไร และใครรับผิดชอบซ่อม</span></div></div>
+    <div class="qi rv"><div class="qn">๔</div><div class="qt"><b>แถวไหนเสีย และจะแก้อย่างไร</b>
+    <span>แยกผลตรวจเป็นใช้ได้/ซ่อม/โอนให้ท้องถิ่น/อุดกลบ พร้อมค่าใช้จ่ายและหน่วยงานรับผิดชอบ</span></div></div>
+    <div class="qi rv"><div class="qn">๕</div><div class="qt"><b>ระบบน้ำที่ตรวจไม่ผ่านตรงกับทรัพย์สินแถวไหน</b>
+    <span>DWR ตรวจ 323 ระบบ พบ 298 ระบบดื่มไม่ผ่านเกณฑ์. เปิดรหัสระบบ/บ่อที่ใช้เชื่อมกับทะเบียน และระบุหน่วยงานที่ต้องแก้คุณภาพน้ำ</span></div></div>
+  </div>
+</div></section>
+</main>
+<script>
+'use strict';
+// reveal on scroll (single motion pattern)
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+// tiny horizontal-bar chart renderer (single-hue, selective labels)
+function bars(id, data, opts) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const W = 640, rowH = 34, pad = 150, padR = 96;
+  const H = data.length * rowH + 14;
+  const max = Math.max(...data.map(d => d[1]));
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${opts.label}">`;
+  s += `<line class="axis" x1="${pad-8}" y1="4" x2="${pad-8}" y2="${H-8}"/>`;
+  data.forEach((d, i) => {
+    const y = i * rowH + 8;
+    const w = (d[1] / max) * (W - pad - padR);
+    const cls = (opts.cls && opts.cls[i]) || 'bar';
+    s += `<text x="${pad - 14}" y="${y + 15}" text-anchor="end">${d[0]}</text>`;
+    s += `<rect class="${cls}" x="${pad - 8}" y="${y}" width="${Math.max(w,2)}" height="20"/>`;
+    s += `<text class="vlab" x="${pad - 8 + Math.max(w,2) + 8}" y="${y + 15}">${opts.fmt(d[1])}</text>`;
+  });
+  el.innerHTML = s + '</svg>' + (opts.cap ? `<div class="cap">${opts.cap}</div>` : '');
+}
+bars('ch-years', [["2559",184],["2560",1397],["2561",2076],["2562",2078],["2563",982],["2564",518],["2565",16]], {
+  label: 'จำนวนแถวทะเบียน DGR ตามปีที่ได้มา', fmt: v => v.toLocaleString('th-TH') + ' แถว',
+  cap: 'จำนวนแถวทะเบียนที่ระบุปีได้ (รวม 7,251 แถว; ไม่ใช่ยอดตรวจยืนยันจำนวนหลุม)' });
+bars('ch-min', [["2559–2562",5735],["2563–2565",1516]], {
+  label: 'จำนวนแถวทะเบียน DGR ตามช่วงปีที่ได้มา', fmt: v => v.toLocaleString('th-TH') + ' แถว',
+  cls: ['bar', 'bar2'], cap: 'ช่วงแรกมูลค่าราว ฿2.538bn; ช่วงหลังราว ฿2.544bn (มูลค่าการได้มาในทะเบียน)' });
+bars('ch-price', [["฿221,300",332],["฿173,200",167],["฿312,300",86],["฿60,000",86],["฿325,400",74]], {
+  label: 'จำนวนแถวทะเบียนตามมูลค่าที่ปัดเป็นหลักร้อย', fmt: v => v + ' แถว',
+  cap: 'มูลค่าการได้มาที่พบบ่อยหลังปัดเป็นหลักร้อยบาท (ไม่ใช่ราคาสัญญาที่ตรวจแล้ว)' });
+</script>
+</body>
+</html>
