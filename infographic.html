@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f3efe6">
-<title>บ่อบาดาล 7,251 รายการ รอทบทวนทั้งชุด: ใครยืนยันว่าเจาะจำเป็นและมีคนใช้?</title>
-<meta name="description" content="ทะเบียน DGR ระบุสินทรัพย์บ่อบาดาล 7,251 รายการ มูลค่าการได้มา 5,081.9 ล้านบาท และสถานะรอทบทวนทั้งชุด ตรวจ 4 จุดที่ควรถามต่อ: ความจำเป็น คุณภาพ ราคา และผู้ใช้น้ำ">
+<title>7,251 รายการ รอทบทวน: เจาะจำเป็นไหม น้ำใช้ได้ไหม เงินถึงคนไหม?</title>
+<meta name="description" content="บัญชี DGR บันทึกมูลค่าการได้มา 5,081.9 ล้านบาทใน 7,251 แถวที่ขึ้นสถานะรอทบทวน ตรวจ 4 สัญญาณเรื่องความจำเป็น คุณภาพ ราคา และผลลัพธ์ พร้อมบอกหลักฐานที่ยังขาด">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -58,14 +58,13 @@ h1 em { color: #ff9578; font-style: normal; }
 .flow-step span { display: block; color: var(--muted); font-size: 11px; line-height: 1.55; }
 .flow-arrow { color: var(--quiet); text-align: center; font-size: 21px; }
 .scope-note { margin: 8px 0 0; color: var(--quiet); font-size: 11px; }
-.signal-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; border: 1px solid #b88770; background: #f7f1e8; color: var(--ink); }
-.signal-strip div { display: flex; min-width: 0; flex-direction: column; padding: 13px 13px; border-right: 1px solid #c9b7a7; }
-.signal-strip div:last-child { border-right: 0; }
+.signal-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 20px; color: var(--ink); }
+.signal-strip div { display: flex; min-width: 0; flex-direction: column; padding: 13px 13px 12px; border: 1px solid #bd9b87; border-top: 4px solid #ef795b; background: #f7f1e8; box-shadow: 3px 3px 0 #171513; }
 .signal-strip .signal-label { order: 1; display: block; margin-bottom: 4px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .02em; line-height: 1.4; }
 .signal-strip b { order: 3; display: block; margin-top: 9px; color: #a52f25; font: 900 clamp(22px, 3vw, 32px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
 .signal-strip span { order: 4; display: block; margin-top: 4px; color: #303832; font-size: 12px; line-height: 1.55; }
 .signal-strip .signal-label + b { margin-top: 0; }
-.signal-strip .signal-question { order: 2; min-height: 3.1em; margin: 0; padding: 0; border: 0; color: #442b25; font-size: 14px; font-weight: 900; line-height: 1.5; }
+.signal-strip .signal-question { order: 2; min-height: 3.1em; margin: 0; padding: 0; border: 0; color: #442b25; font-size: 15px; font-weight: 900; line-height: 1.5; }
 .signal-caveat { margin: 7px 0 0; color: #ede1d4; font-size: 11px; line-height: 1.55; }
 .data-origin { margin-top: 19px; padding: 13px 15px; border-left: 4px solid var(--ink); background: var(--sand); }
 .data-origin h2 { margin: 0; font-size: 18px; }
@@ -162,7 +161,7 @@ main { padding: 28px 0 37px; }
 .data-table th, .data-table td { padding: 6px 7px; border-top: 1px solid var(--rule); text-align: left; vertical-align: top; }
 .data-table th { color: var(--red); font-size: 11px; }
 .data-table td:first-child { font-weight: 700; }
-.evidence-triptych { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-top: 10px; }
+.evidence-triptych { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 10px; }
 .evidence-tile { min-width: 0; padding: 10px 11px; border-top: 3px solid var(--red); background: #f3f0e8; }
 .evidence-tile strong { display: block; color: var(--red); font: 900 clamp(19px, 2.8vw, 27px)/1.25 var(--serif); font-variant-numeric: tabular-nums; }
 .evidence-tile b { display: block; margin: 4px 0; font-size: 13px; line-height: 1.5; }
@@ -208,8 +207,6 @@ main { padding: 28px 0 37px; }
   .section-head { display: block; }
   .section-head p:last-child { margin-top: 6px; }
   .signal-strip { grid-template-columns: 1fr 1fr; }
-  .signal-strip div:nth-child(2n) { border-right: 0; }
-  .signal-strip div:nth-child(-n+2) { border-bottom: 1px solid #c9b7a7; }
   .next { grid-template-columns: 1fr; gap: 12px; }
   .questions { grid-template-columns: repeat(2, 1fr); }
   .evidence-triptych { grid-template-columns: 1fr; }
@@ -255,9 +252,9 @@ main { padding: 28px 0 37px; }
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">ข้อสงสัยเรื่องน้ำบาดาล · สินทรัพย์ DGR · สำรวจ ณ 30 ก.ย. 2567</p>
-    <h1><em>7,251 รายการ</em><span class="hero-head-separator"> · </span><span class="hero-head-amount">฿5,081.9 ล้าน</span><br><em>ขึ้นสถานะ “รอทบทวน” ทั้งชุด</em><br>ใครยืนยันว่าเจาะจำเป็น น้ำได้มาตรฐาน และมีคนใช้จริง?</h1>
-    <p class="dek">นี่คือ 4 ข้อสงสัยจากหลักฐานที่หาได้: <strong>พื้นที่ขาดน้ำจริงทุกจุดหรือไม่ งานเจาะและคุณภาพน้ำผ่านหรือไม่ มูลค่าที่บันทึกอธิบายได้หรือไม่ และโครงการส่งน้ำถึงคนหรือไม่</strong></p>
-    <div class="question-ribbon"><span>คำถามหลัก</span><strong>รัฐบันทึกมูลค่าการได้มาไว้ <em>฿5,081.9 ล้าน</em> แล้วมีเอกสารให้ประชาชนไล่ตรวจเหตุผลเจาะ ผลตรวจน้ำ ราคาจริง และผู้ใช้น้ำได้ครบหรือยัง?</strong></div>
+    <h1><em>7,251 รายการ</em><span class="hero-head-separator"> · </span><span class="hero-head-amount">มูลค่า ฿5,081.9 ล้าน</span><br><em>ขึ้นสถานะ “รอทบทวน” ทุกแถว</em><br>แต่ใครยืนยันว่าเจาะจำเป็น น้ำใช้ได้ และถึงมือผู้ใช้?</h1>
+    <p class="dek">บัญชีนี้ยังต่อหลักฐานรายบ่อจาก <strong>เหตุผลก่อนเจาะ → ผลตรวจน้ำ → สัญญาและเงินจ่าย → ผู้ใช้จริง</strong> ไม่ได้ครบ. ตัวเลขด้านล่างคือ 4 สัญญาณที่ควรเปิดเอกสารมาตอบ.</p>
+    <div class="question-ribbon"><span>ข้อสงสัยหลัก</span><strong>เมื่อมูลค่าตามบัญชีรวม <em>฿5,081.9 ล้าน</em> แต่ยังตามจากเหตุผลเจาะไปถึงคุณภาพน้ำ ราคา และผู้ใช้รายบ่อไม่ได้—หน่วยงานจะเปิดเอกสารอะไรยืนยันว่าเงินทุกโครงการให้ผลตามที่ตั้งไว้?</strong></div>
     <div class="hero-grid">
       <div class="hero-metric" aria-label="7,251 แถว อยู่ระหว่างทบทวนการใช้ประโยชน์">
         <span class="big">7,251 แถว</span>
@@ -268,37 +265,44 @@ main { padding: 28px 0 37px; }
         <span class="metric-copy"><b>มูลค่าการได้มาที่บันทึก</b><br>ไม่ใช่ยอดเบิกจ่ายหรือราคาสัญญา</span>
       </div>
     </div>
-    <div class="signal-strip" aria-label="สี่สัญญาณผิดสังเกตและคำถามที่ต้องเปิดเอกสารตรวจ">
-      <div><span class="signal-label">ข้อสงสัย 1 · ความจำเป็น</span><p class="signal-question">พื้นที่เดิมโผล่หลายปี—แต่ละจุดจำเป็นจริงไหม?</p><b>97.5%</b><span>7,067 แถวได้มาใน 6 ปี; ชื่อพื้นที่บางแห่งปรากฏซ้ำหลายปี</span></div>
-      <div><span class="signal-label">ข้อสงสัย 2 · คุณภาพ</span><p class="signal-question">มีผลตรวจยืนยันหลังซ่อมหรือส่งมอบไหม?</p><b>41% / 92.26%</b><span>บ่อเก่าที่อุดกลบมีท่อชำรุด; 298/323 ระบบที่ตรวจไม่ผ่านเกณฑ์น้ำดื่ม</span></div>
-      <div><span class="signal-label">ข้อสงสัย 3 · ราคา</span><p class="signal-question">255 แถวราคาเท่ากัน เพราะสเปกเหมือนกันจริงหรือ?</p><b>255 แถว</b><span>ลงมูลค่าการได้มา ฿221,280 เท่ากันทุกแถว</span></div>
-      <div><span class="signal-label">ข้อสงสัย 4 · ผลลัพธ์</span><p class="signal-question">สตง. พบ 9 ใน 47 โครงการไม่มีผู้ใช้—ใครยืนยันว่าจ่ายน้ำถึงคน?</p><b>9 / 47</b><span>โครงการที่ สตง. ตรวจไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span></div>
+    <div class="signal-strip" aria-label="สี่สัญญาณที่ต้องถามหน่วยงานและตรวจเอกสาร">
+      <div><span class="signal-label">ธง 1 · จำเป็นหรือไม่</span><p class="signal-question">สองปีมีรายการพุ่งพร้อมกัน ใครยืนยันว่าทุกจุดขาดน้ำ?</p><b>4,154 แถว</b><span>57.3% ของบัญชีลงปี 2561–62; สตง.พบ 12/26 จุดที่ตรวจมีระบบเดิมเพียงพอในโครงการที่ตรวจ</span></div>
+      <div><span class="signal-label">ธง 2 · คุณภาพ</span><p class="signal-question">พบน้ำไม่เหมาะบริโภคแล้ว มีใครตรวจซ้ำหลังแก้ไข?</p><b>41% · 92.26%</b><span>DGR รายงานท่อ/บ่อชำรุดในบ่อที่อุดกลบ; DWR พบ 298/323 ระบบไม่ผ่านเกณฑ์น้ำดื่ม; มีเคสบ่อลึก 6309H003</span></div>
+      <div><span class="signal-label">ธง 3 · ราคา</span><p class="signal-question">เหตุใดมูลค่าเท่ากันถึงสตางค์—งานเหมือนกันจริงหรือ?</p><b>255 × ฿221,280</b><span>มูลค่าตามบัญชีซ้ำเป๊ะ; สองช่วงมีมูลค่ารวมใกล้กัน แต่จำนวนแถวต่างกัน 3.8 เท่า</span></div>
+      <div><span class="signal-label">ธง 4 · ผลลัพธ์</span><p class="signal-question">สร้างแล้วใครยืนยันว่าระบบจ่ายน้ำถึงคน?</p><b>9 / 47 · อีก 4</b><span>สตง.พบ 9 โครงการไม่มีผู้ใช้ และอีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span></div>
     </div>
-    <p class="signal-caveat">สี่ธงมาจากคนละชุดข้อมูลและคนละช่วงเวลา จึงชี้จุดที่ควรเปิดเอกสารตรวจรายโครงการ ไม่ใช่สถิติแทนบ่อทั้ง 7,251 รายการ</p>
+    <p class="signal-caveat">แต่ละสัญญาณมาจากข้อมูลคนละชุดและคนละช่วงเวลา จึงไม่ใช่ผลตรวจแทนทั้ง 7,251 แถว; อ่านข้อจำกัดกำกับทุกธงก่อนสรุป</p>
   </div>
 </header>
 
 <main class="wrap">
+  <section class="proof-matrix" aria-labelledby="proof-title">
+    <p class="section-label">สรุปเส้นแบ่งของหลักฐาน</p>
+    <h2 id="proof-title">แต่ละธงชี้อะไร—และเอกสารชิ้นไหนจะตอบให้ชัด?</h2>
+    <div class="table-scroll">
+      <table class="proof-table">
+        <thead><tr><th>ธง</th><th>หลักฐานที่มี · ชัดระดับไหน</th><th>สิ่งที่ยังตอบไม่ได้</th><th>เอกสารที่จะตอบ</th></tr></thead>
+        <tbody>
+          <tr><td>เจาะโดยไม่จำเป็นหรือไม่?</td><td>ปีได้มาและชื่อพื้นที่กระจุก/ซ้ำในทะเบียน</td><td>เจาะบ่อเดิมซ้ำ หรือทุกจุดไม่จำเป็น</td><td>ผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน พิกัดและเหตุผลเลือกจุด</td></tr>
+          <tr><td>งานและน้ำได้มาตรฐานไหม?</td><td>รายงานรัฐพบงานชำรุดและตัวอย่างน้ำไม่ผ่านเกณฑ์</td><td>บ่อทั้ง 7,251 แถวเสียหรือน้ำไม่ปลอดภัย</td><td>ผลตรวจน้ำและสูบทดสอบล่าสุดที่ผูกกับเลขบ่อ</td></tr>
+          <tr><td>มูลค่าผิดปกติหรือไม่?</td><td>มูลค่าซ้ำและยอดรวมสองช่วงใกล้กัน แต่จำนวนแถวต่างกันมาก</td><td>ราคาสัญญาแพงเกินจริงหรือมีการฮั้ว</td><td>TOR/BOQ ราคากลาง สัญญา ใบตรวจรับและยอดจ่ายรายโครงการ</td></tr>
+          <tr><td>เงินแปลงเป็นน้ำถึงคนหรือไม่?</td><td>รายงานตรวจพบโครงการตัวอย่างที่ไม่มีผู้ใช้หรือส่งน้ำไม่ถึงเป้า</td><td>กรณีตัวอย่างตรงกับบ่อใดในบัญชีทุกกรณี</td><td>เลขบ่อ รหัสระบบ สถานะล่าสุด ผู้ใช้จริงและประวัติซ่อม</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
   <div class="section-head">
-    <div><p class="section-label">4 ข้อสงสัย · ดูหลักฐานแล้วถามต่อ</p><h2>อะไรทำให้ต้องขอคำตอบจากหน่วยงาน?</h2></div>
+    <div><p class="section-label">4 ธงจากเอกสาร · คำถามที่ต้องตอบรายโครงการ</p><h2>สัญญาณเหล่านี้เกิดขึ้นได้อย่างไร—และมีเอกสารอะไรยืนยัน?</h2></div>
     <p>แต่ละข้อแยกสิ่งที่เอกสารยืนยันได้ ออกจากสิ่งที่ยังต้องเปิดข้อมูลรายโครงการ</p>
   </div>
 
-  <section class="case-opener" aria-labelledby="case-title">
-    <div>
-      <p class="section-label">เริ่มจากบ่อจริง · รายงานกรมทรัพยากรน้ำบาดาล</p>
-      <h2 id="case-title">6309H003 · บ่อลึก 342 เมตร</h2>
-      <p><b>ผลตรวจน้ำดิบของกรมฯ:</b> “ไม่เหมาะสมที่จะใช้บริโภค”</p>
-      <a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2565/280/2024110413593453R51.pdf" target="_blank" rel="noopener">เปิดรายงาน DGR ↗</a>
-    </div>
-    <aside class="case-question"><span>คำถามที่เอกสารนี้ยังไม่ตอบ</span><strong>หลังพบผลนี้ มีการปรับปรุงและตรวจน้ำซ้ำก่อนส่งมอบหรือไม่?</strong><p>รายงานนี้ว่าด้วยน้ำดิบ และเป็นคนละชุดกับทะเบียน 7,251 แถว จึงยังบอกไม่ได้ว่าน้ำที่ส่งถึงผู้ใช้เป็นอย่างไร</p></aside>
-  </section>
+
 
   <section class="flags" aria-label="สี่ประเด็นตรวจสอบ">
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 1 · ความจำเป็น</span><h3>7,067 แถวกระจุกใน 6 ปี—ใครยืนยันว่าพื้นที่ยังขาดน้ำก่อนอนุมัติ?</h3></div>
-      <div class="stat"><strong>97.5%</strong><span>7,067 จาก 7,251 แถว<br>มีปีที่ได้มาอยู่ใน 2560–2565</span></div>
-      <div class="bar-track" role="img" aria-label="ร้อยละ 97.5 ของแถวมีปีที่ได้มาอยู่ระหว่าง 2560 ถึง 2565"><div class="bar-fill"></div></div>
+      <div class="flag-head"><span class="flag-no">ธง 1 · ความจำเป็น</span><h3>ปีที่ลงบัญชี 2561–62 มี 4,154 แถว—ใครยืนยันว่าทุกจุดยังขาดน้ำก่อนอนุมัติ?</h3></div>
+      <div class="stat"><strong>57.3%</strong><span>4,154 จาก 7,251 แถว<br>ลงปีที่ได้มา 2561–2562</span></div>
+      <div class="bar-track" role="img" aria-label="ร้อยละ 57.3 ของแถวมีปีที่ได้มาอยู่ระหว่าง 2561 ถึง 2562"><div class="bar-fill" style="width:57.3%"></div></div>
       <div class="year-chart" role="img" aria-label="จำนวนแถวตามปีที่ได้มา: 2559 มี 184, 2560 มี 1,397, 2561 มี 2,076, 2562 มี 2,078, 2563 มี 982, 2564 มี 518, 2565 มี 16">
         <div class="year-col"><b>184</b><i style="height:9%"></i><span>2559</span></div>
         <div class="year-col"><b>1,397</b><i style="height:67%"></i><span>2560</span></div>
@@ -308,7 +312,7 @@ main { padding: 28px 0 37px; }
         <div class="year-col"><b>518</b><i style="height:25%"></i><span>2564</span></div>
         <div class="year-col"><b>16</b><i style="height:2%"></i><span>2565</span></div>
       </div>
-      <p class="scope-note">นับตาม “ปีที่ได้มา” ในบัญชี ไม่ใช่วันเจาะจริงทุกบ่อ · <a href="index.html#need">ดูกราฟและที่มา ↗</a></p>
+      <p class="scope-note">สองปีนี้มี 4,154 แถว (57.3%); นับตาม “ปีที่ได้มา” ไม่ใช่วันเจาะจริงทุกบ่อ · <a href="index.html#need">ดูกราฟและที่มา ↗</a></p>
       <p><b>โครงการแก้ขาดแคลนน้ำยังปรากฏต่อเนื่อง 3 ปีงบ</b></p>
       <table class="data-table">
         <thead><tr><th>ปีงบ</th><th>เป้าหมายตามชื่อโครงการ</th><th>แถวที่พบในทะเบียน</th></tr></thead>
@@ -326,17 +330,18 @@ main { padding: 28px 0 37px; }
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 2 · คุณภาพ</span><h3>พบทั้งงานชำรุดและน้ำไม่ผ่าน—ทำไมยังไม่มีผลตรวจหลังซ่อมรายบ่อ?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 2 · คุณภาพ</span><h3>กรมฯ พบทั้งงานชำรุดและน้ำไม่เหมาะดื่ม—แล้วตรวจซ้ำหลังแก้ไขถึงไหน?</h3></div>
       <div class="evidence-triptych">
         <article class="evidence-tile"><strong>41%</strong><b>1,329 จาก 3,240 บ่อที่อุดกลบ ชำรุดที่ท่อกรุ/ตัวบ่อ</b><p>DGR รายงานปี 2552 · บ่อชุดเก่า ไม่ใช่สัดส่วนของ 7,251 แถว</p><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2552/20180715235554I7ZOO.pdf" target="_blank" rel="noopener">เปิดรายงาน DGR ↗</a></article>
         <article class="evidence-tile"><strong>92.26%</strong><b>298 จาก 323 ระบบที่ตรวจ ไม่ผ่านเกณฑ์น้ำดื่ม</b><p>กรมทรัพยากรน้ำตรวจระบบประปาหมู่บ้านปี 2567 · ไม่ใช่ผลสุ่มแทนทุกบ่อ</p><a href="https://division.dwr.go.th/wad/images/Announce_PDF/30_Report_project__to_strengthen_water_assessment.pdf" target="_blank" rel="noopener">เปิดรายงานกรมทรัพยากรน้ำ ↗</a></article>
+        <article class="evidence-tile"><strong>6309H003</strong><b>บ่อลึก 342 ม. · น้ำดิบไม่เหมาะบริโภค</b><p>DGR รายงาน TDS 2,260 mg/L; ระบุเป็นบ่อสำรวจและคนละโครงการกับบัญชี 7,251 แถว</p><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2565/280/2024110413593453R51.pdf" target="_blank" rel="noopener">เปิดรายงาน DGR ↗</a></article>
       </div>
       <p class="question-box"><strong>ถามให้ชัด:</strong> รายบ่อไหนตรวจไม่ผ่าน? ใครซ่อมแล้ว และมีผลตรวจหลังซ่อมยืนยันหรือยัง? เหตุใดสถานะเหล่านี้จึงยังไม่ปรากฏในบัญชีเดียวกับทะเบียนทรัพย์สิน?</p>
-      <p class="limit"><b>ขอบเขตของธงนี้:</b> สองตัวเลขมาจากคนละโครงการ คนละปี และคนละประเภทการตรวจ; ใช้แทนอัตราความเสียหายของบัญชีปัจจุบันไม่ได้</p>
+      <p class="limit"><b>ขอบเขตของธงนี้:</b> หลักฐานทั้งสามมาจากคนละโครงการ คนละปี และคนละประเภทการตรวจ; ใช้แทนอัตราความเสียหายหรือคุณภาพของบัญชีปัจจุบันไม่ได้</p>
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 3 · ราคา</span><h3>255 แถวลงมูลค่าเดียวกันเป๊ะ—ตรวจ TOR/BOQ และใบตรวจรับครบทุกแถวหรือยัง?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 3 · ราคา</span><h3>255 แถวราคาในบัญชีเท่ากันเป๊ะ—สเปกเหมือนกันจริงหรือ และตรวจเอกสารจัดซื้อครบหรือยัง?</h3></div>
       <p class="evidence"><b>5,735 แถว</b> มูลค่า ฿2,538 ล้าน เทียบกับ <b>1,516 แถว</b> มูลค่า ฿2,544 ล้าน</p>
       <div class="money-bars" role="img" aria-label="ปีที่ได้มา 2559 ถึง 2562 มี 5,735 แถว มูลค่า 2,538 ล้านบาท; ปี 2563 ถึง 2565 มี 1,516 แถว มูลค่า 2,544 ล้านบาท">
         <div class="money-row"><span class="period">ได้มา 2559–2562</span><div class="money-track"><div class="money-fill"></div></div><span class="amount">฿2,538 ลบ.</span></div>
@@ -357,11 +362,11 @@ main { padding: 28px 0 37px; }
       <p class="scope-note">ค่ากลางจากโครงการคนละประเภทและช่วงปี ไม่ใช่ราคาเทียบตรงของบ่อรูปแบบเดียวกัน</p>
       <p class="question-box"><strong>ถามให้ชัด:</strong> ถ้าสเปกต่าง เหตุใด 255 แถวจึงลงมูลค่าเท่ากันถึงสตางค์? เปิด TOR/BOQ ใบตรวจรับ และยอดจ่ายจริงมาเทียบได้หรือไม่?</p>
       <p class="source-inline"><a href="index.html#cost">ดูบันไดราคาและข้อจำกัดการเทียบ ↗</a></p>
-      <p class="scope-note"><b>ยังไม่ใช่หลักฐานฮั้ว:</b> มูลค่าที่ลงบัญชีไม่ใช่สัญญาหรือยอดจ่ายจริง; ต้องเทียบ TOR/BOQ ใบตรวจรับ และการเบิกจ่าย</p>
+      <p class="limit"><b>ยังไม่พิสูจน์:</b> มูลค่าที่ลงบัญชีไม่ใช่ราคาสัญญาหรือยอดจ่ายจริง; ต้องเทียบ TOR/BOQ ใบตรวจรับ และหลักฐานเบิกจ่ายก่อนสรุปว่าราคาผิดปกติหรือมีการฮั้ว</p>
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 4 · ผลลัพธ์</span><h3>9 ใน 47 โครงการที่ตรวจไม่มีผู้ใช้—ใครยืนยันว่าผลงานถึงประชาชน?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 4 · ผลลัพธ์</span><h3>ทั้งบัญชีขึ้น “รอทบทวน” แต่ตัวอย่างตรวจพบไม่มีผู้ใช้—ใครยืนยันว่าระบบส่งน้ำถึงคน?</h3></div>
       <div class="status-line alert"><b>บ้านนาโพธิ์ ม.17</b><span>ข่าวลงพื้นที่ 16 มิ.ย. 2569<br>รายงานว่ายังไม่ได้ใช้น้ำจากโครงการ</span></div>
       <div class="case-pair">
         <div class="case"><b>รายงานหน้างาน</b><span>มิเตอร์ไม่ขยับ และอุปกรณ์เกือบทั้งหมดเสียหาย; โครงการตั้งเป้า 219 ครัวเรือน / 700 คน แต่รายงานว่าไม่ได้ใช้น้ำ</span></div>
@@ -369,25 +374,29 @@ main { padding: 28px 0 37px; }
       </div>
       <p class="source-inline"><a href="https://www.youtube.com/watch?v=JVhIrpLuaHc" target="_blank" rel="noopener">ดูรายงานลงพื้นที่ช่อง 7 ↗</a> · <a href="https://www.bb.go.th/web/budget/province/province_bud66/PDF/plan/bis61rchang2001_02480000.pdf" target="_blank" rel="noopener">ดูแผนจัดสรรงบ DGR ↗</a></p>
       <p class="question-box"><strong>ถามให้ชัด:</strong> ใครยืนยันว่าระบบส่งน้ำถึงครัวเรือนตามเป้าหมาย? ถ้าไม่มีผู้ใช้ ใครต้องซ่อม ติดตาม และรับผิดชอบหลังตรวจรับ?</p>
+  <section class="result-map" aria-labelledby="result-map-title">
+    <p class="section-label">แผนที่อยู่ในธงผลลัพธ์ · จุดสีแดงคือจังหวัดที่มีรายงานปัญหา</p>
+    <h2 id="result-map-title">แผนที่นี้ชี้จังหวัดที่ควรถามต่อ—ไม่ใช่พิกัดของบ่อ</h2>
+    <p>ทะเบียน ณ 30 ก.ย. 2567 ลงสถานะนี้ครบ 7,251 แถว แต่ไม่แสดงการใช้งานรายบ่อ ขณะที่การตรวจและรายงานภาคสนามพบตัวอย่างที่ยังไม่ส่งน้ำหรือไม่มีผู้ใช้</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>หลักฐาน</th><th>ผลที่พบ</th><th>เชื่อมกับทะเบียนได้แค่ไหน</th></tr></thead>
+        <tbody>
+          <tr><td>ทะเบียน DGR</td><td>7,251 แถวขึ้นสถานะ “อยู่ระหว่างทบทวนการใช้ประโยชน์”</td><td>เป็นทั้งชุด ณ วันสำรวจ; ไม่มีสถานะรายบ่อปัจจุบัน</td></tr>
+          <tr><td>สตง. ตรวจ 47 โครงการ</td><td>9 โครงการไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</td><td>รายงานย่อไม่เปิดชื่อจุด จึงจับคู่รายบ่อไม่ได้ · <a href="index.html#result" target="_blank" rel="noopener">เปิดรายงาน สตง. ↗</a></td></tr>
+          <tr><td>บ้านนาโพธิ์ ม.17</td><td>ข่าวภาคสนามระบุว่าโครงการยังไม่จ่ายน้ำ; ตั้งเป้า 219 ครัวเรือน / 700 คน</td><td>ชื่อโครงการตรงกับแถว 17001; ยังไม่มีเลขบ่อยืนยันหรือผลตรวจวิศวกรรม</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a href="index.html#result" target="_blank" rel="noopener">เปิดบทสรุปตรวจการบริหารจัดการน้ำบาดาลของ สตง. ↗</a></p>
+    <iframe class="map-embed" src="map.html" title="แผนที่จำนวนรายการบ่อบาดาลตามจังหวัดและจังหวัดที่พบรายงานปัญหา" loading="lazy"></iframe>
+    <p class="map-caption">แผนที่นี้ใช้พิกัดตัวแทนระดับจังหวัด: วงเขียวแสดงจำนวนแถวทะเบียน วงแดงหมายถึงมีรายงานปัญหาในจังหวัดนั้น ไม่ได้ชี้ตำแหน่งบ่อหรือยืนยันว่าทุกรายการในจังหวัดมีปัญหา</p>
+  </section>
       <p class="limit"><b>ขอบเขตหลักฐาน:</b> เป็นรายงานภาคสนาม ไม่ใช่ผลตรวจวิศวกรรม; จับคู่ได้ระดับโครงการ/พื้นที่ ไม่ใช่เลขบ่อ. ตรวจถึง 4 ต.ค. 2569 ยังไม่พบหลักฐานสาธารณะยืนยันว่าซ่อมและกลับมาจ่ายน้ำแล้ว</p>
     </article>
   </section>
 
-  <section class="proof-matrix" aria-labelledby="proof-title">
-    <p class="section-label">สรุปเส้นแบ่งของหลักฐาน</p>
-    <h2 id="proof-title">แต่ละธงชี้อะไร—และเอกสารชิ้นไหนจะตอบให้ชัด?</h2>
-    <div class="table-scroll">
-      <table class="proof-table">
-        <thead><tr><th>ข้อสงสัย</th><th>หลักฐานรองรับอะไร</th><th>ยังสรุปไม่ได้ว่า</th><th>เอกสารที่ต้องเปิด</th></tr></thead>
-        <tbody>
-          <tr><td>เจาะโดยไม่จำเป็นหรือไม่?</td><td>ปีได้มาและชื่อพื้นที่กระจุก/ซ้ำในทะเบียน</td><td>เจาะบ่อเดิมซ้ำ หรือทุกจุดไม่จำเป็น</td><td>ผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน พิกัดและเหตุผลเลือกจุด</td></tr>
-          <tr><td>งานและน้ำได้มาตรฐานไหม?</td><td>รายงานรัฐพบงานชำรุดและตัวอย่างน้ำไม่ผ่านเกณฑ์</td><td>บ่อทั้ง 7,251 แถวเสียหรือน้ำไม่ปลอดภัย</td><td>ผลตรวจน้ำและสูบทดสอบล่าสุดที่ผูกกับเลขบ่อ</td></tr>
-          <tr><td>มูลค่าผิดปกติหรือไม่?</td><td>มูลค่าซ้ำและยอดรวมสองช่วงใกล้กัน แต่จำนวนแถวต่างกันมาก</td><td>ราคาสัญญาแพงเกินจริงหรือมีการฮั้ว</td><td>TOR/BOQ ราคากลาง สัญญา ใบตรวจรับและยอดจ่ายรายโครงการ</td></tr>
-          <tr><td>เงินแปลงเป็นน้ำถึงคนหรือไม่?</td><td>รายงานตรวจพบโครงการตัวอย่างที่ไม่มีผู้ใช้หรือส่งน้ำไม่ถึงเป้า</td><td>กรณีตัวอย่างตรงกับบ่อใดในบัญชีทุกกรณี</td><td>เลขบ่อ รหัสระบบ สถานะล่าสุด ผู้ใช้จริงและประวัติซ่อม</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+
 
   <section class="integrity" aria-labelledby="integrity-title">
     <p class="section-label">คำถามตรง ๆ · มีทุจริตไหม?</p>
@@ -406,24 +415,7 @@ main { padding: 28px 0 37px; }
     <p class="integrity-close">คำถามที่ควรส่งถึงหน่วยงาน: เหตุใดบัญชี 7,251 รายการจึงยังไม่เชื่อมกับเลขบ่อ ผลตรวจ สัญญา ยอดจ่าย และสถานะผู้ใช้ในข้อมูลชุดเดียว? นี่เป็นข้อสงสัยเรื่องการตรวจสอบและการกำกับโครงการ ไม่ใช่ข้อกล่าวหาเจ้าหน้าที่รายบุคคล</p>
   </section>
 
-  <section class="result-map" aria-labelledby="result-map-title">
-    <p class="section-label">ผลลัพธ์ที่ตรวจต่อได้</p>
-    <h2 id="result-map-title">สถานะ “รอทบทวน” ซ่อนอะไรอยู่—และโครงการไหนส่งน้ำถึงคน?</h2>
-    <p>ทะเบียน ณ 30 ก.ย. 2567 ลงสถานะนี้ครบ 7,251 แถว แต่ไม่แสดงการใช้งานรายบ่อ ขณะที่การตรวจและรายงานภาคสนามพบตัวอย่างที่ยังไม่ส่งน้ำหรือไม่มีผู้ใช้</p>
-    <div class="table-scroll">
-      <table class="data-table">
-        <thead><tr><th>หลักฐาน</th><th>ผลที่พบ</th><th>เชื่อมกับทะเบียนได้แค่ไหน</th></tr></thead>
-        <tbody>
-          <tr><td>ทะเบียน DGR</td><td>7,251 แถวขึ้นสถานะ “อยู่ระหว่างทบทวนการใช้ประโยชน์”</td><td>เป็นทั้งชุด ณ วันสำรวจ; ไม่มีสถานะรายบ่อปัจจุบัน</td></tr>
-          <tr><td>สตง. ตรวจ 47 โครงการ</td><td>9 โครงการไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</td><td>รายงานย่อไม่เปิดชื่อจุด จึงจับคู่รายบ่อไม่ได้ · <a href="index.html#result" target="_blank" rel="noopener">เปิดรายงาน สตง. ↗</a></td></tr>
-          <tr><td>บ้านนาโพธิ์ ม.17</td><td>ข่าวภาคสนามระบุว่าโครงการยังไม่จ่ายน้ำ; ตั้งเป้า 219 ครัวเรือน / 700 คน</td><td>ชื่อโครงการตรงกับแถว 17001; ยังไม่มีเลขบ่อยืนยันหรือผลตรวจวิศวกรรม</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p><a href="index.html#result" target="_blank" rel="noopener">เปิดบทสรุปตรวจการบริหารจัดการน้ำบาดาลของ สตง. ↗</a></p>
-    <iframe class="map-embed" src="map.html" title="แผนที่จำนวนรายการบ่อบาดาลตามจังหวัดและจังหวัดที่พบรายงานปัญหา" loading="lazy"></iframe>
-    <p class="map-caption">แผนที่นี้ใช้พิกัดตัวแทนระดับจังหวัด: วงเขียวแสดงจำนวนแถวทะเบียน วงแดงหมายถึงมีรายงานปัญหาในจังหวัดนั้น ไม่ได้ชี้ตำแหน่งบ่อหรือยืนยันว่าทุกรายการในจังหวัดมีปัญหา</p>
-  </section>
+
 
   <div class="after-flags">
     <section class="data-origin" aria-labelledby="origin-title">
@@ -443,11 +435,11 @@ main { padding: 28px 0 37px; }
     <div>
       <p class="section-label">ขั้นต่อไป</p>
       <h2 id="next-title">ขอสถานะที่เชื่อมถึงบ่อจริง</h2>
-      <p>มีร่างคำขอข้อมูลข่าวสาร อ.ข.๑๘ แล้ว; ยังไม่ได้ยื่น</p>
-      <a class="request-link" href="docs/request-dgr-well-status.md">เปิดร่างคำขอข้อมูล →</a>
+      <p>ข้อ 1 คือคำขอข้อมูลที่ร่างไว้แล้ว; ยังไม่ได้ยื่น</p>
+      <a class="request-link" href="docs/request-dgr-well-status.md">ร่างคำขอ อ.ข.๑๘ อยู่ในคำถามข้อ 1 →</a>
     </div>
     <ol class="questions">
-      <li>แต่ละแถวเชื่อมกับเลขบ่อหรือรหัสระบบใด?</li>
+      <li><b>ยื่น อ.ข.๑๘:</b> ขอให้จับคู่แต่ละแถวกับเลขบ่อและรหัสระบบ. <a href="docs/request-dgr-well-status.md">เปิดร่างคำขอ →</a></li>
       <li>มีพิกัดรายบ่อและจุดบริการตรงไหน?</li>
       <li>สถานะล่าสุดและวันที่ปรับปรุงข้อมูลคือเมื่อไร?</li>
       <li>ผลสูบทดสอบและตรวจน้ำล่าสุดเป็นอย่างไร?</li>
