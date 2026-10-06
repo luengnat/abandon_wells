@@ -59,13 +59,13 @@ h1 em { color: #ff9578; font-style: normal; }
 .flow-arrow { color: var(--quiet); text-align: center; font-size: 21px; }
 .scope-note { margin: 8px 0 0; color: var(--quiet); font-size: 11px; }
 .signal-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 20px; border: 1px solid #b88770; background: #f7f1e8; color: var(--ink); }
-.signal-strip div { min-width: 0; padding: 12px 13px; border-right: 1px solid #c9b7a7; }
+.signal-strip div { display: flex; min-width: 0; flex-direction: column; padding: 13px 13px; border-right: 1px solid #c9b7a7; }
 .signal-strip div:last-child { border-right: 0; }
-.signal-strip .signal-label { display: block; margin-bottom: 5px; color: var(--red); font-size: 12px; font-weight: 900; letter-spacing: .02em; line-height: 1.4; }
-.signal-strip b { display: block; color: #a52f25; font: 900 clamp(22px, 3vw, 32px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
-.signal-strip span { display: block; margin-top: 4px; color: #303832; font-size: 12px; line-height: 1.55; }
+.signal-strip .signal-label { order: 1; display: block; margin-bottom: 4px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .02em; line-height: 1.4; }
+.signal-strip b { order: 3; display: block; margin-top: 9px; color: #a52f25; font: 900 clamp(22px, 3vw, 32px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+.signal-strip span { order: 4; display: block; margin-top: 4px; color: #303832; font-size: 12px; line-height: 1.55; }
 .signal-strip .signal-label + b { margin-top: 0; }
-.signal-strip .signal-question { margin: 8px 0 0; padding-top: 7px; border-top: 1px solid #c9b7a7; color: #86291f; font-size: 12px; font-weight: 800; line-height: 1.5; }
+.signal-strip .signal-question { order: 2; min-height: 3.1em; margin: 0; padding: 0; border: 0; color: #442b25; font-size: 14px; font-weight: 900; line-height: 1.5; }
 .signal-caveat { margin: 7px 0 0; color: #ede1d4; font-size: 11px; line-height: 1.55; }
 .data-origin { margin-top: 19px; padding: 13px 15px; border-left: 4px solid var(--ink); background: var(--sand); }
 .data-origin h2 { margin: 0; font-size: 18px; }
@@ -254,10 +254,10 @@ main { padding: 28px 0 37px; }
 <body>
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">แฟ้มตรวจสอบ · สินทรัพย์บ่อบาดาล DGR · สำรวจ ณ 30 ก.ย. 2567</p>
-    <h1><em>7,251 รายการ</em><span class="hero-head-separator"> · </span><span class="hero-head-amount">฿5,081.9 ล้าน</span><br><em>“รอทบทวน” ทั้งชุด</em><br>เจาะจำเป็นไหม? มีคนใช้น้ำจริงหรือไม่?</h1>
-    <p class="dek">ทะเบียนสินทรัพย์ ณ 30 ก.ย. 2567 ระบุสถานะรอทบทวนครบทั้ง 7,251 แถว ขณะที่ข้อมูลที่เปิดเผยยังตอบคำถามรายบ่อไม่ได้ว่า <strong>ก่อนเจาะจำเป็นแค่ไหน หลังเจาะน้ำผ่านหรือไม่ ราคาอธิบายได้ไหม และใครใช้น้ำจริง</strong></p>
-    <div class="question-ribbon"><span>4 คำถามที่ต้องตอบ</span><strong>มีหลักฐานความจำเป็นก่อนอนุมัติไหม? มีผลตรวจน้ำหลังสร้างหรือซ่อมไหม? มูลค่าที่ซ้ำกันตรงกับสเปกและ BOQ จริงหรือไม่? และใครตรวจว่ามีผู้ใช้น้ำก่อนปิดโครงการ?</strong></div>
+    <p class="eyebrow">ข้อสงสัยเรื่องน้ำบาดาล · สินทรัพย์ DGR · สำรวจ ณ 30 ก.ย. 2567</p>
+    <h1><em>7,251 รายการ</em><span class="hero-head-separator"> · </span><span class="hero-head-amount">฿5,081.9 ล้าน</span><br><em>ขึ้นสถานะ “รอทบทวน” ทั้งชุด</em><br>ใครยืนยันว่าเจาะจำเป็น น้ำได้มาตรฐาน และมีคนใช้จริง?</h1>
+    <p class="dek">นี่คือ 4 ข้อสงสัยจากหลักฐานที่หาได้: <strong>พื้นที่ขาดน้ำจริงทุกจุดหรือไม่ งานเจาะและคุณภาพน้ำผ่านหรือไม่ มูลค่าที่บันทึกอธิบายได้หรือไม่ และโครงการส่งน้ำถึงคนหรือไม่</strong></p>
+    <div class="question-ribbon"><span>คำถามหลัก</span><strong>รัฐบันทึกมูลค่าการได้มาไว้ <em>฿5,081.9 ล้าน</em> แล้วมีเอกสารให้ประชาชนไล่ตรวจเหตุผลเจาะ ผลตรวจน้ำ ราคาจริง และผู้ใช้น้ำได้ครบหรือยัง?</strong></div>
     <div class="hero-grid">
       <div class="hero-metric" aria-label="7,251 แถว อยู่ระหว่างทบทวนการใช้ประโยชน์">
         <span class="big">7,251 แถว</span>
@@ -269,10 +269,10 @@ main { padding: 28px 0 37px; }
       </div>
     </div>
     <div class="signal-strip" aria-label="สี่สัญญาณผิดสังเกตและคำถามที่ต้องเปิดเอกสารตรวจ">
-      <div><span class="signal-label">ธง 1 · จำเป็นจริงไหม?</span><b>97.5%</b><span>7,067 แถวได้มาใน 6 ปี; โครงการแก้ขาดแคลนปรากฏ 3 ปีงบ</span><p class="signal-question">ก่อนอนุมัติซ้ำ ใครตรวจว่าพื้นที่ยังขาดน้ำ?</p></div>
-      <div><span class="signal-label">ธง 2 · น้ำผ่านไหม?</span><b>41% / 92.26%</b><span>บ่อเก่าที่อุดกลบมีท่อชำรุด; 298/323 ระบบที่ตรวจไม่ผ่านเกณฑ์</span><p class="signal-question">มีผลตรวจซ้ำหลังซ่อมหรือส่งมอบหรือยัง?</p></div>
-      <div><span class="signal-label">ธง 3 · ราคาอธิบายได้ไหม?</span><b>255 แถว</b><span>ลงมูลค่า ฿221,280 เท่ากันทุกแถว</span><p class="signal-question">ทั้ง 255 แถวมีสเปกและปริมาณงานเดียวกันจริงไหม?</p></div>
-      <div><span class="signal-label">ธง 4 · มีคนใช้ไหม?</span><b>9 / 47</b><span>โครงการที่ สตง. ตรวจไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span><p class="signal-question">ใครยืนยันผู้ใช้น้ำก่อนปิดโครงการ?</p></div>
+      <div><span class="signal-label">ข้อสงสัย 1 · ความจำเป็น</span><p class="signal-question">พื้นที่เดิมโผล่หลายปี—แต่ละจุดจำเป็นจริงไหม?</p><b>97.5%</b><span>7,067 แถวได้มาใน 6 ปี; ชื่อพื้นที่บางแห่งปรากฏซ้ำหลายปี</span></div>
+      <div><span class="signal-label">ข้อสงสัย 2 · คุณภาพ</span><p class="signal-question">มีผลตรวจยืนยันหลังซ่อมหรือส่งมอบไหม?</p><b>41% / 92.26%</b><span>บ่อเก่าที่อุดกลบมีท่อชำรุด; 298/323 ระบบที่ตรวจไม่ผ่านเกณฑ์น้ำดื่ม</span></div>
+      <div><span class="signal-label">ข้อสงสัย 3 · ราคา</span><p class="signal-question">255 แถวราคาเท่ากัน เพราะสเปกเหมือนกันจริงหรือ?</p><b>255 แถว</b><span>ลงมูลค่าการได้มา ฿221,280 เท่ากันทุกแถว</span></div>
+      <div><span class="signal-label">ข้อสงสัย 4 · ผลลัพธ์</span><p class="signal-question">สตง. พบ 9 ใน 47 โครงการไม่มีผู้ใช้—ใครยืนยันว่าจ่ายน้ำถึงคน?</p><b>9 / 47</b><span>โครงการที่ สตง. ตรวจไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span></div>
     </div>
     <p class="signal-caveat">สี่ธงมาจากคนละชุดข้อมูลและคนละช่วงเวลา จึงชี้จุดที่ควรเปิดเอกสารตรวจรายโครงการ ไม่ใช่สถิติแทนบ่อทั้ง 7,251 รายการ</p>
   </div>
@@ -280,8 +280,8 @@ main { padding: 28px 0 37px; }
 
 <main class="wrap">
   <div class="section-head">
-    <div><p class="section-label">4 ธงแดง · หลักฐานที่ชวนให้ถามต่อ</p><h2>ทำไมต้องเจาะ? งานผ่านไหม? ราคาอธิบายได้หรือเปล่า? แล้วใครได้น้ำ?</h2></div>
-    <p>แต่ละธงแสดงหลักฐานที่พบ คำถามที่ต้องตอบ และข้อจำกัดของหลักฐานชุดนั้น</p>
+    <div><p class="section-label">4 ข้อสงสัย · ดูหลักฐานแล้วถามต่อ</p><h2>อะไรทำให้ต้องขอคำตอบจากหน่วยงาน?</h2></div>
+    <p>แต่ละข้อแยกสิ่งที่เอกสารยืนยันได้ ออกจากสิ่งที่ยังต้องเปิดข้อมูลรายโครงการ</p>
   </div>
 
   <section class="case-opener" aria-labelledby="case-title">
