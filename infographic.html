@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f3efe6">
-<title>บ่อบาดาล 7,251 รายการ: ทำไมโครงการซ้ำ และใครได้น้ำจริง?</title>
-<meta name="description" content="ตรวจ 4 ธงจากทะเบียนสินทรัพย์บ่อบาดาล DGR: ความจำเป็น คุณภาพ ราคา และผลใช้งาน พร้อมถามตรง ๆ ว่าทำไมระบบนี้จึงตรวจสอบรายบ่อได้ยาก">
+<title>บ่อบาดาล 7,251 รายการ รอทบทวนทั้งชุด: ใครยืนยันว่าเจาะจำเป็นและมีคนใช้?</title>
+<meta name="description" content="ทะเบียน DGR ระบุสินทรัพย์บ่อบาดาล 7,251 รายการ มูลค่าการได้มา 5,081.9 ล้านบาท และสถานะรอทบทวนทั้งชุด ตรวจ 4 จุดที่ควรถามต่อ: ความจำเป็น คุณภาพ ราคา และผู้ใช้น้ำ">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -36,6 +36,7 @@ a:hover { color: var(--red); }
 .wrap { width: min(100% - 36px, 1080px); margin-inline: auto; }
 .hero { padding: 42px 0 30px; border-bottom: 5px solid var(--red); background: linear-gradient(122deg, #201f1c 0%, #30251f 72%, #572c25 100%); color: #fbf8f1; }
 .hero .eyebrow { color: #ffb08a; }
+.hero-head-separator, .hero-head-amount { display: inline; }
 .eyebrow, .section-label { margin: 0; color: var(--red); font-size: 12px; font-weight: 800; letter-spacing: .04em; }
 h1, h2, h3, .big { font-family: var(--serif); }
 h1 { max-width: 980px; margin: 10px 0 9px; font-size: clamp(36px, 6.7vw, 68px); line-height: 1.23; font-weight: 900; letter-spacing: -.025em; }
@@ -64,6 +65,7 @@ h1 em { color: #ff9578; font-style: normal; }
 .signal-strip b { display: block; color: #a52f25; font: 900 clamp(22px, 3vw, 32px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
 .signal-strip span { display: block; margin-top: 4px; color: #303832; font-size: 12px; line-height: 1.55; }
 .signal-strip .signal-label + b { margin-top: 0; }
+.signal-strip .signal-question { margin: 8px 0 0; padding-top: 7px; border-top: 1px solid #c9b7a7; color: #86291f; font-size: 12px; font-weight: 800; line-height: 1.5; }
 .signal-caveat { margin: 7px 0 0; color: #ede1d4; font-size: 11px; line-height: 1.55; }
 .data-origin { margin-top: 19px; padding: 13px 15px; border-left: 4px solid var(--ink); background: var(--sand); }
 .data-origin h2 { margin: 0; font-size: 18px; }
@@ -219,6 +221,9 @@ main { padding: 28px 0 37px; }
 }
 @media (max-width: 430px) {
   body { font-size: 15px; }
+  h1 { font-size: clamp(30px, 8vw, 34px); line-height: 1.28; }
+  .hero-head-separator { display: none; }
+  .hero-head-amount { display: block; }
   .wrap { width: min(100% - 22px, 1080px); }
   .flag { padding: 17px 14px; }
   .money-row { grid-template-columns: 93px minmax(0,1fr) 76px; gap: 6px; }
@@ -250,9 +255,9 @@ main { padding: 28px 0 37px; }
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow">แฟ้มตรวจสอบ · สินทรัพย์บ่อบาดาล DGR · สำรวจ ณ 30 ก.ย. 2567</p>
-    <h1><em>7,251 รายการ</em> · ฿5,081.9 ล้าน<br>โครงการแก้ขาดแคลนน้ำ<br><em>กลับมาซ้ำ 3 ปีติด?</em></h1>
-    <p class="dek">97.5% ของรายการบันทึกปีที่ได้มาอยู่ในช่วง 6 ปี; ชื่อพื้นที่กลับมาซ้ำ; เอกสารรัฐพบทั้งน้ำไม่เหมาะบริโภคและงานชำรุด; 255 แถวลงมูลค่าเท่ากันเป๊ะ; และ สตง. พบ 9 ใน 47 โครงการไม่มีผู้ใช้. <strong>ใครยืนยันว่าจำเป็นทุกครั้ง—และตรวจหรือยังว่าน้ำถึงคนจริง?</strong></p>
-    <div class="question-ribbon"><span>ข้อสงสัยหลัก</span><strong>โครงการขยายตัวเร็วกว่า <em>การพิสูจน์ความจำเป็นและการติดตามผลรายบ่อ</em> หรือไม่? เราจึงถามตรง ๆ ว่า ใครตรวจความจำเป็นก่อนเจาะ ตรวจคุณภาพหลังสร้าง และยืนยันผู้ใช้ก่อนปิดโครงการ?</strong></div>
+    <h1><em>7,251 รายการ</em><span class="hero-head-separator"> · </span><span class="hero-head-amount">฿5,081.9 ล้าน</span><br><em>“รอทบทวน” ทั้งชุด</em><br>เจาะจำเป็นไหม? มีคนใช้น้ำจริงหรือไม่?</h1>
+    <p class="dek">ทะเบียนสินทรัพย์ ณ 30 ก.ย. 2567 ระบุสถานะรอทบทวนครบทั้ง 7,251 แถว ขณะที่ข้อมูลที่เปิดเผยยังตอบคำถามรายบ่อไม่ได้ว่า <strong>ก่อนเจาะจำเป็นแค่ไหน หลังเจาะน้ำผ่านหรือไม่ ราคาอธิบายได้ไหม และใครใช้น้ำจริง</strong></p>
+    <div class="question-ribbon"><span>4 คำถามที่ต้องตอบ</span><strong>มีหลักฐานความจำเป็นก่อนอนุมัติไหม? มีผลตรวจน้ำหลังสร้างหรือซ่อมไหม? มูลค่าที่ซ้ำกันตรงกับสเปกและ BOQ จริงหรือไม่? และใครตรวจว่ามีผู้ใช้น้ำก่อนปิดโครงการ?</strong></div>
     <div class="hero-grid">
       <div class="hero-metric" aria-label="7,251 แถว อยู่ระหว่างทบทวนการใช้ประโยชน์">
         <span class="big">7,251 แถว</span>
@@ -263,11 +268,11 @@ main { padding: 28px 0 37px; }
         <span class="metric-copy"><b>มูลค่าการได้มาที่บันทึก</b><br>ไม่ใช่ยอดเบิกจ่ายหรือราคาสัญญา</span>
       </div>
     </div>
-    <div class="signal-strip" aria-label="สี่สัญญาณผิดสังเกตที่ต้องตรวจสอบ">
-      <div><span class="signal-label">ธง 1 · ความจำเป็น</span><b>97.5%</b><span>7,067 แถวบันทึกปีที่ได้มาใน 6 ปี · โครงการแก้ขาดแคลนปรากฏ 3 ปีงบ · พื้นที่ซ้ำ</span></div>
-      <div><span class="signal-label">ธง 2 · คุณภาพ</span><b>41% / 92%</b><span>พบทั้งท่อบ่อเก่าชำรุดและระบบที่ตรวจไม่ผ่านเกณฑ์น้ำดื่ม</span></div>
-      <div><span class="signal-label">ธง 3 · ราคา</span><b>255 แถว</b><span>ลงมูลค่า ฿221,280 เท่ากันเป๊ะ · ยอดสองช่วงใกล้กัน แต่จำนวนแถวต่าง 3.8 เท่า</span></div>
-      <div><span class="signal-label">ธง 4 · ผลลัพธ์</span><b>9 / 47</b><span>โครงการที่ สตง. ตรวจไม่มีผู้ใช้ · อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span></div>
+    <div class="signal-strip" aria-label="สี่สัญญาณผิดสังเกตและคำถามที่ต้องเปิดเอกสารตรวจ">
+      <div><span class="signal-label">ธง 1 · จำเป็นจริงไหม?</span><b>97.5%</b><span>7,067 แถวได้มาใน 6 ปี; โครงการแก้ขาดแคลนปรากฏ 3 ปีงบ</span><p class="signal-question">ก่อนอนุมัติซ้ำ ใครตรวจว่าพื้นที่ยังขาดน้ำ?</p></div>
+      <div><span class="signal-label">ธง 2 · น้ำผ่านไหม?</span><b>41% / 92.26%</b><span>บ่อเก่าที่อุดกลบมีท่อชำรุด; 298/323 ระบบที่ตรวจไม่ผ่านเกณฑ์</span><p class="signal-question">มีผลตรวจซ้ำหลังซ่อมหรือส่งมอบหรือยัง?</p></div>
+      <div><span class="signal-label">ธง 3 · ราคาอธิบายได้ไหม?</span><b>255 แถว</b><span>ลงมูลค่า ฿221,280 เท่ากันทุกแถว</span><p class="signal-question">ทั้ง 255 แถวมีสเปกและปริมาณงานเดียวกันจริงไหม?</p></div>
+      <div><span class="signal-label">ธง 4 · มีคนใช้ไหม?</span><b>9 / 47</b><span>โครงการที่ สตง. ตรวจไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</span><p class="signal-question">ใครยืนยันผู้ใช้น้ำก่อนปิดโครงการ?</p></div>
     </div>
     <p class="signal-caveat">สี่ธงมาจากคนละชุดข้อมูลและคนละช่วงเวลา จึงชี้จุดที่ควรเปิดเอกสารตรวจรายโครงการ ไม่ใช่สถิติแทนบ่อทั้ง 7,251 รายการ</p>
   </div>
