@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3efe6">
+<title>7,251 แถว รอทบทวน — ภาพรวมข้อสงสัยและหลักฐาน</title>
+<meta name="description" content="อินโฟกราฟิกสรุปทะเบียนสินทรัพย์บ่อบาดาล 7,251 แถว: สิ่งที่รู้ สิ่งที่ยังพิสูจน์ไม่ได้ และข้อมูลที่ควรขอรายบ่อ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Noto+Serif+Thai:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --paper: #f3efe6;
+  --white: #fbf9f4;
+  --sand: #e7dfd1;
+  --ink: #18211e;
+  --muted: #4d5952;
+  --quiet: #68736b;
+  --rule: #d3ccbd;
+  --red: #a2382d;
+  --red-soft: #f1e3dc;
+  --gold: #8b5b2d;
+  --gold-soft: #f2eadc;
+  --green: #2d5944;
+  --green-soft: #e1ebe3;
+  --serif: "Noto Serif Thai", "Thonburi", serif;
+  --sans: "Noto Sans Thai", system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.75 var(--sans); }
+a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+.wrap { width: min(100% - 36px, 1080px); margin-inline: auto; }
+.hero { padding: 42px 0 30px; border-bottom: 1px solid var(--rule); }
+.eyebrow, .section-label { margin: 0; color: var(--red); font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+h1, h2, h3, .big { font-family: var(--serif); }
+h1 { max-width: 900px; margin: 10px 0 9px; font-size: clamp(36px, 7vw, 68px); line-height: 1.23; font-weight: 900; letter-spacing: -.025em; }
+h1 em { color: var(--red); font-style: normal; }
+.dek { max-width: 830px; margin: 0; color: var(--muted); font-size: clamp(16px, 2.1vw, 19px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(230px, .75fr); gap: 24px; align-items: end; margin-top: 23px; }
+.hero-metric { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 13px; padding: 14px 0; border-block: 1px solid var(--ink); }
+.big { color: var(--red); font-size: clamp(35px, 5.3vw, 54px); line-height: 1.25; font-weight: 900; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.metric-copy { max-width: 390px; color: var(--muted); font-size: 13px; }
+.caveat-top { margin: 0; padding: 14px 16px; border-left: 4px solid var(--gold); background: var(--sand); font-size: 13px; line-height: 1.7; }
+.caveat-top strong { color: var(--ink); }
+.source-flow { display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; align-items: center; gap: 6px; margin-top: 23px; }
+.flow-step { min-height: 78px; padding: 9px 11px; border-top: 2px solid var(--green); background: var(--white); }
+.flow-step b { display: block; margin-bottom: 2px; font-size: 13px; }
+.flow-step span { display: block; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.flow-arrow { color: var(--quiet); text-align: center; font-size: 21px; }
+.scope-note { margin: 8px 0 0; color: var(--quiet); font-size: 11px; }
+main { padding: 28px 0 37px; }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+.section-head h2 { margin: 2px 0 0; font-size: clamp(24px, 3.7vw, 34px); line-height: 1.4; }
+.section-head p:last-child { max-width: 410px; margin: 0; color: var(--muted); font-size: 12px; }
+.flags { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--rule); background: var(--rule); }
+.flag { min-width: 0; padding: 18px 19px 17px; background: var(--white); }
+.flag-head { display: flex; align-items: baseline; gap: 9px; margin-bottom: 6px; }
+.flag-no { color: var(--red); font-size: 12px; font-weight: 800; }
+.flag h3 { margin: 0; font-size: 22px; line-height: 1.45; }
+.stat { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; margin: 7px 0 6px; }
+.stat strong { color: var(--green); font-family: var(--serif); font-size: clamp(27px, 4.2vw, 39px); font-weight: 900; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 12px; }
+.flag p { margin: 7px 0 0; font-size: 12px; line-height: 1.72; }
+.flag .evidence { color: var(--ink); }
+.flag .limit { margin-top: 9px; padding: 8px 10px; border-left: 3px solid var(--gold); background: var(--gold-soft); color: #4c4438; }
+.flag .limit b { color: var(--ink); }
+.bar-track { height: 10px; overflow: hidden; background: #e5dfd3; }
+.bar-fill { height: 100%; width: 97.5%; background: var(--green); }
+.quality-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 9px 0 6px; }
+.quality-head strong { font: 800 25px/1.3 var(--serif); font-variant-numeric: tabular-nums; }
+.quality-head span { color: var(--muted); font-size: 11px; text-align: right; }
+.quality-bar { display: flex; height: 23px; overflow: hidden; background: #e5dfd3; }
+.quality-bar span { display: grid; place-items: center; color: #fff; font-size: 11px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.quality-bar .not-fit { width: 21.8%; background: var(--red); }
+.quality-bar .conditional { width: 52.7%; background: var(--gold); }
+.quality-bar .fit { width: 25.5%; background: var(--green); }
+.quality-legend { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px 9px; margin: 7px 0 0; }
+.quality-legend span { font-size: 10.5px; line-height: 1.45; }
+.quality-legend b { display: block; font-size: 12px; }
+.quality-legend .red { color: var(--red); }
+.quality-legend .gold { color: var(--gold); }
+.quality-legend .green { color: var(--green); }
+.unknown-count { margin-top: 7px; color: var(--muted); font-size: 11px; }
+.money-bars { display: grid; gap: 8px; margin-top: 10px; }
+.money-row { display: grid; grid-template-columns: 115px minmax(0,1fr) 88px; align-items: center; gap: 8px; font-size: 11px; }
+.money-row .period { color: var(--muted); line-height: 1.4; }
+.money-row .amount { color: var(--ink); text-align: right; font-size: 12px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.money-track { height: 15px; background: #e5dfd3; }
+.money-fill { height: 100%; width: 99.8%; background: var(--green); }
+.money-fill.alt { width: 100%; background: var(--red); }
+.row-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 8px; }
+.row-counts div { padding: 7px 9px; background: var(--sand); color: var(--muted); font-size: 10.5px; }
+.row-counts b { display: block; color: var(--ink); font-size: 15px; font-variant-numeric: tabular-nums; }
+.repeat-value { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 7px; margin-top: 9px; color: var(--muted); font-size: 11px; }
+.repeat-value b { color: var(--red); font: 800 18px/1.45 var(--serif); font-variant-numeric: tabular-nums; }
+.status-line { display: flex; align-items: center; gap: 10px; padding: 9px 11px; background: var(--green); color: #fff; }
+.status-line b { font: 800 17px/1.4 var(--serif); }
+.status-line span { font-size: 10.5px; }
+.case-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 9px; }
+.case { padding: 9px 10px; background: #f3f0e8; }
+.case b { display: block; margin-bottom: 2px; font-size: 11px; }
+.case span { display: block; color: var(--muted); font-size: 10.5px; line-height: 1.58; }
+.not-linked { margin-top: 7px !important; color: var(--red); font-size: 11px !important; font-weight: 700; }
+.well-example { margin-top: 10px; padding: 8px 10px; border-left: 3px solid var(--red); background: var(--red-soft); color: #48352f; font-size: 11px; }
+.next { display: grid; grid-template-columns: minmax(180px, .75fr) 2fr; gap: 18px; align-items: start; margin-top: 23px; padding: 16px 18px; border-top: 2px solid var(--ink); background: var(--sand); }
+.next h2 { margin: 0 0 5px; font-size: 22px; line-height: 1.5; }
+.next p { margin: 0; color: var(--muted); font-size: 11px; }
+.questions { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; counter-reset: q; }
+.questions li { counter-increment: q; color: var(--ink); font-size: 10.5px; line-height: 1.55; }
+.questions li::before { content: "0" counter(q); display: block; margin-bottom: 4px; color: var(--red); font: 800 18px/1.2 var(--serif); }
+.request-link { display: inline-block; margin-top: 9px; font-size: 11px; font-weight: 700; }
+.footer { padding: 15px 0 24px; border-top: 1px solid var(--rule); }
+.footer-head { display: flex; justify-content: space-between; gap: 15px; align-items: baseline; }
+.footer-head h2 { margin: 0; font-size: 18px; }
+.footer-head p { margin: 0; color: var(--quiet); font-size: 10px; }
+.sources { display: flex; flex-wrap: wrap; gap: 7px 16px; margin-top: 7px; font-size: 10.5px; }
+.endnote { margin: 9px 0 0; color: var(--quiet); font-size: 10px; }
+@media (max-width: 700px) {
+  .wrap { width: min(100% - 28px, 1080px); }
+  .hero { padding-top: 30px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 10px; }
+  .source-flow { grid-template-columns: 1fr; gap: 5px; }
+  .flow-step { min-height: 0; }
+  .flow-arrow { transform: rotate(90deg); line-height: 1; }
+  .section-head { display: block; }
+  .section-head p:last-child { margin-top: 6px; }
+  .flags { grid-template-columns: 1fr; }
+  .next { grid-template-columns: 1fr; gap: 12px; }
+  .questions { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 430px) {
+  body { font-size: 14px; }
+  .wrap { width: min(100% - 22px, 1080px); }
+  .flag { padding: 15px 13px; }
+  .money-row { grid-template-columns: 93px minmax(0,1fr) 76px; gap: 6px; }
+  .case-pair { grid-template-columns: 1fr; }
+  .footer-head { display: block; }
+  .footer-head p { margin-top: 3px; }
+}
+@media print {
+  @page { size: A3 portrait; margin: 10mm; }
+  body { background: #fff; font-size: 10pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .wrap { width: 100%; }
+  .hero { padding: 16px 0 14px; }
+  h1 { font-size: 38pt; }
+  main { padding: 14px 0; }
+  .flag { padding: 12px 13px; }
+  .flag h3 { font-size: 16pt; }
+  .flag p { font-size: 9pt; }
+  .next { margin-top: 14px; padding: 12px; }
+  a { color: inherit; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">แฟ้มตรวจสอบสินทรัพย์ · กรมทรัพยากรน้ำบาดาล · สำรวจ 30 ก.ย. 2567</p>
+    <h1><em>7,251 แถว</em> ในบัญชี<br>แต่ยังไม่มีสถานะรายบ่อ</h1>
+    <p class="dek">บัญชีแสดงมูลค่าการได้มา 5,081.9 ล้านบาท และจัดทุกรายการไว้ “อยู่ระหว่างทบทวนการใช้ประโยชน์”. คำถามคือจำเป็นแค่ไหน น้ำมีคุณภาพหรือไม่ ราคาและขอบเขตงานเป็นอย่างไร และสุดท้ายมีคนได้น้ำจริงหรือเปล่า</p>
+    <div class="hero-grid">
+      <div class="hero-metric" aria-label="7,251 แถว มูลค่าการได้มา 5,081.9 ล้านบาท">
+        <span class="big">฿5,081.9 ล้าน</span>
+        <span class="metric-copy"><b>มูลค่าการได้มาที่บันทึกในทะเบียน</b><br>ไม่ใช่ยอดเบิกจ่ายหรือราคาสัญญา</span>
+      </div>
+      <p class="caveat-top"><strong>อ่านตัวเลขให้ตรงฐาน:</strong> หนึ่งแถวไม่จำเป็นต้องเท่ากับหนึ่งบ่อ. สถานะ “รอทบทวน” ไม่ได้ยืนยันว่าทรัพย์สินเสีย และไม่ได้ยืนยันว่าทุกบ่อยังใช้งานได้</p>
+    </div>
+    <div class="source-flow" aria-label="ที่มาของชุดข้อมูล">
+      <div class="flow-step"><b>ก.พ.ร. สำรวจสินทรัพย์</b><span>12 กระทรวง · 30 ก.ย. 2567<br>ยอดทางการ 17,573 รายการ</span></div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step"><b>ไฟล์รวมที่นำมาวิเคราะห์</b><span>17,536 รายการ<br>ต่างจากยอดทางการ 37 รายการ</span></div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step"><b>กรองแถวของ DGR</b><span>ชื่อรายการมีคำว่า “บ่อน้ำบาดาล”<br>7,251 แถว · ฿5,081.9 ล้าน</span></div>
+    </div>
+    <p class="scope-note">ขอบเขตบัญชี: รายการสินทรัพย์จัดซื้อจัดจ้างปีงบประมาณ 2556–2565. ปีที่ได้มาในทะเบียนอาจไม่ใช่ปีที่เจาะ.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="section-head">
+    <div><p class="section-label">สี่ธงที่ควรตรวจ</p><h2>มีเบาะแส แต่ยังไม่ใช่คำตัดสิน</h2></div>
+    <p>ตัวอย่างและผลตรวจด้านล่างมาจากคนละโครงการกับทะเบียน 7,251 แถว เว้นแต่จะระบุว่าจับคู่ได้แค่ระดับชื่อพื้นที่</p>
+  </div>
+
+  <section class="flags" aria-label="สี่ประเด็นตรวจสอบ">
+    <article class="flag">
+      <div class="flag-head"><span class="flag-no">ธง 1</span><h3>เจาะเพราะจำเป็นหรือไม่?</h3></div>
+      <div class="stat"><strong>97.5%</strong><span>7,067 จาก 7,251 แถว<br>มีปีที่ได้มาอยู่ใน 2560–2565</span></div>
+      <div class="bar-track" role="img" aria-label="ร้อยละ 97.5 ของแถวมีปีที่ได้มาอยู่ระหว่าง 2560 ถึง 2565"><div class="bar-fill"></div></div>
+      <p class="evidence">ข้อมูลกระจุกตัวในช่วง 6 ปี; ยังมีชื่อพื้นที่ที่ปรากฏซ้ำข้ามปีและหลายโครงการในพื้นที่เดียวกัน</p>
+      <p class="limit"><b>ยังไม่พิสูจน์:</b> ปีที่ได้มาไม่ใช่หลักฐานปีเจาะหรือเหตุผลอนุมัติ. ชื่อหมู่บ้านซ้ำไม่ได้แปลว่าเป็นบ่อเดิมหรือขุดซ้ำจุดเดิม.</p>
+    </article>
+
+    <article class="flag">
+      <div class="flag-head"><span class="flag-no">ธง 2</span><h3>คุณภาพน้ำผ่านหรือไม่?</h3></div>
+      <div class="quality-head"><strong>279 แถวในรายงาน DGR</strong><span>188 มีคำวินิจฉัยชัด<br>อีก 91 ไม่มีผล/ต้องตรวจใหม่</span></div>
+      <div class="quality-bar" role="img" aria-label="ใน 188 แถวที่มีคำวินิจฉัย: 41 ไม่เหมาะบริโภค, 99 อนุโลม, 48 ผ่านมาตรฐาน">
+        <span class="not-fit">41</span><span class="conditional">99</span><span class="fit">48</span>
+      </div>
+      <div class="quality-legend"><span class="red"><b>41</b>ไม่เหมาะบริโภค</span><span class="gold"><b>99</b>อนุโลม</span><span class="green"><b>48</b>ผ่านมาตรฐาน</span></div>
+      <p class="limit"><b>ขอบเขต:</b> เป็นผลตรวจในโครงการศึกษา 279 แห่ง ไม่ใช่ตัวอย่างสุ่มแทน 7,251 แถว และผลน้ำไม่เหมาะดื่มไม่ได้แปลว่าบ่อหรือปั๊มเสีย.</p>
+      <div class="well-example"><b>ตัวอย่างที่มีรหัสบ่อ:</b> DGR ระบุบ่อ 6309H003 ลึก 342 เมตรว่า “ไม่เหมาะสมที่จะใช้บริโภค”.</div>
+    </article>
+
+    <article class="flag">
+      <div class="flag-head"><span class="flag-no">ธง 3</span><h3>มูลค่าที่ลงบัญชีอธิบายได้ไหม?</h3></div>
+      <p class="evidence">มูลค่ารวมของสองช่วงใกล้กัน แต่จำนวนแถวต่างกันมาก:</p>
+      <div class="money-bars" role="img" aria-label="ปีที่ได้มา 2559 ถึง 2562 มี 5,735 แถว มูลค่า 2,538 ล้านบาท; ปี 2563 ถึง 2565 มี 1,516 แถว มูลค่า 2,544 ล้านบาท">
+        <div class="money-row"><span class="period">ได้มา 2559–2562</span><div class="money-track"><div class="money-fill"></div></div><span class="amount">฿2,538 ลบ.</span></div>
+        <div class="money-row"><span class="period">ได้มา 2563–2565</span><div class="money-track"><div class="money-fill alt"></div></div><span class="amount">฿2,544 ลบ.</span></div>
+      </div>
+      <div class="row-counts"><div><b>5,735 แถว</b>ช่วงแรก</div><div><b>1,516 แถว</b>ช่วงหลัง</div></div>
+      <div class="repeat-value"><b>255 แถว</b><span>ลงมูลค่าการได้มาเท่ากันที่ ฿221,280</span></div>
+      <p class="limit"><b>ยังไม่พิสูจน์:</b> รายการต่างชนิดและขอบเขตงานอาจไม่เทียบกันตรง ๆ. มูลค่าซ้ำไม่ใช่ยอดจ่ายจริง และไม่ใช่หลักฐานฮั้ว; ต้องดู TOR/BOQ สัญญา ใบตรวจรับ และการจ่ายเงิน.</p>
+    </article>
+
+    <article class="flag">
+      <div class="flag-head"><span class="flag-no">ธง 4</span><h3>สร้างแล้วมีคนได้น้ำหรือไม่?</h3></div>
+      <div class="status-line"><b>7,251 แถว</b><span>สถานะในทะเบียนเดียวกัน:<br>“อยู่ระหว่างทบทวนการใช้ประโยชน์”</span></div>
+      <div class="case-pair">
+        <div class="case"><b>ผลตรวจบ่อ · 6302L050</b><span>DGR ระบุฟลูออไรด์เกินเกณฑ์น้ำบริโภค ที่บ้านห้วยแม่ระวาง ม.3</span></div>
+        <div class="case"><b>ซ่อมระบบ · กลุ่ม 2 ม.3</b><span>พ.ค. 2568 DGR รายงานเปลี่ยนบอลวาล์วและระบุว่าระบบกลับมาใช้ได้ มีน้ำพอสำหรับ 200 ครัวเรือน</span></div>
+      </div>
+      <p class="not-linked">ยังไม่มีเลขบ่อหรือจุดเก็บตัวอย่างเชื่อมหลักฐานสองชุด และไม่มีผลตรวจน้ำหลังซ่อม</p>
+      <p class="limit"><b>นี่คือช่องว่างสำคัญ:</b> รายงานระบบกลับมาเดินได้ไม่ยืนยันว่าคุณภาพน้ำของบ่อ 6302L050 ดีขึ้น; สถานะทะเบียนก็ไม่บอกผลรายบ่อ.</p>
+    </article>
+  </section>
+
+  <section class="next" aria-labelledby="next-title">
+    <div>
+      <p class="section-label">ขั้นต่อไป</p>
+      <h2 id="next-title">ขอสถานะที่เชื่อมถึงบ่อจริง</h2>
+      <p>มีร่างคำขอข้อมูลข่าวสาร อ.ข.๑๘ แล้ว; ยังไม่ได้ยื่น</p>
+      <a class="request-link" href="docs/request-dgr-well-status.md">เปิดร่างคำขอข้อมูล →</a>
+    </div>
+    <ol class="questions">
+      <li>แต่ละแถวเชื่อมกับเลขบ่อหรือรหัสระบบใด?</li>
+      <li>มีพิกัดรายบ่อและจุดบริการตรงไหน?</li>
+      <li>สถานะล่าสุดและวันที่ปรับปรุงข้อมูลคือเมื่อไร?</li>
+      <li>ผลสูบทดสอบและตรวจน้ำล่าสุดเป็นอย่างไร?</li>
+      <li>ใครดูแล ซ่อม หรือรับโอนสินทรัพย์?</li>
+    </ol>
+    <p class="scope-note">อ่านรายละเอียดและแหล่งอ้างอิงรายประเด็นใน <a href="index.html">บทวิเคราะห์ฉบับเต็ม →</a></p>
+  </section>
+</main>
+</body>
+</html>

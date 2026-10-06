@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>๕.๑ พันล้าน ๗,๒๕๑ บ่อ — นำเสนอ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:#f7f4ee; --paper2:#efebe2; --ink:#17150f; --ink2:#55524a; --ink3:#8a867b;
+  --rule:#d8d3c6; --seal:#b3382c; --well:#2a78d6;
+  --serif:"Noto Serif Thai","Sukhumvit Set",serif;
+  --sans:system-ui,-apple-system,"Noto Sans Thai","Sukhumvit Set",sans-serif;
+}
+* { box-sizing:border-box; margin:0; }
+body { background:var(--ink); font-family:var(--sans); overflow:hidden; }
+.slide {
+  position:absolute; inset:0; display:none; flex-direction:column;
+  background:var(--paper); color:var(--ink); padding:56px 72px;
+}
+.slide.active { display:flex; }
+.slide .kick { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--seal); font-weight:700; margin-bottom:14px; }
+.slide h1 { font-family:var(--serif); font-weight:900; font-size:clamp(30px,4.2vw,52px); line-height:1.22; }
+.slide h2 { font-family:var(--serif); font-weight:900; font-size:clamp(26px,3.4vw,42px); line-height:1.25; margin-bottom:20px; }
+.slide h1 em, .slide h2 em { font-style:normal; color:var(--seal); }
+.slide p, .slide li { font-size:clamp(16px,1.5vw,20px); line-height:1.7; color:var(--ink2); }
+.slide .b { flex:1; display:flex; flex-direction:column; justify-content:center; gap:14px; min-height:0; }
+.slide .src { font-size:12.5px; color:var(--ink3); margin-top:18px; border-top:1px solid var(--rule); padding-top:10px; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.callout { border-left:4px solid var(--seal); background:var(--paper2); padding:14px 20px; font-size:clamp(15px,1.4vw,19px); line-height:1.6; }
+.big { font-family:var(--serif); font-weight:900; font-size:clamp(44px,7vw,96px); line-height:1; }
+.big.red { color:var(--seal); }
+table.d { border-collapse:collapse; font-size:clamp(14px,1.3vw,18px); width:100%; }
+.d th { text-align:left; color:var(--ink3); font-size:.8em; border-bottom:2px solid var(--ink); padding:6px 8px; }
+.d td { padding:7px 8px; border-bottom:1px solid var(--rule); }
+.d td.n { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.d .hl td { background:#f3e9e2; }
+.d .hl2 td { background:#e9efe2; }
+.cols { display:flex; gap:24px; }
+.cols > div { flex:1; }
+.cols h3 { font-family:var(--serif); font-size:clamp(17px,1.6vw,22px); margin-bottom:10px; }
+.cols .yes h3 { color:#0a6b3d; } .cols .no h3 { color:var(--seal); }
+.cols li { margin-bottom:8px; font-size:clamp(14px,1.3vw,18px); }
+iframe.map { flex:1; border:1px solid var(--ink); background:#fff; min-height:0; }
+#hud { position:fixed; right:18px; bottom:14px; z-index:50; color:#fff; font-size:13px; opacity:.85; font-family:var(--sans); }
+#hud b { font-size:15px; }
+.cyc { display:flex; gap:0; align-items:stretch; }
+.cyc > div { flex:1; border:1.5px solid var(--ink); padding:14px 16px; margin-right:-1.5px; background:#fff; }
+.cyc .yr { font-size:11.5px; letter-spacing:.1em; color:var(--seal); font-weight:700; }
+.cyc .bn { font-family:var(--serif); font-weight:900; font-size:clamp(24px,2.8vw,38px); margin:2px 0; }
+.cyc .tx { font-size:clamp(12px,1.15vw,15px); color:var(--ink2); line-height:1.45; }
+.cyc .ar { flex:0 0 auto; border:none; background:none; display:flex; align-items:center; padding:0 10px; font-size:26px; color:var(--ink3); }
+.qi { display:flex; gap:14px; padding:10px 0; border-bottom:1px solid var(--rule); }
+.qi .qn { font-family:var(--serif); font-weight:900; font-size:22px; color:var(--seal); flex:0 0 34px; }
+.qi b { display:block; }
+.qi span { color:var(--ink2); font-size:clamp(13px,1.2vw,17px); }
+.chart svg { width:100%; height:auto; display:block; }
+.chart text { font-family:var(--sans); font-size:13px; fill:var(--ink2); }
+.chart .vlab { fill:var(--ink); font-weight:600; }
+.chart .bar { fill:var(--well); } .chart .axis { stroke:var(--rule); }
+</style>
+</head>
+<body>
+<section class="slide active">
+  <div class="b">
+    <div class="kick">เริ่มจากบ่อหนึ่งบ่อ</div>
+    <h1>หมายเลขบ่อ 6309H003<br>ลึก 342 เมตร — ต.โพรงอากาศ ฉะเชิงเทรา</h1>
+    <div class="callout">รายงานติดตามของกรมทรัพยากรน้ำบาดาลเอง สรุปผลตรวจน้ำบ่อนี้ว่า
+    <b>"ไม่เหมาะสมที่จะใช้บริโภค"</b> — เหล็ก คลอไรด์ ความกระด้าง TDS เกินเกณฑ์ (รายงาน 397 หน้า เพื่อตำบลเดียว)</div>
+    <p class="src">กด.พอ.5 ปีงบ 2565 · data/sources/dgr_2565.pdf หน้า 49–50 · ทุกตัวเลขในงานนำเสนอนี้ทำซ้ำได้จาก analysis.py</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ขยายจาก 1 บ่อ</div>
+    <div class="big">฿<span class="red">5.08</span> bn · 7,251 บ่อ</div>
+    <h2>และวันนี้ ทุกบ่ออยู่ในสถานะเดียวกัน: <em>"รอทบทวนการใช้ประโยชน์"</em></h2>
+    <p>ทะเบียนสินทรัพย์ ก.พ.ร. 12 กระทรวง (สำรวจ 30 ก.ย. 2567 → ส่ง กมธ. มิ.ย. 2569) — 17,536 รายการ
+    เราได้ไฟล์ วิเคราะห์ และจับคู่กับเอกสารของกรมฯ เอง และหลักฐานสาธารณะ</p>
+    <p class="mut" style="color:var(--ink3);font-size:14px">ขอบเขต: ทะเบียนไม่ได้บอกว่าบ่อไหนพังหรือใช้งานอยู่ — นั่นคือคำถามหลักที่งานนี้ต้องการเปิด</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ที่มาที่ไป — วงจรที่วนซ้ำ</div>
+    <h2>รอบนี้ไม่ใช่รอบแรก</h2>
+    <div class="cyc">
+      <div><div class="yr">2548</div><div class="bn">38,758</div><div class="tx">บ่อร้างที่กรมฯ สำรวจพบเอง</div></div>
+      <div class="ar">→</div>
+      <div><div class="yr">2552</div><div class="bn">3,240</div><div class="tx">บ่อถูกอุดกลบ ฿81M — 41% ท่อชำรุด · เหลือบ่อร้างอีก 22,500</div></div>
+      <div class="ar">→</div>
+      <div><div class="yr">2559–65</div><div class="bn">7,251</div><div class="tx">บ่อเจาะใหม่ ฿5.08bn — วันนี้ "รอทบทวน" ทั้งบัญชี</div></div>
+    </div>
+    <p class="src">นี่คือรอบที่สองของโครงการชนิดเดียวกัน — และรอบก่อนจบด้วยการฝังบ่อของตัวเอง</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ธง ๑ — ความจำเป็น</div>
+    <h2>เจาะเป็น "คลื่น" ตามภัยแล้ง — แล้วเจาะซ้ำรายหมู่บ้าน</h2>
+    <div class="chart" id="ch-years"></div>
+    <div class="grid2" style="margin-top:10px">
+      <div class="callout">ต.นาชำ เพชรบูรณ์ — <b>68 บ่อ</b> ใน 2 ปีงบ · อ.หล่มเก่า — <b>96 บ่อ</b> อำเภอเดียว ·
+      บ้านเชียงเพ็ง — เจาะ <b>6 ปีติด</b> · หมู่บ้านโดนเจาะซ้ำ ≥2 ปี — <b>415 แห่ง</b></div>
+      <div class="callout" style="border-left-color:var(--well)">โครงการชนิดเดียวทำซ้ำ: แก้ขาดน้ำ 1,727 แถว (3 รอบ) ·
+      เกษตรภัยแล้ง 1,330 · โรงเรียน 1,012 — ทั้งที่ 3 กระทรวงต่างมีโครงการแก้ภัยแล้งของตัวเอง</div>
+    </div>
+    <p class="src">ข้อจำกัด: รูปแบบนี้ชี้ว่า "ควรตรวจเหตุผลและพิกัด" — ไม่ได้พิสูจน์ว่าไม่มีความจำเป็นรายบ่อ</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ธง ๒ — คุณภาพ</div>
+    <h2>เอกสารของกรมฯ เอง ว่าน้ำ/บ่อมีปัญหา</h2>
+    <div class="big red">49 <span style="font-size:.35em;color:var(--ink)">จาก 188 บ่อที่กรมตรวจน้ำเอง ดื่มได้เต็มเกณฑ์</span></div>
+    <p>อีก <b>98 บ่อ "อนุโลม"</b> (ต้องแก้เหล็ก/ความขุ่นก่อน) และ <b>40 บ่อไม่เหมาะบริโภค</b> —
+    จากตารางรายบ่อที่กรมเผยแพร่ (มีหมายเลขบ่อ + พิกัด) · และผลตรวจน้ำประปาระบบที่ใช้น้ำบาดาล ปี 2567:
+    <b>298/323 ระบบ (92.26%) ไม่ผ่านเกณฑ์ดื่ม</b></p>
+    <p class="src">กด.พอ.5 2563 ตาราง 3.2 · รายงานกรมทรัพยากรน้ำ 2567 · ข้อจำกัด: ตรวจน้ำ ≠ ตรวจสภาพปั๊ม; คนละโครงการกับบ่อส่วนใหญ่ในบัญชี</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ธง ๓ — ราคา</div>
+    <h2>เงินเท่ากัน ฿2.54bn — ได้บ่อต่างกัน ๓.๘ เท่า</h2>
+    <table class="d">
+      <thead><tr><th>หมวด</th><th class="n">มูลค่ามัธยฐาน</th><th class="n">รายการ</th></tr></thead>
+      <tbody>
+        <tr><td>บ่อเปล่า (2559–62)</td><td class="n">฿0.17–0.30M</td><td class="n">3,722</td></tr>
+        <tr><td>ระบบโซลาร์/ประปา (2563–64)</td><td class="n">฿1.84–2.13M</td><td class="n">1,730</td></tr>
+        <tr class="hl"><td>ระดับลึก/ระยะไกล (2564–65)</td><td class="n">฿10–13.7M</td><td class="n">68</td></tr>
+      </tbody>
+    </table>
+    <div class="grid2">
+      <div class="callout">บ่อ <b>332 บ่อ ราคาเป๊ะ ฿221,300</b> ข้ามจังหวัดข้ามปี ·
+      โครงการเดียวปีเดียว ราคา <b>฿10k–2.3M</b> (ต่างกัน 3 ระดับตัวเลข)</div>
+      <div class="callout" style="border-left-color:var(--well)">ราคามาตรฐานซ้ำ <b>อาจถูกต้องตามระเบียบ</b> —
+      ประเด็นคือมันทำให้ตรวจสอบรายหลุมแทบเป็นไปไม่ได้ และยังไม่มีใครตรวจ</div>
+    </div>
+    <p class="src">ข้อจำกัด: มูลค่าลงบัญชี ≠ ราคาสัญญา; ต้องมี TOR/BOQ เทียบก่อนสรุปว่าแพงเกินจริง</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">คำถามที่ถูก</div>
+    <h2>"มีทุจริตไหม?" — ตอบตรง: <em>เราไม่มีหลักฐานทุจริต</em><br>เรามีหลักฐานว่า <em>ระบบนี้ตรวจสอบยาก</em></h2>
+    <div class="cols">
+      <div class="no"><h3>สิ่งที่มี (หลักฐานอ้างอิงได้)</h3>
+        <ul>
+          <li>เอกสารกรมฯ เอง: น้ำบ่อลึก "ไม่เหมาะบริโภค" · อุดกลบรอบก่อน 41% ท่อชำรุด</li>
+          <li>ราคาสำเร็จรูปซ้ำเป๊ะ 332 ครั้ง · 189 รายการ ฿1.3bn ไม่มีชื่อ</li>
+          <li>ป.ป.ช. และ สตง. กำลังตรวจโครงการตระกูลนี้อยู่แล้ว</li>
+        </ul></div>
+      <div class="yes"><h3>สิ่งที่ยังไม่มี</h3>
+        <ul>
+          <li>หลักฐานใครได้ประโยชน์ผิดปกติ</li>
+          <li>การเทียบ TOR/BOQ รายหลุม</li>
+          <li>สถานะใช้งานจริงของบ่อแม้แต่บ่อเดียวในบัญชี</li>
+        </ul></div>
+    </div>
+    <div class="callout">คำถามที่ถูกไม่ใช่ "มีทุจริตไหม" — แต่คือ <b>"ทำไมระบบนี้ถึงออกแบบให้ตรวจสอบยากขนาดนี้"</b></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ธง ๔ — ผลลัพธ์</div>
+    <h2>ทุกอย่างที่สร้าง จบลงที่จุดเดียวกัน</h2>
+    <table class="d">
+      <thead><tr><th>สิ่งที่สร้าง</th><th class="n">จำนวน</th><th class="n">มูลค่า</th><th>สถานะ</th></tr></thead>
+      <tbody>
+        <tr><td>บ่อ + ปั๊ม (2560–62)</td><td class="n">5,235</td><td class="n">฿1.75bn</td><td>รอทบทวน</td></tr>
+        <tr><td>ระบบโซลาร์/ประปา (2563–64)</td><td class="n">1,699</td><td class="n">฿2.57bn</td><td>รอทบทวน</td></tr>
+        <tr class="hl"><td>บ่อระดับลึก/ระยะไกล (2564–65)</td><td class="n">68</td><td class="n">฿0.84bn</td><td>รอทบทวน</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">โครงการความมั่นคงระดับชุมชน เพิ่งขยายจาก <b>279 → 858 แห่ง</b> —
+    cohort รุ่นใหม่ที่จะไหลเข้าบัญชีเดียวกันนี้ ถ้าไม่มีใครขอดูสถานะรายบ่อวันนี้</div>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">หลักฐานบนแผนที่</div>
+    <h2>จุดจริง 271 บ่อ ที่กรมตรวจน้ำเอง</h2>
+    <iframe class="map" src="map-quality.html" title="แผนที่ผลตรวจน้ำ"></iframe>
+    <p class="src">แดง = ไม่เหมาะบริโภค 40 · เหลือง = อนุโลม 98 · เขียว = ใช้ได้ 49 · เทา = ไม่มีผลตรวจ 83 · แผนที่บัญชีเต็ม: map.html</p>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">ขั้นต่อไป</div>
+    <h2>๕ คำถามที่กรมฯ มีข้อมูลอยู่แล้ว — ตอบได้ภายในเดือนเดียว</h2>
+    <div>
+      <div class="qi"><div class="qn">๑</div><div><b>สถานะรายบ่อ: ใช้งาน/ชำรุด/ร้าง กี่บ่อ?</b><span>กรมฯ มีระบบหมายเลขบ่อ (611F023, 6309H003) — ขอ export คอลัมน์เดียว</span></div></div>
+      <div class="qi"><div class="qn">๒</div><div><b>ต.นาชำ 68 บ่อ ใน 2 ปีงบ — ความจำเป็น?</b><span>มีผลสำรวจความต้องการน้ำก่อนเจาะหรือไม่</span></div></div>
+      <div class="qi"><div class="qn">๓</div><div><b>บ่อลึก ฿4.5–5.1M บางน้ำเปรี้ยว = 6309H003 หรือไม่?</b><span>ที่รายงานบอกว่าน้ำไม่ดื่มได้</span></div></div>
+      <div class="qi"><div class="qn">๔</div><div><b>งบอุดกลบรอบที่สามเท่าไหร่?</b><span>รอบแรก ฿81M อุด 3,240 บ่อ</span></div></div>
+      <div class="qi"><div class="qn">๕</div><div><b>189 รายการ ฿1.3bn ไม่มีชื่อ — คืออะไร?</b><span>ขึ้นทะเบียนด้วยรหัส GFMIS ล้วน ถอดได้เฉพาะกรมเจ้าของ</span></div></div>
+    </div>
+    <div class="callout">แบบคำขอ อ.ข.๑๘ เขียนร่างไว้แล้ว — <b>เหลือแค่เซ็นชื่อส่ง</b></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="b">
+    <div class="kick">สรุป</div>
+    <h2>จำ ๓ อย่างพอ</h2>
+    <p style="font-size:clamp(19px,2vw,26px);line-height:1.8">
+    <b>๑.</b> ฿5.08bn 7,251 บ่อ — และ <b>ไม่มีบ่อไหนในบัญชีที่ใครยืนยันได้ว่ายังใช้งานอยู่</b><br>
+    <b>๒.</b> 4 ธงที่มีหลักฐานหนุน: ความจำเป็น · คุณภาพ · ราคา · ผลลัพธ์ — <b>แต่ยังไม่มีข้อสรุป</b> เพราะไม่มีใครมองสถานะรายบ่อ<br>
+    <b>๓.</b> ทางออกไม่ใช่การกล่าวหา — แต่คือ <b>การขอดูเอกสารที่กรมฯ มีอยู่แล้ว</b></p>
+    <div class="callout" style="margin-top:20px">ถ้าไม่ขอสถานะรายบ่อวันนี้ — สิ่งเดียวที่รออยู่คือ <b>งบอุดกลบรอบที่สาม</b></div>
+    <p class="src">FINDINGS.md F1–F20 · WELLS.md · analysis.py · docs/request-dgr-well-status.md</p>
+  </div>
+</section>
+<div id="hud"><b>1</b> / 11 · ← →</div>
+<script>
+'use strict';
+const slides = document.querySelectorAll('.slide');
+let cur = 0;
+function show(i) {
+  cur = Math.max(0, Math.min(slides.length - 1, i));
+  slides.forEach((s, j) => s.classList.toggle('active', j === cur));
+  document.querySelector('#hud b').textContent = cur + 1;
+}
+document.addEventListener('keydown', e => {
+  if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(cur + 1); }
+  if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(cur - 1); }
+  if (e.key === 'Home') show(0);
+  if (e.key === 'End') show(slides.length - 1);
+});
+document.addEventListener('click', e => { if (e.clientX > innerWidth * .25) show(cur + 1); });
+// slide-4 wave chart (same bars helper as site)
+(function () {
+  const el = document.getElementById('ch-years');
+  if (!el) return;
+  const data = [["2559",184],["2560",1397],["2561",2076],["2562",2078],["2563",982],["2564",518],["2565",16]];
+  const W = 620, rowH = 30, pad = 130, padR = 90, H = data.length * rowH + 10;
+  const max = Math.max(...data.map(d => d[1]));
+  let s = `<svg viewBox="0 0 ${W} ${H}"><line class="axis" x1="${pad-8}" y1="2" x2="${pad-8}" y2="${H-6}"/>`;
+  data.forEach((d, i) => {
+    const y = i * rowH + 6, w = d[1] / max * (W - pad - padR);
+    s += `<text x="${pad-14}" y="${y+14}" text-anchor="end">${d[0]}</text>` +
+         `<rect class="bar" x="${pad-8}" y="${y}" width="${w}" height="18"/>` +
+         `<text class="vlab" x="${pad-8+w+8}" y="${y+14}">${d[1].toLocaleString('th-TH')} บ่อ</text>`;
+  });
+  el.innerHTML = s + '</svg><div style="font-size:12.5px;color:var(--ink3);margin-top:6px">บ่อใหม่ต่อปีงบที่ได้มา (รวม 7,251 บ่อ)</div>';
+})();
+</script>
+</body>
+</html>
