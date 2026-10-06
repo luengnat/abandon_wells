@@ -139,6 +139,42 @@ main { padding: 28px 0 37px; }
 .footer-head p { margin: 0; color: var(--quiet); font-size: 10px; }
 .sources { display: flex; flex-wrap: wrap; gap: 7px 16px; margin-top: 7px; font-size: 10.5px; }
 .endnote { margin: 9px 0 0; color: var(--quiet); font-size: 10px; }
+.proof-matrix { margin: 8px 0 25px; padding: 15px 16px 17px; border: 1px solid var(--ink); background: var(--white); }
+.proof-matrix h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.4; }
+.proof-table { width: 100%; border-collapse: collapse; font-size: 11.5px; line-height: 1.65; }
+.proof-table th, .proof-table td { padding: 8px 9px; border-top: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.proof-table th { color: var(--red); font-weight: 800; }
+.proof-table td:first-child { width: 20%; font-weight: 800; }
+.year-chart { display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 7px; align-items: end; height: 142px; margin: 10px 0 8px; padding: 8px 8px 0; border-bottom: 1px solid var(--ink); background: #f3f0e8; }
+.year-col { display: flex; min-width: 0; height: 100%; flex-direction: column; align-items: center; justify-content: end; gap: 3px; color: var(--muted); font-size: 9.5px; }
+.year-col b { color: var(--ink); font-size: 9px; font-variant-numeric: tabular-nums; }
+.year-col i { display: block; width: min(100%, 34px); min-height: 2px; background: #aab5aa; border-radius: 2px 2px 0 0; }
+.year-col.peak i { background: var(--red); }
+.year-col span { padding-bottom: 4px; }
+.data-table { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 10.5px; line-height: 1.55; }
+.data-table th, .data-table td { padding: 6px 7px; border-top: 1px solid var(--rule); text-align: left; vertical-align: top; }
+.data-table th { color: var(--red); font-size: 10px; }
+.data-table td:first-child { font-weight: 700; }
+.evidence-triptych { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 10px; }
+.evidence-tile { min-width: 0; padding: 10px 11px; border-top: 3px solid var(--red); background: #f3f0e8; }
+.evidence-tile strong { display: block; color: var(--red); font: 900 clamp(19px, 2.8vw, 27px)/1.25 var(--serif); font-variant-numeric: tabular-nums; }
+.evidence-tile b { display: block; margin: 3px 0; font-size: 10.5px; line-height: 1.5; }
+.evidence-tile p { margin: 4px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.evidence-tile a { font-size: 10px; font-weight: 700; }
+.price-ladder { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 5px; margin-top: 9px; }
+.price-step { padding: 7px 8px; background: #f3f0e8; font-size: 9.5px; line-height: 1.45; }
+.price-step b { display: block; color: var(--green); font: 800 14px/1.4 var(--serif); font-variant-numeric: tabular-nums; }
+.question-box { margin: 10px 0 0 !important; padding: 9px 11px; border-left: 4px solid var(--red); background: var(--red-soft); color: #482f2a; font-size: 11.5px !important; line-height: 1.65 !important; }
+.question-box strong { color: var(--red); }
+.result-map { margin-top: 22px; padding: 16px 17px; border: 1px solid var(--ink); background: var(--white); }
+.result-map h2 { margin: 0; font-size: 22px; line-height: 1.4; }
+.result-map > p { margin: 5px 0 9px; color: var(--muted); font-size: 11px; }
+.outcome-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 9px 0; }
+.outcome-strip article { padding: 9px 10px; background: #f3f0e8; }
+.outcome-strip b { display: block; color: var(--red); font: 800 20px/1.3 var(--serif); }
+.outcome-strip span { display: block; margin-top: 3px; color: var(--muted); font-size: 10.5px; line-height: 1.55; }
+.map-embed { display: block; width: 100%; height: 620px; border: 1px solid var(--rule); background: #e6e8e1; }
+.map-caption { margin: 6px 0 0 !important; font-size: 10px !important; }
 @media (max-width: 700px) {
   .wrap { width: min(100% - 28px, 1080px); }
   .hero { padding-top: 30px; }
@@ -154,6 +190,9 @@ main { padding: 28px 0 37px; }
   .signal-strip div:nth-child(-n+2) { border-bottom: 1px solid #5b625d; }
   .next { grid-template-columns: 1fr; gap: 12px; }
   .questions { grid-template-columns: repeat(2, 1fr); }
+  .evidence-triptych { grid-template-columns: 1fr; }
+  .result-map { padding: 13px 12px; }
+  .map-embed { height: 510px; }
 }
 @media (max-width: 430px) {
   body { font-size: 14px; }
@@ -163,6 +202,11 @@ main { padding: 28px 0 37px; }
   .case-pair { grid-template-columns: 1fr; }
   .footer-head { display: block; }
   .footer-head p { margin-top: 3px; }
+  .proof-matrix { padding: 12px 10px; overflow-x: auto; }
+  .proof-table { min-width: 620px; }
+  .price-ladder { grid-template-columns: 1fr 1fr; }
+  .outcome-strip { grid-template-columns: 1fr; }
+  .map-embed { height: 440px; }
 }
 @media print {
   @page { size: A3 portrait; margin: 10mm; }
@@ -182,10 +226,10 @@ main { padding: 28px 0 37px; }
 <body>
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">4 สัญญาณจากบัญชีสินทรัพย์บ่อบาดาล · กรมทรัพยากรน้ำบาดาล · สำรวจ 30 ก.ย. 2567</p>
-    <h1><em>7,251 รายการ</em> มูลค่าตามบัญชี ฿5,081.9 ล้าน<br>มีหลักฐานไหมว่า<em>จำเป็น ใช้ได้ และคุ้ม?</em></h1>
-    <p class="dek">รูปแบบในทะเบียนและรายงานของหน่วยงานเองชวนให้ถามตรง ๆ: ทำไมรายการกระจุกในไม่กี่ปีและพื้นที่เดิม? ราคาซ้ำมีขอบเขตงานอะไรอยู่ข้างหลัง? และสร้างแล้วส่งน้ำถึงคนจริงหรือไม่?</p>
-    <div class="question-ribbon"><span>ข้อสงสัยหลัก</span><strong>เงินลงบัญชีหลายพันล้าน แต่ข้อมูลรายบ่อยังตอบไม่ได้ว่าใครต้องการน้ำ บ่อไหนใช้ได้ และใครได้รับน้ำ</strong></div>
+    <p class="eyebrow">ตรวจสอบบัญชีสินทรัพย์บ่อบาดาล · กรมทรัพยากรน้ำบาดาล · ข้อมูล ณ 30 ก.ย. 2567</p>
+    <h1><em>7,251 แถว</em> มูลค่าตามบัญชี ฿5,081.9 ล้าน<br>แต่ยังตอบไม่ได้ว่า<em>จำเป็น ใช้ได้ คุ้ม และถึงคนหรือไม่</em></h1>
+    <p class="dek">นี่คือ 4 ข้อสงสัยจากทะเบียนและเอกสารตรวจของรัฐ: ทำไมรายการกระจุกในไม่กี่ปีและพื้นที่เดิม? น้ำและงานผ่านเกณฑ์หรือไม่? มูลค่าที่บันทึกตรงกับขอบเขตงานแค่ไหน? และหลังสร้างแล้วมีใครได้น้ำจริง?</p>
+    <div class="question-ribbon"><span>คำถามใหญ่</span><strong>เหตุใดสินทรัพย์มูลค่ากว่า 5 พันล้านจึงยังไม่มีข้อมูลรายบ่อให้ตรวจว่าเจาะเพราะจำเป็น งานมีคุณภาพ และส่งน้ำถึงผู้ใช้?</strong></div>
     <div class="hero-grid">
       <div class="hero-metric" aria-label="7,251 แถว อยู่ระหว่างทบทวนการใช้ประโยชน์">
         <span class="big">7,251 แถว</span>
@@ -196,46 +240,81 @@ main { padding: 28px 0 37px; }
         <span class="metric-copy"><b>มูลค่าการได้มาที่บันทึก</b><br>ไม่ใช่ยอดเบิกจ่ายหรือราคาสัญญา</span>
       </div>
     </div>
-    <div class="signal-strip" aria-label="สี่สัญญาณที่ต้องชี้แจง">
-      <div><b>97.5%</b><span>รายการอยู่ในช่วงปีที่ได้มา 6 ปี</span></div>
-      <div><b>68 แถว</b><span>ชื่อตำบลเดียวใน 2 ปีงบ</span></div>
-      <div><b>255 แถว</b><span>ลงมูลค่าเท่ากัน ฿221,280</span></div>
-      <div><b>41 / 188</b><span>ผลตรวจ DGR ระบุไม่เหมาะบริโภค</span></div>
+    <div class="signal-strip" aria-label="สี่ข้อสงสัยที่ต้องชี้แจง">
+      <div><b>97.5%</b><span>ใน 6 ปี · 415 หมู่บ้านมีรายการข้ามปี · นาชำ 68 แถว</span></div>
+      <div><b>41% / 92%</b><span>ท่อบ่อเก่าชำรุด · 298/323 ระบบน้ำไม่ผ่าน · บ่อ 6309H003 ไม่เหมาะดื่ม</span></div>
+      <div><b>255 แถว</b><span>ลง ฿221,280 เท่ากัน · ยอดรวม ฿2,538/2,544 ล้าน แต่จำนวนต่าง 3.8 เท่า</span></div>
+      <div><b>7,251 แถว</b><span>สถานะเดียว “รอทบทวน” · สตง.พบ 9/47 โครงการไม่มีผู้ใช้</span></div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
+  <section class="proof-matrix" aria-labelledby="proof-title">
+    <p class="section-label">อ่านก่อน — ตั้งข้อสงสัยจากหลักฐาน ไม่ใช่เดาเจตนา</p>
+    <h2 id="proof-title">ข้อมูลนี้พิสูจน์อะไร และยังพิสูจน์อะไรไม่ได้?</h2>
+    <div class="table-scroll">
+      <table class="proof-table">
+        <thead><tr><th>ประเด็น</th><th>หลักฐานรองรับอะไร</th><th>ยังสรุปไม่ได้ว่า</th><th>เอกสารที่ต้องถามหา</th></tr></thead>
+        <tbody>
+          <tr><td>ความจำเป็น</td><td>ปีได้มาและชื่อพื้นที่กระจุก/ซ้ำในทะเบียน</td><td>เจาะบ่อเดิมซ้ำ หรือทุกจุดไม่จำเป็น</td><td>ผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน พิกัดและเหตุผลเลือกจุด</td></tr>
+          <tr><td>คุณภาพ</td><td>รายงานรัฐพบงานชำรุดและตัวอย่างน้ำไม่ผ่านเกณฑ์</td><td>บ่อทั้ง 7,251 แถวเสียหรือน้ำไม่ปลอดภัย</td><td>ผลตรวจน้ำและสูบทดสอบล่าสุดที่ผูกกับเลขบ่อ</td></tr>
+          <tr><td>ราคา</td><td>มูลค่าซ้ำและยอดรวมสองช่วงใกล้กัน แต่จำนวนแถวต่างกันมาก</td><td>ราคาสัญญาแพงเกินจริงหรือมีการฮั้ว</td><td>TOR/BOQ ราคากลาง สัญญา ใบตรวจรับและยอดจ่ายรายโครงการ</td></tr>
+          <tr><td>ผลลัพธ์</td><td>รายงานตรวจพบโครงการตัวอย่างที่ไม่มีผู้ใช้หรือส่งน้ำไม่ถึงเป้า</td><td>กรณีตัวอย่างตรงกับบ่อใดในบัญชีทุกกรณี</td><td>เลขบ่อ รหัสระบบ สถานะล่าสุด ผู้ใช้จริงและประวัติซ่อม</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <div class="section-head">
-    <div><p class="section-label">4 จุดผิดสังเกต · 4 คำถามที่ต้องตอบด้วยเอกสาร</p><h2>ตัวเลขเหล่านี้มีคำอธิบายรายโครงการหรือไม่?</h2></div>
-    <p>นี่คือสัญญาณให้ตรวจสอบจากข้อมูลที่พบ ไม่ใช่ข้อสรุปว่าทุกบ่อมีปัญหา. เปิดดูหลักฐานและข้อจำกัดของแต่ละข้อด้านล่าง</p>
+    <div><p class="section-label">4 จุดผิดสังเกต · 4 คำถามที่หน่วยงานควรตอบ</p><h2>ทำไมรูปแบบเหล่านี้จึงเกิดขึ้น?</h2></div>
+    <p>แต่ละธงชี้สิ่งที่ควรตรวจเป็นรายโครงการและรายบ่อ อ่านคู่กับข้อจำกัดเพื่อไม่เหมารวมข้อมูลคนละชุด</p>
   </div>
 
   <section class="flags" aria-label="สี่ประเด็นตรวจสอบ">
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 1 · ความจำเป็น</span><h3>ทำไม 97.5% ของรายการจึงกระจุกใน 6 ปี?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 1 · อาจไม่จำเป็น?</span><h3>ก่อนเจาะ มีหลักฐานว่าพื้นที่นั้นขาดน้ำจริงแค่ไหน?</h3></div>
       <div class="stat"><strong>97.5%</strong><span>7,067 จาก 7,251 แถว<br>มีปีที่ได้มาอยู่ใน 2560–2565</span></div>
       <div class="bar-track" role="img" aria-label="ร้อยละ 97.5 ของแถวมีปีที่ได้มาอยู่ระหว่าง 2560 ถึง 2565"><div class="bar-fill"></div></div>
-      <p class="evidence">ต.นาชำ เพชรบูรณ์มี <b>68 รายการใน 2 ปีงบ</b>; ชื่อบ้านเชียงเพ็งปรากฏในทะเบียน 6 ปีติดต่อกัน. <b>แต่ละจุดมีผลสำรวจความขาดแคลนและพิกัดแยกกันก่อนอนุมัติหรือไม่?</b></p>
-      <p class="limit"><b>ยังไม่พิสูจน์:</b> ปีในกราฟคือปีที่ได้มาตามบัญชี ไม่ใช่วันเจาะ. การมีหลายบ่อในพื้นที่เดียวอาจมีเหตุผล แต่ต้องตรวจความจำเป็นและจุดเจาะรายบ่อ</p>
+      <div class="year-chart" role="img" aria-label="จำนวนแถวตามปีที่ได้มา: 2559 มี 184, 2560 มี 1,397, 2561 มี 2,076, 2562 มี 2,078, 2563 มี 982, 2564 มี 518, 2565 มี 16">
+        <div class="year-col"><b>184</b><i style="height:9%"></i><span>2559</span></div>
+        <div class="year-col"><b>1,397</b><i style="height:67%"></i><span>2560</span></div>
+        <div class="year-col peak"><b>2,076</b><i style="height:100%"></i><span>2561</span></div>
+        <div class="year-col peak"><b>2,078</b><i style="height:100%"></i><span>2562</span></div>
+        <div class="year-col"><b>982</b><i style="height:47%"></i><span>2563</span></div>
+        <div class="year-col"><b>518</b><i style="height:25%"></i><span>2564</span></div>
+        <div class="year-col"><b>16</b><i style="height:2%"></i><span>2565</span></div>
+      </div>
+      <p class="scope-note">นับตาม “ปีที่ได้มา” ในบัญชี ไม่ใช่วันเจาะจริงทุกบ่อ · <a href="index.html#need">ดูกราฟและที่มา ↗</a></p>
+      <p><b>โครงการแก้ขาดแคลนน้ำยังปรากฏต่อเนื่อง 3 ปีงบ</b></p>
+      <table class="data-table">
+        <thead><tr><th>ปีงบ</th><th>เป้าหมายตามชื่อโครงการ</th><th>แถวที่พบในทะเบียน</th></tr></thead>
+        <tbody><tr><td>2560</td><td>1,500 แห่ง</td><td>410</td></tr><tr><td>2561</td><td>1,437 แห่ง</td><td>1,317</td></tr><tr><td>2562</td><td>247 แห่ง</td><td>196</td></tr></tbody>
+      </table>
+      <p class="scope-note">จำนวนเป้าหมายกับแถวทะเบียนเป็นคนละยอด ยังไม่ยืนยันว่าเป็นจุดหรือสัญญาเดิม</p>
+      <p><b>ชื่อพื้นที่เดิมก็กลับมาในหลายปี</b></p>
+      <table class="data-table">
+        <thead><tr><th>พื้นที่</th><th>รายการที่พบ</th></tr></thead>
+        <tbody><tr><td>ต.นาชำ · เพชรบูรณ์</td><td>68 แถวใน 2 ปีงบ กระจายอย่างน้อย 4 หมู่บ้าน</td></tr><tr><td>อ.หล่มเก่า · เพชรบูรณ์</td><td>96 แถวทั้งอำเภอ</td></tr><tr><td>บ้านเชียงเพ็ง ม.3 · อุดรธานี</td><td>ชื่อเดิมปรากฏ 6 ปีติด (2559–2564)</td></tr></tbody>
+      </table>
+      <p class="question-box"><strong>คำถาม:</strong> ก่อนอนุมัติแต่ละรอบ มีผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน และพิกัดแยกจุดรองรับหรือไม่?</p>
+      <p class="limit"><b>ยังไม่พิสูจน์:</b> ปีบัญชีไม่ใช่วันเจาะ; รายการระดับตำบล/อำเภอหรือชื่อหมู่บ้านซ้ำไม่ยืนยันว่าเจาะจุดเดิมหรือไม่จำเป็น</p>
       <p class="source-inline"><a href="index.html#need">ดูกราฟและตารางพื้นที่ซ้ำในบทวิเคราะห์ ↗</a></p>
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 2 · คุณภาพ</span><h3>กรมฯ พบ 41 จุดน้ำไม่เหมาะบริโภค—แล้วบ่ออื่นตรวจเมื่อไร?</h3></div>
-      <div class="quality-head"><strong>41 จาก 188 จุด</strong><span>รายงานผลตรวจของ DGR<br>279 จุดที่ศึกษา · คนละชุดกับทะเบียน</span></div>
-      <div class="quality-bar" role="img" aria-label="ใน 188 แถวที่มีคำวินิจฉัย: 41 ไม่เหมาะบริโภค, 99 อนุโลม, 48 ผ่านมาตรฐาน">
-        <span class="not-fit">41</span><span class="conditional">99</span><span class="fit">48</span>
+      <div class="flag-head"><span class="flag-no">ธง 2 · คุณภาพ</span><h3>งานชำรุดและน้ำไม่เหมาะดื่ม—บ่อในบัญชีตรวจเมื่อไร?</h3></div>
+      <div class="evidence-triptych">
+        <article class="evidence-tile"><strong>41%</strong><b>1,329 จาก 3,240 บ่อที่อุดกลบ ชำรุดที่ท่อกรุ/ตัวบ่อ</b><p>DGR รายงานปี 2552 · บ่อชุดเก่า ไม่ใช่สัดส่วนของ 7,251 แถว</p><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2552/20180715235554I7ZOO.pdf" target="_blank" rel="noopener">เปิดรายงาน DGR ↗</a></article>
+        <article class="evidence-tile"><strong>92.26%</strong><b>298 จาก 323 ระบบที่ตรวจ ไม่ผ่านเกณฑ์น้ำดื่ม</b><p>กรมทรัพยากรน้ำตรวจระบบประปาหมู่บ้านปี 2567 · ไม่ใช่ผลสุ่มแทนทุกบ่อ</p><a href="https://division.dwr.go.th/wad/images/Announce_PDF/30_Report_project__to_strengthen_water_assessment.pdf" target="_blank" rel="noopener">เปิดรายงานกรมทรัพยากรน้ำ ↗</a></article>
+        <article class="evidence-tile"><strong>6309H003</strong><b>บ่อลึก 342 เมตร: “ไม่เหมาะสมที่จะใช้บริโภค”</b><p>รายงาน DGR ระบุผลน้ำดิบ; ต้องดูระบบปรับปรุงก่อนสรุปว่าน้ำที่ส่งถึงผู้ใช้เป็นอย่างไร</p><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2565/280/2024110413593453R51.pdf" target="_blank" rel="noopener">เปิดรายงาน DGR ↗</a></article>
       </div>
-      <div class="quality-legend"><span class="red"><b>41</b>ไม่เหมาะบริโภค</span><span class="gold"><b>99</b>อนุโลม</span><span class="green"><b>48</b>ผ่านมาตรฐาน</span></div>
-      <p class="evidence">ใน 188 จุดที่มีคำวินิจฉัยชัด <b>41 จุดระบุว่าน้ำไม่เหมาะบริโภค</b>; อีก 99 จุดอนุโลม และ 48 จุดผ่านมาตรฐาน. แล้วสินทรัพย์ 7,251 แถวมีผลตรวจล่าสุดกี่บ่อ?</p>
-      <div class="well-example"><b>ตัวอย่างที่มีรหัสบ่อ:</b> DGR ระบุบ่อ 6309H003 ลึก 342 เมตรว่า “ไม่เหมาะสมที่จะใช้บริโภค”.</div>
-      <p class="limit"><b>ยังไม่พิสูจน์:</b> รายงาน 279 แห่งเป็นอีกโครงการ ไม่ใช่ตัวอย่างสุ่มแทน 7,251 แถว. จึงยังไม่รู้คุณภาพน้ำของสินทรัพย์ส่วนใหญ่</p>
-      <p class="source-inline"><a href="https://gdf.dgr.go.th/public/upload/files/projectsupport/2563/202301110932484CZS9.pdf" target="_blank" rel="noopener">เปิดรายงานผลตรวจ DGR ↗</a></p>
+      <p class="question-box"><strong>คำถาม:</strong> ใน 7,251 แถว มีบ่อใดตรวจแล้วไม่ผ่าน? ตรวจครั้งล่าสุดเมื่อไร และมีผลตรวจหลังซ่อมหรือปรับปรุงหรือไม่?</p>
+      <p class="limit"><b>ยังไม่พิสูจน์:</b> ตัวเลขสามชุดมาจากคนละโครงการ คนละปี และคนละประเภทการตรวจ; ใช้แทนอัตราความเสียหายของบัญชีปัจจุบันไม่ได้</p>
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 3 · ราคา</span><h3>ยอดแทบเท่ากัน แต่จำนวนต่างกัน 3.8 เท่า—คำนวณจากอะไร?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 3 · ราคา</span><h3>งบรวมพอกัน แต่จำนวนแถวต่างเกือบ 4 เท่า—เพราะอะไร?</h3></div>
       <p class="evidence"><b>5,735 แถว</b> มูลค่า ฿2,538 ล้าน เทียบกับ <b>1,516 แถว</b> มูลค่า ฿2,544 ล้าน</p>
       <div class="money-bars" role="img" aria-label="ปีที่ได้มา 2559 ถึง 2562 มี 5,735 แถว มูลค่า 2,538 ล้านบาท; ปี 2563 ถึง 2565 มี 1,516 แถว มูลค่า 2,544 ล้านบาท">
         <div class="money-row"><span class="period">ได้มา 2559–2562</span><div class="money-track"><div class="money-fill"></div></div><span class="amount">฿2,538 ลบ.</span></div>
@@ -243,25 +322,56 @@ main { padding: 28px 0 37px; }
       </div>
       <div class="row-counts"><div><b>5,735 แถว</b>ช่วงแรก</div><div><b>1,516 แถว</b>ช่วงหลัง</div></div>
       <div class="repeat-value"><b>255 แถว</b><span>ลงมูลค่าการได้มาเท่ากันที่ ฿221,280</span></div>
-      <p class="limit"><b>คำถามที่ต้องตอบ:</b> เมื่อจำนวนแถวต่างกันเกือบ 4 เท่า เหตุใดยอดรวมจึงเกือบเท่ากัน และ 255 รายการราคาเดียวกันเป็นงานแบบใด?</p>
+      <p><b>บันไดมูลค่าต่อรายการในบัญชี</b> — อาจเป็นงานคนละแบบ จึงต้องเทียบขอบเขตงานก่อน</p>
+      <div class="price-ladder" aria-label="ค่ากลางมูลค่าต่อรายการตามประเภทระบบ">
+        <div class="price-step"><b>฿0.17–0.30 ล.</b>บ่อหมู่บ้านเปล่า</div>
+        <div class="price-step"><b>฿0.19 ล.</b>บ่ออุปโภคบริโภค</div>
+        <div class="price-step"><b>฿0.30 ล.</b>บ่อเกษตร</div>
+        <div class="price-step"><b>฿0.87 ล.</b>ระบบน้ำดื่มโรงเรียน</div>
+        <div class="price-step"><b>฿1.84 ล.</b>ระบบสูบพลังงานแสงอาทิตย์</div>
+        <div class="price-step"><b>฿10–12 ล.</b>บ่อแหล่งน้ำระยะไกล</div>
+        <div class="price-step"><b>฿13.7 ล.</b>บ่อเกษตรเทคโนโลยีสูง</div>
+      </div>
+      <p class="scope-note">ค่ากลางจากโครงการคนละประเภทและช่วงปี ไม่ใช่ราคาเทียบตรงของบ่อรูปแบบเดียวกัน</p>
+      <p class="question-box"><strong>คำถาม:</strong> เหตุใดยอดรวมสองช่วงจึงเกือบเท่ากันทั้งที่จำนวนแถวต่าง 3.8 เท่า? สเปกและอุปกรณ์ที่เพิ่มขึ้นอธิบายมูลค่าได้หรือไม่? และ 255 แถวราคาเดียวกันเป็นงานแบบใด?</p>
       <p class="source-inline"><a href="index.html#cost">ดูบันไดราคาและข้อจำกัดการเทียบ ↗</a></p>
       <p class="scope-note"><b>ยังไม่ใช่หลักฐานฮั้ว:</b> มูลค่าที่ลงบัญชีไม่ใช่สัญญาหรือยอดจ่ายจริง; ต้องเทียบ TOR/BOQ ใบตรวจรับ และการเบิกจ่าย</p>
     </article>
 
     <article class="flag">
-      <div class="flag-head"><span class="flag-no">ธง 4 · ผลลัพธ์</span><h3>ขึ้นทะเบียนแล้ว แต่ชาวบ้านยังไม่ได้ใช้น้ำ—ใครตรวจรับผล?</h3></div>
+      <div class="flag-head"><span class="flag-no">ธง 4 · ผลลัพธ์</span><h3>สร้างเสร็จแล้ว น้ำถึงผู้ใช้จริงหรือใครแค่ตรวจรับงาน?</h3></div>
       <div class="status-line alert"><b>บ้านนาโพธิ์ ม.17</b><span>ข่าวลงพื้นที่ 16 มิ.ย. 2569<br>รายงานว่ายังไม่ได้ใช้น้ำจากโครงการ</span></div>
       <div class="case-pair">
         <div class="case"><b>รายงานหน้างาน</b><span>มิเตอร์ไม่ขยับ และอุปกรณ์เกือบทั้งหมดเสียหาย; โครงการตั้งเป้า 219 ครัวเรือน / 700 คน แต่รายงานว่าไม่ได้ใช้น้ำ</span></div>
         <div class="case"><b>โยงกับทะเบียนได้</b><span>แถว 17001 ชื่อพื้นที่และโครงการตรงกัน; มูลค่าตามบัญชี ฿592,155 ไม่ใช่ยอดจ่ายจริง</span></div>
       </div>
       <p class="source-inline"><a href="https://www.youtube.com/watch?v=JVhIrpLuaHc" target="_blank" rel="noopener">ดูรายงานลงพื้นที่ช่อง 7 ↗</a> · <a href="https://www.bb.go.th/web/budget/province/province_bud66/PDF/plan/bis61rchang2001_02480000.pdf" target="_blank" rel="noopener">ดูแผนจัดสรรงบ DGR ↗</a></p>
+      <p class="question-box"><strong>คำถาม:</strong> ตรวจรับจากการก่อสร้างเสร็จ หรือมีหลักฐานว่าระบบจ่ายน้ำถึงผู้ใช้ตามเป้าหมายจริง?</p>
       <p class="limit"><b>ขอบเขตหลักฐาน:</b> เป็นรายงานภาคสนาม ไม่ใช่ผลตรวจวิศวกรรม; จับคู่ได้ระดับโครงการ/พื้นที่ ไม่ใช่เลขบ่อ. ตรวจถึง 4 ต.ค. 2569 ยังไม่พบหลักฐานสาธารณะยืนยันว่าซ่อมและกลับมาจ่ายน้ำแล้ว</p>
     </article>
   </section>
 
+  <section class="result-map" aria-labelledby="result-map-title">
+    <p class="section-label">ผลลัพธ์ที่ตรวจต่อได้</p>
+    <h2 id="result-map-title">ทุกแถวจบที่ “รอทบทวน” แต่บางโครงการมีรายงานว่าไม่มีคนใช้</h2>
+    <p>บัญชีที่สำรวจ 30 ก.ย. 2567 แสดงสถานะเดียวกัน 7,251 แถว; สถานะนี้ไม่บอกว่าบ่อเสียหรือยังทำงาน และไม่ใช่สถานะปัจจุบันที่ตรวจซ้ำแล้ว</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>หลักฐาน</th><th>ผลที่พบ</th><th>เชื่อมกับทะเบียนได้แค่ไหน</th></tr></thead>
+        <tbody>
+          <tr><td>ทะเบียน DGR</td><td>7,251 แถวขึ้นสถานะ “อยู่ระหว่างทบทวนการใช้ประโยชน์”</td><td>เป็นทั้งชุด ณ วันสำรวจ; ไม่มีสถานะรายบ่อปัจจุบัน</td></tr>
+          <tr><td>สตง. ตรวจ 47 โครงการ</td><td>9 โครงการไม่มีผู้ใช้; อีก 4 ระบบทำงานไม่เต็มที่หรือไม่ตรงเป้า</td><td>รายงานย่อไม่เปิดชื่อจุด จึงจับคู่รายบ่อไม่ได้ · <a href="index.html#result" target="_blank" rel="noopener">เปิดรายงาน สตง. ↗</a></td></tr>
+          <tr><td>บ้านนาโพธิ์ ม.17</td><td>ข่าวภาคสนามระบุว่าโครงการยังไม่จ่ายน้ำ; ตั้งเป้า 219 ครัวเรือน / 700 คน</td><td>ชื่อโครงการตรงกับแถว 17001; ยังไม่มีเลขบ่อยืนยันหรือผลตรวจวิศวกรรม</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><a href="index.html#result" target="_blank" rel="noopener">เปิดบทสรุปตรวจการบริหารจัดการน้ำบาดาลของ สตง. ↗</a></p>
+    <iframe class="map-embed" src="map.html" title="แผนที่จำนวนรายการบ่อบาดาลตามจังหวัดและจังหวัดที่พบรายงานปัญหา" loading="lazy"></iframe>
+    <p class="map-caption">แผนที่นี้ใช้พิกัดตัวแทนระดับจังหวัด: วงเขียวแสดงจำนวนแถวทะเบียน วงแดงหมายถึงมีรายงานปัญหาในจังหวัดนั้น ไม่ได้ชี้ตำแหน่งบ่อหรือยืนยันว่าทุกรายการในจังหวัดมีปัญหา</p>
+  </section>
+
   <div class="after-flags">
-    <p class="caveat-top"><strong>ชวนสงสัย แต่ยังไม่ใช่ข้อกล่าวหา:</strong> ปีในทะเบียนคือปีที่ได้มา ไม่ใช่วันเจาะ; รายงานคุณภาพน้ำเป็นคนละชุดโครงการ; มูลค่าลงบัญชีไม่ใช่ราคาสัญญาหรือยอดจ่ายจริง; กรณีภาคสนามจับคู่ได้ระดับพื้นที่/โครงการ. จึงยังสรุปไม่ได้ว่าทั้ง 7,251 แถวเสียหรือมีการทุจริต</p>
+    <p class="caveat-top"><strong>ข้อสงสัยที่ต้องตรวจ ไม่ใช่ข้อกล่าวหา:</strong> หลักฐานแสดงการกระจุกตัวของโครงการ ผลตรวจคุณภาพที่มีปัญหา ความต่างของมูลค่า และผลใช้งานที่ไม่ถึงเป้าในบางกรณี. แต่ข้อมูลนี้ยังไม่พิสูจน์ว่าทั้ง 7,251 แถวเสีย ไม่จำเป็น หรือมีการทุจริต</p>
     <section class="data-origin" aria-labelledby="origin-title">
       <h2 id="origin-title">ตัวเลข 7,251 แถวมาจากไหน?</h2>
       <div class="source-flow" aria-label="ที่มาของชุดข้อมูล">
@@ -276,9 +386,9 @@ main { padding: 28px 0 37px; }
   </div>
 
   <section class="verdict" aria-labelledby="verdict-title">
-    <p class="section-label">ข้อสรุปตรง ๆ</p>
-    <h2 id="verdict-title">สี่สัญญาณนี้ชวนสงสัยเรื่องการวางแผน ความเหมาะสมของงาน ราคา และการติดตามผล</h2>
-    <p>แต่หลักฐานยังไม่พอจะฟันธงว่าผิดกฎหมายหรือทุจริต. หน่วยงานควรแสดงเอกสารรายบ่อที่เชื่อมเหตุผลก่อนเจาะ เลขบ่อ พิกัด ผลสูบทดสอบ คุณภาพน้ำ TOR/BOQ ยอดจ่ายจริง การตรวจรับ และผู้ใช้น้ำหลังส่งมอบ</p>
+    <p class="section-label">คำตอบตรง ๆ · มีเหตุให้ตั้งคำถาม</p>
+    <h2 id="verdict-title">พื้นที่ขาดน้ำจริงไหม? งานได้มาตรฐานไหม? ราคาอธิบายได้ไหม? แล้วมีคนได้น้ำจริงหรือไม่?</h2>
+    <p>หลักฐานที่เปิดเผยทำให้ต้องตรวจ 4 เรื่องนี้เป็นรายโครงการ แต่ยังไม่พิสูจน์ว่าบ่อทั้ง 7,251 แถวเสียหรือมีการทุจริต. คำตอบต้องมาจากเอกสารที่เชื่อมเหตุผลก่อนเจาะ เลขบ่อ พิกัด ผลสูบทดสอบ คุณภาพน้ำ TOR/BOQ ยอดจ่าย การตรวจรับ และผู้ใช้หลังส่งมอบ</p>
   </section>
 
   <section class="next" aria-labelledby="next-title">
