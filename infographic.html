@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f3efe6">
-<title>7,251 รายการยังรอทบทวน — ใครตรวจว่าเจาะแล้วคุ้ม? | ตรวจโครงการบาดาล</title>
+<title>7,251 รายการรอทบทวน — ใครรับรองว่าเจาะจำเป็นและใช้ได้? | ตรวจโครงการบาดาล</title>
 <meta name="description" content="ทะเบียนสินทรัพย์ DGR มีรายการบ่อบาดาล 7,251 แถว มูลค่าการได้มาที่บันทึก 5,081.9 ล้านบาท และขึ้นสถานะอยู่ระหว่างทบทวนทั้งชุด ตรวจ 4 ประเด็น: ความจำเป็น คุณภาพ ราคา และผลลัพธ์">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,18 +49,19 @@ h1 em { color: #ff9578; font-style: normal; }
 .flow-step span { display: block; color: var(--muted); font-size: 11px; line-height: 1.55; }
 .flow-arrow { color: var(--quiet); text-align: center; font-size: 21px; }
 .scope-note { margin: 8px 0 0; color: var(--quiet); font-size: 11px; }
-.signal-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 20px; color: var(--ink); }
+.signal-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 20px; color: var(--ink); }
 .signal-strip div { display: flex; min-width: 0; flex-direction: column; padding: 13px 13px 12px; border: 2px solid #a65a48; border-top: 6px solid #b6382a; background: #f4e5dc; box-shadow: 3px 3px 0 #171513; }
-.signal-strip .signal-label { order: 1; display: block; margin-bottom: 4px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .02em; line-height: 1.4; }
-.signal-strip b { order: 3; display: block; margin-top: 9px; color: #a52f25; font: 900 clamp(22px, 3vw, 32px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+.signal-strip .signal-label { order: 1; display: block; margin-bottom: 3px; color: var(--red); font-size: 11px; font-weight: 900; letter-spacing: .02em; line-height: 1.4; }
+.signal-strip b { order: 3; display: block; margin-top: 7px; color: #a52f25; font: 900 clamp(25px, 3.2vw, 35px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
 .signal-strip span { order: 4; display: block; margin-top: 4px; color: #303832; font-size: 12px; line-height: 1.55; }
-.signal-strip .signal-label + b { margin-top: 0; }
-.signal-strip .signal-question { order: 4; min-height: 0; margin: 10px 0 0; padding: 8px 0 0; border: 0; border-top: 1px solid #c8b4a7; color: #72251f; font-size: 14px; font-weight: 900; line-height: 1.5; }
-.signal-strip b { order: 2; }
-.signal-strip div > span:not(.signal-label) { order: 3; }
+.signal-strip .signal-question { order: 2; min-height: 0; margin: 1px 0 0; padding: 0; border: 0; color: #69251f; font-size: clamp(15px, 1.8vw, 19px); font-weight: 900; line-height: 1.45; }
 .signal-caveat { margin: 7px 0 0; color: #ede1d4; font-size: 11px; line-height: 1.55; }
-.signal-strip div { position: relative; border-color: #e19878; border-top-width: 7px; background: #fbf3e9; box-shadow: 4px 4px 0 #100e0c; }
+.signal-strip div { position: relative; border-color: #b85c49; border-top-width: 7px; background: #fbf3e9; box-shadow: 4px 4px 0 #100e0c; }
 .signal-strip .signal-question { color: #69251f; }
+.audit-verdict { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; align-items: center; margin-top: 17px; padding: 12px 15px; border: 1px solid #ec9879; border-left: 8px solid #ff795c; background: #55221e; color: #fff4e7; }
+.audit-verdict b { color: #ffd08c; font: 800 clamp(17px, 2.1vw, 22px)/1.5 var(--serif); }
+.audit-verdict span { color: #f0dfd0; font-size: 12px; line-height: 1.6; }
+.audit-verdict a { color: #ffd08c; font-size: 11px; font-weight: 800; }
 .front-evidence { display: grid; grid-template-columns: minmax(220px, .8fr) 2fr; gap: 18px; align-items: center; margin: 0 0 23px; padding: 20px 22px; border: 2px solid #8e3027; border-left: 10px solid var(--red); background: #efe0d6; box-shadow: 5px 5px 0 #d7c8b8; }
 .front-evidence h2 { margin: 1px 0 5px; color: #76251f; font-size: clamp(23px, 3vw, 32px); line-height: 1.4; }
 .front-evidence .front-number { display: block; color: var(--red); font: 900 clamp(38px, 5vw, 57px)/1.05 var(--serif); font-variant-numeric: tabular-nums; }
@@ -71,6 +72,7 @@ h1 em { color: #ff9578; font-style: normal; }
 .front-evidence-grid span { display: block; color: var(--ink); font-size: 11px; line-height: 1.55; }
 .front-evidence .front-scope { grid-column: 1 / -1; margin: 1px 0 0; padding-top: 9px; border-top: 1px solid #c4a89b; color: #51433b; font-size: 11px; }
 .front-evidence .front-source { grid-column: 1 / -1; margin-top: 0; font-size: 11px; font-weight: 800; }
+.hero-status { display: inline-block; margin-top: 13px; padding: 5px 9px; border: 1px solid #ffb08a; color: #fff1df; font-size: 12px; font-weight: 800; }
 .data-origin { margin-top: 19px; padding: 13px 15px; border-left: 4px solid var(--ink); background: var(--sand); }
 .data-origin h2 { margin: 0; font-size: 18px; }
 .data-origin .source-flow { margin-top: 9px; }
@@ -201,6 +203,11 @@ main { padding: 28px 0 37px; }
 .integrity-card { padding: 12px 14px; border-top: 4px solid var(--red); background: var(--white); }
 .integrity-card h3 { margin: 0 0 5px; color: #7f261f; font-size: 18px; }
 .integrity-card p { margin: 0; color: #313832; font-size: 13px; line-height: 1.65; }
+.integrity-case { margin-top: 13px; padding: 14px 16px; border-left: 8px solid #ff795c; background: #55221e; color: #fff4e7; }
+.integrity-case .section-label { color: #ffbd92; }
+.integrity-case h3 { margin: 3px 0 5px; color: #ffd08c; font: 800 clamp(18px, 2.5vw, 24px)/1.45 var(--serif); }
+.integrity-case p { margin: 4px 0 0; color: #f0dfd0; font-size: 12px; line-height: 1.65; }
+.integrity-case a { color: #ffd08c; font-weight: 800; }
 .integrity-close { margin: 13px 0 0; padding-top: 10px; border-top: 1px solid #bd9889; font-size: 14px; font-weight: 700; }
 .handover-alert { margin-top: 10px; padding: 12px 14px; border-left: 7px solid #ff795c; background: #52211d; color: #fff4e7; font-size: 13px; line-height: 1.65; }
 .handover-alert b { color: #ffd08c; }
@@ -217,6 +224,7 @@ main { padding: 28px 0 37px; }
   .questions { grid-template-columns: repeat(2, 1fr); }
   .evidence-triptych { grid-template-columns: 1fr; }
   .case-opener, .integrity-grid { grid-template-columns: 1fr; }
+  .audit-verdict { grid-template-columns: 1fr; gap: 3px; }
   .front-evidence { grid-template-columns: 1fr; padding: 16px 15px; }
   .front-evidence-grid { grid-template-columns: 1fr; }
   .front-evidence-grid article { min-height: 0; }
@@ -233,6 +241,7 @@ main { padding: 28px 0 37px; }
   .hero-head-amount { display: block; }
   .wrap { width: min(100% - 22px, 1080px); }
   .flag { padding: 17px 14px; }
+  .signal-strip { grid-template-columns: 1fr; }
   .money-row { grid-template-columns: 93px minmax(0,1fr) 76px; gap: 6px; }
   .case-pair { grid-template-columns: 1fr; }
   .footer-head { display: block; }
@@ -261,34 +270,36 @@ main { padding: 28px 0 37px; }
 <body>
 <header class="hero">
   <div class="wrap">
-    <p class="eyebrow">ธงตรวจสอบทะเบียนสินทรัพย์ DGR · ข้อมูล ณ 30 ก.ย. 2567</p>
-    <h1>7,251 รายการ · ฿5,081.9 ล้านบาท<br><em>มีน้ำเดิมพอ แต่ทำไมยังเจาะ?</em></h1>
-    <p class="dek">ทุกแถวในบัญชีขึ้นสถานะ “อยู่ระหว่างทบทวนการใช้ประโยชน์” ณ 30 ก.ย. 2567. ในรายงานตรวจ DGR เขต 2 สตง.พบ 12 จาก 26 พื้นที่มีระบบน้ำเดิมพอ; อีกโครงการหนึ่งไม่มีการสำรวจก่อนดำเนินงานและยกเลิกจุดเจาะหลังเจอน้ำเค็มหรือสูบได้น้อย. รายงานเหล่านี้ยังจับคู่กับทั้ง 7,251 แถวไม่ได้ แต่ทิ้งคำถามตรง ๆ: ใครยืนยันความจำเป็นก่อนอนุมัติ และใครตรวจว่าน้ำถึงคนก่อนรับงาน?</p>
+    <p class="eyebrow">ข้อสงสัยเรื่องการเลือกจุดเจาะ คุณภาพน้ำ ราคา และผลหลังสร้าง · เอกสารรัฐที่ตรวจสอบได้</p>
+    <h1>7,251 รายการ<br>฿5,081.9 ล้าน<br><em>ใครรับรองว่าเจาะจำเป็นและใช้งานได้?</em></h1>
+    <p class="dek">ทุกแถวในทะเบียนสินทรัพย์ DGR ขึ้นสถานะ “อยู่ระหว่างทบทวนการใช้ประโยชน์” ณ 30 ก.ย. 2567. ตัวเลข 5,081.9 ล้านบาทคือมูลค่าการได้มาที่ลงบัญชี ไม่ใช่ยอดเบิกจ่ายจริง. แต่รายงาน สตง. ตรวจพบพื้นที่มีน้ำเดิมพอแล้วยังทำโครงการ จุดเจาะที่ได้น้ำน้อย และระบบที่สร้างแล้วไม่ถูกใช้หรือใช้ได้บางส่วน — ใครอนุมัติ ใครตรวจรับ และใครติดตาม?</p>
+    <span class="hero-status">สถานะในทะเบียน: อยู่ระหว่างทบทวน ครบทั้ง 7,251 รายการ</span>
+    <div class="audit-verdict"><b>สตง.สรุปโครงการที่ตรวจว่า “ไม่มีประสิทธิภาพ” และ “ยังไม่บรรลุวัตถุประสงค์”</b><span>ข้อสงสัยนี้มีหลักฐานจากการตรวจโครงการจริง แต่ยังไม่มีหลักฐานพอจะสรุปว่าทุกรายการในทะเบียนมีปัญหาหรือมีการทุจริต</span><a href="https://en.audit.go.th/sites/default/files/files/inspection-results/โครงการพัฒนาน้ำบาดาลเพื่อความมั่นคงระดับชุมชน.pdf" target="_blank" rel="noopener">เปิดรายงาน สตง. เขต 2 ↗</a></div>
     <div class="signal-strip" aria-label="สี่ข้อสงสัยเรื่องความจำเป็น คุณภาพ ราคา และผลลัพธ์">
-      <div><span class="signal-label">ผิดสังเกต 1 · เลือกจุดเจาะ</span><b>12 / 26 พื้นที่</b><span>สตง.ระบุว่ามีระบบน้ำเดิมครอบคลุมและเพียงพอ; บัญชี DGR อีกส่วน 97.5% ลงปีได้มาในช่วง 6 ปี</span><p class="signal-question">ใครมีผลสำรวจว่าต้องเจาะเพิ่ม?</p></div>
-      <div><span class="signal-label">ผิดสังเกต 2 · คุณภาพน้ำ</span><b>298 / 323</b><span>ระบบที่กรมทรัพยากรน้ำตรวจไม่ผ่านเกณฑ์น้ำดื่ม; รายงาน DGR อีกชุดพบ 41% ของบ่อที่อุดกลบชำรุด</span><p class="signal-question">มีผลตรวจซ้ำหลังซ่อมไหม?</p></div>
-      <div><span class="signal-label">ผิดสังเกต 3 · มูลค่าบัญชี</span><b>255 × ฿221,280</b><span>มูลค่าการได้มาซ้ำเท่ากันถึงสตางค์; ยอดรวมสองช่วงใกล้กัน แม้จำนวนแถวต่างกัน 3.8 เท่า</span><p class="signal-question">TOR/BOQ ยืนยันขอบเขตงานได้ไหม?</p></div>
-      <div><span class="signal-label">ผิดสังเกต 4 · ผลหลังสร้าง</span><b>2 ไม่ใช้ · 8 ใช้บางส่วน</b><span>สตง.พบระบบไม่ใช้ตามเป้า 2 แห่ง; ตู้กดน้ำ 17/18 เครื่องไม่เคยเปิด</span><p class="signal-question">ใครตรวจรับและใครดูแลต่อ?</p></div>
+      <div><span class="signal-label">ธง 1 · เลือกพื้นที่</span><p class="signal-question">มีน้ำเดิมพอแล้วยังสร้างเพิ่ม — ใครรับรองว่าจำเป็น?</p><b>12 / 26 พื้นที่</b><span>สตง.พบระบบน้ำเดิมครอบคลุมและเพียงพอ; อีก 3 จุดปริมาณน้ำต่ำกว่าเกณฑ์</span></div>
+      <div><span class="signal-label">ธง 2 · คุณภาพน้ำ</span><p class="signal-question">น้ำที่ส่งให้ชาวบ้านดื่ม ผ่านเกณฑ์จริงไหม?</p><b>298 / 323 ระบบ</b><span>กรมทรัพยากรน้ำตรวจแล้วไม่ผ่านเกณฑ์น้ำดื่ม; DGR เคยรายงาน 41% ของบ่อที่อุดกลบมีท่อกรุ/ตัวบ่อชำรุด</span></div>
+      <div><span class="signal-label">ธง 3 · ราคา</span><p class="signal-question">255 รายการลงมูลค่าเท่ากันทุกบาท — งานเหมือนกันไหม?</p><b>255 × ฿221,280</b><span>ยอดรวมสองช่วงเกือบเท่ากัน ทั้งที่จำนวนรายการต่างกัน 3.8 เท่า</span></div>
+      <div><span class="signal-label">ธง 4 · ผลหลังสร้าง</span><p class="signal-question">สร้างเสร็จแล้วใครใช้ — และใครรับผิดชอบ?</p><b>2 ไม่ใช้ · 8 ใช้บางส่วน</b><span>สตง.พบตู้กดน้ำ 17 จาก 18 เครื่องไม่เคยเปิด; 7 จาก 23 ระบบยังรอส่งมอบ/ทำข้อตกลง</span></div>
     </div>
-    <p class="signal-caveat">ตัวเลขมาจากคนละชุดตรวจ คนละช่วงเวลา และคนละหน่วยวิเคราะห์; เป็นเหตุให้ถามและเปิดเอกสาร ไม่ใช่ผลตรวจแทนรายการทั้ง 7,251 แถวหรือหลักฐานว่ามีทุจริต</p>
+    <p class="signal-caveat">นี่เป็นสัญญาณให้เปิดรายงานสำรวจ TOR/BOQ ผลตรวจน้ำ และเอกสารตรวจรับ ตัวเลขมาจากคนละชุดตรวจและยังจับคู่กับบัญชีทั้ง 7,251 แถวไม่ได้ จึงเป็นข้อสงสัยที่มีหลักฐานรองรับ ไม่ใช่ข้อพิสูจน์การทุจริต</p>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="front-evidence" aria-labelledby="front-evidence-title">
+  <section class="front-evidence" id="maha-case" aria-labelledby="front-evidence-title">
     <div>
-      <p class="section-label">จุดผิดสังเกตที่รายงาน สตง. ระบุ</p>
-      <span class="front-number">12 / 26</span>
-      <h2 id="front-evidence-title">พื้นที่มีน้ำเดิมพอ<br>แต่ยังทำโครงการบาดาล</h2>
-      <p>นี่คือคำถามหลักของหน้า: มีใครตรวจว่าจำเป็นก่อนอนุมัติหรือไม่?</p>
+      <p class="section-label">กรณีตรวจสอบจริง · โครงการ ทสจ.มหาสารคาม</p>
+      <span class="front-number">1,375 บ่อ</span>
+      <h2 id="front-evidence-title">เจาะ 6 ปี ใช้เงิน ฿477.3 ล้าน<br>แต่ไม่มีฐานข้อมูลและรายงานติดตาม</h2>
+      <p>สตง.ระบุว่าไม่มีการสำรวจพื้นที่ก่อนเสนอของบ และไม่มีเอกสารติดตามประเมินผลให้ตรวจ. ถ้าไม่มีพิกัด/ประวัติรายบ่อ แล้วหน่วยงานรู้ได้อย่างไรว่าโครงการใหม่จำเป็นและไม่ซ้ำของเดิม?</p>
     </div>
     <div class="front-evidence-grid">
-      <article><b>2 ระบบ</b><span>สตง.พบว่าไม่ใช้ตามเป้าหมาย</span></article>
-      <article><b>8 ระบบ</b><span>ใช้ได้เพียงบางส่วน</span></article>
-      <article><b>7 / 23</b><span>ยังรอส่งมอบและทำข้อตกลงบริหาร; ทั้ง 23 ระบบยังไม่โอนสินทรัพย์ ณ เวลาตรวจ</span></article>
-      <p class="front-scope">รายงานนี้ตรวจโครงการในเขต 2 จ.สุพรรณบุรี ไม่ใช่การสุ่มตัวแทนทั่วประเทศ และยังจับคู่ตัวเลขเหล่านี้กับทุกรายการในบัญชี 7,251 แถวไม่ได้</p>
-      <a class="front-source" href="https://en.audit.go.th/sites/default/files/files/inspection-results/โครงการพัฒนาน้ำบาดาลเพื่อความมั่นคงระดับชุมชน.pdf" target="_blank" rel="noopener">เปิดรายงานผลตรวจ สตง. เขต 2 ↗</a>
+      <article><b>26 / 262 โครงการ</b><span>ไม่มีเอกสารคำขอโครงการให้ตรวจ; สตง.ยังพบคัดเลือกไม่ตามเกณฑ์และกลุ่มซ้ำซ้อน</span></article>
+      <article><b>27 / 134 จุด</b><span>ที่ลงตรวจพบงานชำรุดหรือปัญหาการใช้งาน (20.15%)</span></article>
+      <article><b>10 กลุ่ม · ฿3.46 ล้าน</b><span>กลุ่มที่ใช้บ่อไม่ได้หรือไม่ได้ใช้; สตง.ระบุงบไม่ก่อประโยชน์</span></article>
+      <p class="front-scope">สตง.ยังพบ 10/262 สัญญายกเลิกหลังเจอน้ำเค็มหรืออัตราสูบต่ำกว่า 2 ลบ.ม./ชม.; ข้อกำหนดตรวจคุณภาพน้ำไม่ตรงกับการใช้ดื่ม และคณะกรรมการตรวจรับตรวจผลวิเคราะห์ไม่ครบ. เป็นโครงการ ทสจ.มหาสารคาม ไม่ใช่โครงการ DGR ในบัญชี 7,251 แถว</p>
+      <a class="front-source" href="https://www.audit.go.th/sites/default/files/files/inspection-results/%E0%B8%9A%E0%B8%97%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%20%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%20%28%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%A5%29%20%E0%B9%AF%20%E0%B8%87%E0%B8%9A%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%20%E0%B8%88.%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A1.pdf" target="_blank" rel="noopener">เปิดรายงาน สตง. มหาสารคาม ↗</a>
     </div>
   </section>
 
@@ -297,10 +308,10 @@ main { padding: 28px 0 37px; }
     <h2 id="proof-title">อ่านก่อน — หลักฐานพิสูจน์อะไร และยังพิสูจน์อะไรไม่ได้</h2>
     <div class="table-scroll">
       <table class="proof-table">
-        <thead><tr><th>ประเด็น</th><th>หลักฐานยืนยันอะไร</th><th>ยังยืนยันอะไรไม่ได้</th><th>เอกสารที่ต้องเปิด</th></tr></thead>
+        <thead><tr><th>ข้อสงสัย</th><th>สิ่งที่ สตง./หน่วยงานตรวจพบ</th><th>ยังโยงไม่ได้</th><th>เอกสารที่ต้องเปิด</th></tr></thead>
         <tbody>
-          <tr><td>เจาะโดยไม่จำเป็นหรือไม่?</td><td>ปีได้มาและชื่อพื้นที่กระจุก/ซ้ำในทะเบียน; สตง.ระบุว่าอีกโครงการในมหาสารคามไม่มีสำรวจก่อนดำเนินงาน และยกเลิก 10/262 จุดเพราะน้ำเค็มหรือสูบต่ำ</td><td>บ่อที่ยกเลิกอยู่ตรงไหน; หลักฐานยังไม่ชี้ว่าจุดในทะเบียน DGR ซ้ำหรือไม่จำเป็น</td><td>ผลสำรวจแหล่งน้ำเดิม จำนวนผู้ขาดแคลน พิกัดและเหตุผลเลือกจุด พร้อมรายชื่อโครงการที่ถูกยกเลิก</td></tr>
-          <tr><td>งานและน้ำได้มาตรฐานไหม?</td><td>รายงานรัฐพบงานชำรุดและตัวอย่างน้ำไม่ผ่านเกณฑ์; บ้านคลองศิริราชมีบ่อเก่าที่อุดกลบและบ่อใหม่ที่ฟลูออไรด์เกินเกณฑ์</td><td>บ่อทั้ง 7,251 แถวเสียหรือน้ำไม่ปลอดภัย; บ่อใหม่เป็นการทดแทนบ่อเก่าหรือไม่</td><td>ผลตรวจน้ำและสูบทดสอบล่าสุดที่ผูกกับเลขบ่อ และเหตุผลเลือกจุดก่อสร้าง</td></tr>
+          <tr><td>ขุดเพิ่มทั้งที่ไม่สำรวจหรือไม่?</td><td>สุพรรณบุรี: 12/26 พื้นที่มีน้ำเดิมพอ. มหาสารคาม: ไม่สำรวจก่อนของบ, คำขอหาย 26/262, พบคัดเลือกไม่ตามเกณฑ์/กลุ่มซ้ำ และยกเลิก 10/262 สัญญาหลังเจอน้ำเค็มหรือสูบต่ำ</td><td>ยังไม่มีพิกัดให้โยงโครงการมหาสารคามกับแถว DGR 7,251 รายการ</td><td>ผลสำรวจก่อนอนุมัติ รายชื่อผู้รับประโยชน์ พิกัดบ่อ และเหตุผลเลือกพื้นที่</td></tr>
+          <tr><td>น้ำและงานผ่านจริงหรือไม่?</td><td>DWR ตรวจน้ำระบบประปา 298/323 แห่งไม่ผ่านเกณฑ์ดื่ม. มหาสารคาม: TOR ตรวจน้ำไม่ตรงวัตถุประสงค์ดื่ม และกรรมการตรวจรับตรวจผลไม่ครบ</td><td>ผลตรวจเหล่านี้ไม่ใช่ผลรายบ่อของทะเบียน DGR ทั้งชุด และไม่บอกสถานะน้ำวันนี้</td><td>ผลวิเคราะห์ฉบับเต็มก่อนตรวจรับ ผลตรวจซ้ำ และใบรับรองผูกเลขบ่อ/ระบบ</td></tr>
           <tr><td>มูลค่าผิดปกติหรือไม่?</td><td>มูลค่าซ้ำและยอดรวมสองช่วงใกล้กัน แต่จำนวนแถวต่างกันมาก</td><td>ราคาสัญญาแพงเกินจริงหรือมีการฮั้ว</td><td>TOR/BOQ ราคากลาง สัญญา ใบตรวจรับและยอดจ่ายรายโครงการ</td></tr>
           <tr><td>เงินแปลงเป็นน้ำถึงคนหรือไม่?</td><td>สตง.พบ 2 ระบบไม่ถูกใช้ตามเป้า, 8 ใช้บางส่วน และ 17/18 ตู้กดน้ำเย็นไม่เคยเปิด ในโครงการเขต 2</td><td>ผลเหล่านี้ตรงกับแถวใดในบัญชี 7,251 รายการ</td><td>เลขบ่อ รหัสระบบ สถานะล่าสุด ผู้ใช้จริงและประวัติซ่อม</td></tr>
         </tbody>
@@ -309,8 +320,8 @@ main { padding: 28px 0 37px; }
   </section>
 
   <div class="section-head">
-    <div><p class="section-label">ลงรายละเอียดทีละธง</p><h2>สี่คำถามที่ต้องให้เอกสารตอบ</h2></div>
-    <p>หลักฐานที่เห็นมีทั้งข้อมูลทะเบียนและผลตรวจจากคนละโครงการ. ไล่ดูแต่ละกรณีว่าใครตรวจอะไรแล้ว และใครยังต้องเปิดเอกสารตอบ</p>
+    <div><p class="section-label">ลงรายละเอียดทีละธง</p><h2>รูปแบบที่ผิดสังเกต — ใครต้องเปิดเอกสารมาตอบ?</h2></div>
+    <p>มีทั้งปีบัญชีกระจุก ราคาในบัญชีซ้ำ น้ำไม่ผ่านเกณฑ์ และระบบไม่เกิดประโยชน์. แต่ละข้อมีช่องว่างชัดเจนที่หน่วยงานต้องชี้แจง</p>
   </div>
 
 
@@ -348,19 +359,7 @@ main { padding: 28px 0 37px; }
         <article class="evidence-tile"><strong>26 พื้นที่</strong><b>งบรวม ฿119.9 ล้าน</b><p>ตรวจโครงการ DGR เขต 2 (สุพรรณบุรี) ไม่ใช่ตัวอย่างแทนทั้งประเทศ</p></article>
       </div>
       <p class="source-inline"><a href="https://en.audit.go.th/sites/default/files/files/inspection-results/โครงการพัฒนาน้ำบาดาลเพื่อความมั่นคงระดับชุมชน.pdf" target="_blank" rel="noopener">เปิดรายงานผลตรวจ สตง. เขต 2 ↗</a></p>
-      <div class="case-opener">
-        <div>
-          <p class="section-label">อีกโครงการหนึ่ง · งบกลางปี 2564 · จ.มหาสารคาม</p>
-          <h2>ไม่มีสำรวจพื้นที่ก่อน; 10 จาก 262 จุดถูกยกเลิกหลังเจอน้ำเค็มหรือสูบได้น้อย</h2>
-          <p>จาก 134 จุดที่ สตง. ลงสังเกต มี 27 จุดชำรุดหรือมีปัญหาใช้งาน; ภาพรวมปี 2561–2566 จังหวัดเจาะ 1,375 บ่อ แต่ไม่มีฐานข้อมูลและเอกสารติดตามประเมินผลให้ตรวจสอบ.</p>
-          <a href="https://www.audit.go.th/sites/default/files/files/inspection-results/%E0%B8%9A%E0%B8%97%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%20%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%20%28%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%A5%29%20%E0%B9%AF%20%E0%B8%87%E0%B8%9A%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%20%E0%B8%88.%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B2%E0%B8%A1.pdf" target="_blank" rel="noopener">เปิดรายงาน สตง. มหาสารคาม ↗</a>
-        </div>
-        <div class="case-question">
-          <span>คำถามที่ต้องตอบ</span>
-          <strong>ใครรับรองว่าจุดเจาะจำเป็นและมีน้ำพอ ก่อนผูกพันงบ?</strong>
-          <p>รายงานไม่เปิดชื่อหมู่บ้านหรือรหัสบ่อ และเป็นโครงการของ ทสจ.มหาสารคาม ไม่ใช่รายการ DGR ในตาราง 7,251 แถว จึงยังจับคู่รายบ่อไม่ได้</p>
-        </div>
-      </div>
+      <p class="scope-note">รายงานอีกโครงการที่ชี้ช่องโหว่เรื่องการสำรวจและติดตาม: <a href="#maha-case">มหาสารคาม — 1,375 บ่อ แต่ไม่มีฐานข้อมูลติดตามผล ↗</a></p>
       <p class="question-box"><strong>หน่วยงานต้องตอบ:</strong> ผลสำรวจฉบับใดอนุมัติให้สร้างเพิ่มใน 12 พื้นที่ที่มีระบบน้ำเดิมพอ? โครงการที่ชื่อพื้นที่กลับมาซ้ำมีเลขบ่อและพิกัดยืนยันว่าเป็นคนละจุดหรือไม่?</p>
       <p class="limit"><b>ยังไม่พิสูจน์:</b> ปีบัญชีไม่ใช่วันเจาะ; รายการระดับตำบล/อำเภอหรือชื่อหมู่บ้านซ้ำไม่ยืนยันว่าเจาะจุดเดิมหรือไม่จำเป็น</p>
       <p class="source-inline"><a href="index.html#need">ดูกราฟและตารางพื้นที่ซ้ำในบทวิเคราะห์ ↗</a></p>
@@ -461,7 +460,7 @@ main { padding: 28px 0 37px; }
   <section class="integrity" aria-labelledby="integrity-title">
     <p class="section-label">ข้อสงสัยหลัก · ให้หน่วยงานเปิดเอกสารตอบ</p>
     <h2 id="integrity-title">อนุมัติทั้งที่มีน้ำเดิม? ตรวจรับทั้งที่ใช้งานไม่ได้? แล้วใครรับผิดเมื่อสินทรัพย์ยังไม่โอน?</h2>
-    <p class="integrity-intro">สตง.พบ 12/26 พื้นที่ในสุพรรณบุรีมีน้ำเดิมพอ, 2 ระบบไม่ใช้ตามเป้า, 8 ใช้บางส่วน, 17/18 ตู้ไม่เคยเปิด และสินทรัพย์ 23 ระบบยังไม่โอน ณ เวลาตรวจ. อีกโครงการในมหาสารคามไม่มีสำรวจก่อนดำเนินงานและยกเลิก 10/262 จุดเพราะน้ำเค็มหรือสูบต่ำ. สองรายงานนี้ไม่ใช่ผลแทนทะเบียน DGR 7,251 แถว แต่ชี้ว่าต้องเปิดผลสำรวจ ใบตรวจรับ บันทึกใช้จริง และเอกสารส่งมอบรายจุด</p>
+    <p class="integrity-intro">สตง.พบ 12/26 พื้นที่ในสุพรรณบุรีมีน้ำเดิมพอ, 2 ระบบไม่ใช้ตามเป้า, 8 ใช้บางส่วน, 17/18 ตู้ไม่เคยเปิด และสินทรัพย์ 23 ระบบยังไม่โอน ณ เวลาตรวจ. อีกโครงการในมหาสารคามไม่มีสำรวจก่อนดำเนินงานและยกเลิก 10/262 สัญญาเพราะน้ำเค็มหรือสูบต่ำ. สองรายงานนี้ไม่ใช่ผลแทนทะเบียน DGR 7,251 แถว แต่ชี้ว่าต้องเปิดผลสำรวจ ใบตรวจรับ บันทึกใช้จริง และเอกสารส่งมอบรายจุด</p>
     <div class="integrity-grid">
       <article class="integrity-card">
         <h3>4 ข้อสงสัยที่ต้องตอบ</h3>
@@ -472,7 +471,12 @@ main { padding: 28px 0 37px; }
         <p>เหตุผลและผลสำรวจความจำเป็นก่อนเจาะ · เลขบ่อกับพิกัดที่ตรงทะเบียน · TOR/BOQ สัญญา ใบตรวจรับ และยอดจ่ายจริง · ผลตรวจและจำนวนผู้ใช้หลังส่งมอบ</p>
       </article>
     </div>
-    <p class="integrity-close"><strong>ข้อสรุปที่ยืนยันได้:</strong> สตง.พบการอนุมัติพื้นที่ที่มีน้ำเดิมพอในตัวอย่างหนึ่ง และอีกโครงการไม่มีการสำรวจพื้นที่ก่อนทำสัญญา ทั้งยังมีจุดที่น้ำเค็ม/สูบต่ำจนยกเลิก. นี่เป็นหลักฐานว่าการวางแผนและผลลัพธ์มีปัญหาในโครงการที่ตรวจ; ยังไม่พิสูจน์ทุจริต และไม่ชี้ว่าบ่อ DGR ทั้ง 7,251 แถวเสีย. หน่วยงานต้องเปิดว่าใครรับรองความจำเป็นและศักยภาพของแต่ละจุด, ตรวจรับอย่างไร, สินทรัพย์ยังไม่โอนเพราะอะไร, และมูลค่าซ้ำ 255 รายการอธิบายได้ด้วยสัญญา/BOQ หรือไม่</p>
+    <div class="integrity-case">
+      <p class="section-label">คำถามตรง ๆ: มีคดีทุจริตเกี่ยวกับการเจาะบ่อไหม?</p>
+      <h3>มีคดีที่ศาลชั้นต้นพิพากษาจำคุก — แต่ยังโยงกับบัญชี 7,251 รายการนี้ไม่ได้</h3>
+      <p>ข่าวรายงานว่าอดีตนายก อบต.บริบูรณ์ จ.ขอนแก่น และจำเลยอีกคนถูกจำคุกคนละ 4 ปี 12 เดือนในคดีเจาะบ่อพร้อมหอถังสูง หลังรับสารภาพ. เป็นโครงการท้องถิ่นคนละโครงการกับทะเบียน DGR; ยังไม่พบเลขบ่อหรือสัญญาที่เชื่อมคดีเข้ากับรายการในบัญชี และแหล่งที่พบยังไม่ยืนยันสถานะอุทธรณ์ของจำเลย. <a href="https://nextnewsth.com/th/investigative/corruption-case/6a1b7b182efaa00975846535" target="_blank" rel="noopener">อ่านรายงานข่าวคดีและความคืบหน้าจาก ป.ป.ช. ↗</a></p>
+    </div>
+    <p class="integrity-close"><strong>ข้อสรุปที่ยืนยันได้:</strong> สตง.พบความบกพร่องจริงทั้งการสำรวจ คัดเลือก ตรวจรับ และติดตามในโครงการที่ตรวจ; อีกโครงการท้องถิ่นมีรายงานข่าวว่าศาลชั้นต้นลงโทษคดีทุจริตเจาะบ่อ. แต่ยังไม่มีหลักฐานเชื่อมคดีนั้นหรือข้อผิดสังเกตเรื่องราคาเข้ากับ 7,251 รายการ DGR. หน่วยงานต้องเปิดผลสำรวจ เลขบ่อ/พิกัด TOR/BOQ ใบตรวจรับ ยอดจ่าย และสถานะอุทธรณ์ เพื่อชี้ให้ได้ว่าใครรับผิดในโครงการใด</p>
   </section>
 
 
