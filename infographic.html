@@ -72,6 +72,15 @@ h1 em { color: #ff9578; font-style: normal; }
 .front-evidence-grid span { display: block; color: var(--ink); font-size: 11px; line-height: 1.55; }
 .front-evidence .front-scope { grid-column: 1 / -1; margin: 1px 0 0; padding-top: 9px; border-top: 1px solid #c4a89b; color: #51433b; font-size: 11px; }
 .front-evidence .front-source { grid-column: 1 / -1; margin-top: 0; font-size: 11px; font-weight: 800; }
+.nacc-spotlight { display: grid; grid-template-columns: minmax(210px, .9fr) 1.5fr; gap: 15px; align-items: center; margin: 0 0 23px; padding: 17px 20px; border: 2px solid #7f211b; border-left: 10px solid #a32720; background: #49211f; color: #fff4e7; box-shadow: 5px 5px 0 #d7c8b8; }
+.nacc-spotlight .section-label { color: #ffbd92; }
+.nacc-spotlight h2 { margin: 2px 0 3px; color: #ffd08c; font-size: clamp(23px, 3vw, 31px); line-height: 1.35; }
+.nacc-spotlight .spotlight-number { display: block; color: #fff4e7; font: 900 clamp(29px, 4.4vw, 45px)/1.2 var(--serif); font-variant-numeric: tabular-nums; }
+.nacc-spotlight p { margin: 4px 0 0; color: #f0dfd0; font-size: 12px; line-height: 1.65; }
+.nacc-spotlight strong { color: #ffd08c; }
+.nacc-spotlight a { color: #ffd08c; font-weight: 800; }
+.nacc-spotlight .spotlight-question { padding-left: 14px; border-left: 1px solid #a85a49; }
+.nacc-spotlight .spotlight-question b { display: block; margin-bottom: 3px; color: #ffbd92; font-size: 12px; }
 .hero-status { display: inline-block; margin-top: 13px; padding: 5px 9px; border: 1px solid #ffb08a; color: #fff1df; font-size: 12px; font-weight: 800; }
 .data-origin { margin-top: 19px; padding: 13px 15px; border-left: 4px solid var(--ink); background: var(--sand); }
 .data-origin h2 { margin: 0; font-size: 18px; }
@@ -229,6 +238,8 @@ main { padding: 28px 0 37px; }
   .front-evidence-grid { grid-template-columns: 1fr; }
   .front-evidence-grid article { min-height: 0; }
   .front-evidence .front-scope, .front-evidence .front-source { grid-column: auto; }
+  .nacc-spotlight { grid-template-columns: 1fr; padding: 15px; }
+  .nacc-spotlight .spotlight-question { padding: 10px 0 0; border-left: 0; border-top: 1px solid #a85a49; }
   .case-opener { padding: 16px 15px; }
   .integrity { padding: 17px 15px; }
   .result-map { padding: 13px 12px; }
@@ -300,6 +311,20 @@ main { padding: 28px 0 37px; }
       <article><b>10 กลุ่ม · ฿3.46 ล้าน</b><span>กลุ่มที่ใช้บ่อไม่ได้หรือไม่ได้ใช้; สตง.ระบุงบไม่ก่อประโยชน์</span></article>
       <p class="front-scope">สตง.ยังพบ 10/262 สัญญายกเลิกหลังเจอน้ำเค็มหรืออัตราสูบต่ำกว่า 2 ลบ.ม./ชม.; ข้อกำหนดตรวจคุณภาพน้ำไม่ตรงกับการใช้ดื่ม และคณะกรรมการตรวจรับตรวจผลวิเคราะห์ไม่ครบ. เป็นโครงการ ทสจ.มหาสารคาม ไม่ใช่โครงการ DGR ในบัญชี 7,251 แถว</p>
       <a class="front-source" href="https://www.audit.go.th/sites/default/files/files/inspection-results/%E0%B8%9A%E0%B8%97%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%20%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2%E0%B9%81%E0%B8%AB%E0%B8%A5%E0%B9%88%E0%B8%87%E0%B8%99%E0%B9%89%E0%B8%B3%20%28%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9A%E0%B8%B2%E0%B8%94%E0%B8%B2%E0%B8%A5%29%20%E0%B9%AF%20%E0%B8%87%E0%B8%9A%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%20%E0%B8%88.%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AA%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A1.pdf" target="_blank" rel="noopener">เปิดรายงาน สตง. มหาสารคาม ↗</a>
+    </div>
+  </section>
+
+  <section class="nacc-spotlight" aria-labelledby="nacc-spotlight-title">
+    <div>
+      <p class="section-label">มีมติชี้มูลจริง · โครงการ อบต. คนละชุดกับทะเบียน DGR</p>
+      <span class="spotlight-number">38 บ่อ · ฿4.29 ล้าน</span>
+      <h2 id="nacc-spotlight-title">ป.ป.ช.ส่งสำนวนจัดซื้อเจาะบ่อให้อัยการ</h2>
+      <p>กรณี อบต.ไผ่ล้อม จ.อุตรดิตถ์ ปี 2559: ป.ป.ช.มีมติว่ามีมูลความผิดทางอาญา และส่งสำนวนให้อัยการสูงสุดดำเนินคดี. <strong>เป็นมติชี้มูล ไม่ใช่คำพิพากษาศาล</strong> และยังไม่มีหลักฐานเชื่อมกับ 7,251 แถว DGR.</p>
+    </div>
+    <div class="spotlight-question">
+      <b>คำถามที่มติ ป.ป.ช. ทำให้ต้องถามต่อ</b>
+      <p>เมื่อเจ้าหน้าที่เสนอ e-Auction แต่นายก อบต. ยืนยัน “ตกลงราคา” สองครั้ง โดยอ้างเร่งช่วยภัยแล้งทั้งที่ช่วงช่วยเหลือผ่านไปแล้ว—เหตุใดจึงไม่เปิดแข่งขัน และสัญญา 12 ฉบับตกแก่ใคร?</p>
+      <p>มติระบุผู้รับจ้าง 2 กลุ่ม รวม 8 ราย; ผู้รับจ้างในแต่ละกลุ่มเป็นเครือญาติกันและไม่มีอาชีพเจาะบ่อโดยตรง. <a href="#integrity-case">อ่านรายละเอียดและข้อจำกัด ↘</a> · <a href="https://www.nacc.go.th/uthaithani/categorydetail/2020012309482336/20250106163440" target="_blank" rel="noopener">อ่านมติ ป.ป.ช. ↗</a></p>
     </div>
   </section>
 
@@ -472,12 +497,13 @@ main { padding: 28px 0 37px; }
         <p>เหตุผลและผลสำรวจความจำเป็นก่อนเจาะ · เลขบ่อกับพิกัดที่ตรงทะเบียน · TOR/BOQ สัญญา ใบตรวจรับ และยอดจ่ายจริง · ผลตรวจและจำนวนผู้ใช้หลังส่งมอบ</p>
       </article>
     </div>
-    <div class="integrity-case">
+    <div class="integrity-case" id="integrity-case">
       <p class="section-label">คำถามตรง ๆ: มีคดีทุจริตเกี่ยวกับการเจาะบ่อไหม?</p>
-      <h3>มีคดีที่ศาลชั้นต้นพิพากษาจำคุก — แต่ยังโยงกับบัญชี 7,251 รายการนี้ไม่ได้</h3>
-      <p>ข่าวรายงานว่าอดีตนายก อบต.บริบูรณ์ จ.ขอนแก่น และจำเลยอีกคนถูกจำคุกคนละ 4 ปี 12 เดือนในคดีเจาะบ่อพร้อมหอถังสูง หลังรับสารภาพ. เป็นโครงการท้องถิ่นคนละโครงการกับทะเบียน DGR; ยังไม่พบเลขบ่อหรือสัญญาที่เชื่อมคดีเข้ากับรายการในบัญชี และแหล่งที่พบยังไม่ยืนยันสถานะอุทธรณ์ของจำเลย. <a href="https://nextnewsth.com/th/investigative/corruption-case/6a1b7b182efaa00975846535" target="_blank" rel="noopener">อ่านรายงานข่าวคดีและความคืบหน้าจาก ป.ป.ช. ↗</a></p>
+      <h3>ป.ป.ช.ชี้มูลคดีเจาะ 38 บ่อ; อีกคดีมีข่าวศาลลงโทษ — แต่ยังโยงกับบัญชีนี้ไม่ได้</h3>
+      <p>ป.ป.ช.เผยแพร่มติเมื่อ 6 ม.ค. 2568 กรณี อบต.ไผ่ล้อม อ.ลับแล จ.อุตรดิตถ์: โครงการปี 2559 เจาะ 38 บ่อ วงเงิน 4,287,890 บาท. ป.ป.ช.ระบุว่าอดีตนายก อบต.ยืนยันใช้วิธีตกลงราคาทั้งที่เจ้าหน้าที่เสนอ e-Auction, ติดต่อผู้รับจ้าง 2 กลุ่ม รวม 8 ราย และทำ 12 สัญญา; ผู้รับจ้างเป็นเครือญาติและไม่มีอาชีพเจาะบ่อโดยตรง. ป.ป.ช.มีมติว่ามีมูลความผิดและส่งสำนวนให้อัยการสูงสุดดำเนินคดี. <strong>นี่เป็นมติชี้มูล ไม่ใช่คำพิพากษาศาล; เอกสารไม่ระบุว่าบ่อพังหรือใช้งานไม่ได้.</strong> <a href="https://www.nacc.go.th/uthaithani/categorydetail/2020012309482336/20250106163440" target="_blank" rel="noopener">อ่านมติ ป.ป.ช. ↗</a></p>
+      <p>อีกโครงการหนึ่งที่ อบต.บริบูรณ์ จ.ขอนแก่น: Next News รายงานว่าศาลชั้นต้นลงโทษจำเลยในคดีเจาะบ่อพร้อมหอถังสูง; ข่าวที่พบยังไม่ยืนยันสถานะอุทธรณ์. ทั้งสองคดีเป็นโครงการท้องถิ่นคนละชุดกับทะเบียน DGR และยังไม่มีเลขบ่อหรือสัญญาที่เชื่อมถึง 7,251 แถว <a href="https://nextnewsth.com/th/investigative/corruption-case/6a1b7b182efaa00975846535" target="_blank" rel="noopener">อ่านรายงานข่าวคดีบริบูรณ์ ↗</a></p>
     </div>
-    <p class="integrity-close"><strong>ข้อสรุปที่ยืนยันได้:</strong> สตง.พบความบกพร่องจริงทั้งการสำรวจ คัดเลือก ตรวจรับ และติดตามในโครงการที่ตรวจ; อีกโครงการท้องถิ่นมีรายงานข่าวว่าศาลชั้นต้นลงโทษคดีทุจริตเจาะบ่อ. แต่ยังไม่มีหลักฐานเชื่อมคดีนั้นหรือข้อผิดสังเกตเรื่องราคาเข้ากับ 7,251 รายการ DGR. หน่วยงานต้องเปิดผลสำรวจ เลขบ่อ/พิกัด TOR/BOQ ใบตรวจรับ ยอดจ่าย และสถานะอุทธรณ์ เพื่อชี้ให้ได้ว่าใครรับผิดในโครงการใด</p>
+    <p class="integrity-close"><strong>ข้อสรุปที่ยืนยันได้:</strong> สตง.พบความบกพร่องจริงทั้งการสำรวจ คัดเลือก ตรวจรับ และติดตามในโครงการที่ตรวจ; ป.ป.ช.มีมติชี้มูลและส่งคดีจัดซื้อเจาะ 38 บ่อของ อบต.ไผ่ล้อมให้อัยการ; อีกโครงการหนึ่งมีรายงานข่าวว่าศาลชั้นต้นลงโทษ. หลักฐานเหล่านี้ยืนยันปัญหาและคดีในโครงการอื่น แต่ยังไม่เชื่อมกับ 7,251 รายการ DGR และไม่ยืนยันสภาพของบ่อในบัญชีนี้</p>
   </section>
 
 
